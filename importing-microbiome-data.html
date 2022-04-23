@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Questions for Lab 1, 2 and 3</title>
+  <title>Chapter 6 Importing microbiome data | Questions for Lab 1, 2 and 3</title>
   <meta name="description" content="Course material" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Questions for Lab 1, 2 and 3" />
+  <meta property="og:title" content="Chapter 6 Importing microbiome data | Questions for Lab 1, 2 and 3" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course material" />
   <meta name="github-repo" content="microbiome/course_2022_oulu" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Questions for Lab 1, 2 and 3" />
+  <meta name="twitter:title" content="Chapter 6 Importing microbiome data | Questions for Lab 1, 2 and 3" />
   
   <meta name="twitter:description" content="Course material" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="organizers.html"/>
+<link rel="prev" href="reproducible-reporting-with-rmarkdown.html"/>
+<link rel="next" href="microbiome-data-exploration.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -309,118 +309,184 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Questions for Lab 1, 2 and 3</h1>
-<p class="author"><em>Leo lahti &amp; Rajesh Shigdel</em></p>
-<p class="date"><em>2022-04-23</em></p>
-</div>
-<div id="overview" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Welcome to <a href="">Oulu Summer School, June 2022</a></strong></p>
-<p><strong>Venue</strong> University of Oulu. June 20-23, 2022.
-Organized together with <a href="http://datascience.utu.fi">University of Turku</a>, Finland.</p>
-<p><img src="https://user-images.githubusercontent.com/60338854/121848694-1072a480-ccf3-11eb-9af2-7fdefd8d1794.png" alt="ML4microbiome" width="50%"/></p>
-<p style="font-size:12px">
-Figure source: Moreno-Indias <em>et al</em>. (2021) <a href="https://doi.org/10.3389/fmicb.2021.635781">Statistical and Machine Learning Techniques in Human Microbiome Studies: Contemporary Challenges and Solutions</a>. Frontiers in Microbiology 12:11.
-</p>
-<div id="introduction" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This course is based on data science with R, a popular open source
-environment for scientific data analysis. It provides general
-capabilities for the analysis, integration, and visualization of
-multi-omic data from biomedical studies.</p>
-<p>The course is based on <a href="https://microbiome.github.io"><em>miaverse</em></a> (mia = <strong>MI</strong>crobiome <strong>A</strong>nalysis), an
-R/Bioconductor framework for microbiome data science.</p>
-<p>The data science framework consists of the following elements:</p>
+<div id="importing-microbiome-data" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Importing microbiome data<a href="importing-microbiome-data.html#importing-microbiome-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section demonstrates how to import microbiome profiling data in R.</p>
+<div id="data-access" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Data access<a href="importing-microbiome-data.html#data-access" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Option 1</strong></p>
+<p><em>ADHD-associated changes in gut microbiota and brain in a mouse model</em></p>
+<p>Tengeler AC <em>et
+al.</em> (2020) <a href="https://doi.org/10.1186/s40168-020-00816-x"><strong>Gut microbiota from persons with
+attention-deficit/hyperactivity disorder affects the brain in
+mice</strong></a>. Microbiome
+8:44.</p>
+<p>In this study, mice are colonized with microbiota from participants
+with ADHD (attention deficit hyperactivity disorder) and healthy
+participants. The aim of the study was to assess whether the mice
+display ADHD behaviors after being inoculated with ADHD microbiota,
+suggesting a role of the microbiome in ADHD pathology.</p>
+<p>Download the data from
+<a href="https://github.com/microbiome/course_2021_radboud/tree/main/data">data</a>
+subfolder.</p>
+<p><strong>Option 2</strong></p>
+<p><em>Western diet intervention study in serotonin transporter modified mouse model</em></p>
+<p>Mice received three weeks of Western (high fat, high sugar) or Control diet in
+three Genotype groups, a wild-type group and 2 groups with either partial or
+complete knock-out of the serotonin transporter (SERT), leading to an excess of
+serotonin in the gut, brain and blood circulation. Mice were measured before
+and after the intervention. In total there are three factors in this design,
+Time (pre-,post-intervention), Diet (Control, Western diet) and Genotype group
+(WT, HET, KO). There are about 6-8 mice per group.</p>
+<p>Data can be found from Summer School’s <a href="https://brightspace.ru.nl/d2l/le/content/249077/Home">Brightspace</a>.</p>
+<p><strong>Option 3</strong></p>
+<p><em>Open data set of your own choice</em>, see e.g.:</p>
 <ul>
-<li>efficient multi-omic data container</li>
-<li>a package ecosystem, providing algorithmic data analysis methods</li>
-<li>demonstration data sets</li>
-<li>open documentation</li>
-</ul>
-<p>The framework is explained in a greater depth in the online book
-<a href="https://microbiome.github.io/OMA">Orchestrating Microbiome
-Analysis</a>. The book is currently a
-development version.</p>
-</div>
-<div id="learning-goals" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Learning goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course aims to provide the basic understanding and skills for
-biomedical data analysis with R and Bioconductor. The course provides
-an overview of reproducible data analysis and reporting workflow in
-multi-omic studies, with recent example data sets published microbiome
-studies.</p>
-<p>The participants become familiar with standard concepts and methods in
-multi-omic data analysis, in particular in human microbiome research.
-This includes better understanding of the specific statistical
-challenges, practical hands-on experience with the commonly used
-methods, and reproducible research with R.</p>
-<p>After the course you will know how to approach new tasks in microbiome
-data science by utilizing available documentation and R tools.</p>
-<p><strong>Target audience</strong> Advanced MSc and PhD students, Postdocs, and
-biomedical researchers who wish to develop their skills in
-scientific programming and biomedical data analysis.</p>
-</div>
-<div id="schedule" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Schedule<a href="index.html#schedule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course takes place daily between 9am – 5pm, including coffee and
-lunch breaks.</p>
-<p>The course will be organized in a live format but the material will be
-openly available online during and after the course.</p>
-<p>A priority will given for local students from Oulu. Participants from
-other higher education institutions are welcome to apply.</p>
-<p>The mornings will start with lectures, and afternoons are mainly
-dedicated to hands-on sessions that consist of practical tasks and
-example data from recent research literature. Students will solve the
-exercises based on available online examples and resources that are
-pointed out in the study material. There is often more than one way to
-solve a given task, and the teachers will be available for assistance.</p>
-<p>Monday:</p>
-<ul>
-<li>Orientation</li>
-<li>Best practices in reproducible reporting and open science</li>
-<li>Hands-on: Introduction to R</li>
-</ul>
-<p>Tuesday:</p>
-<ul>
-<li>Key concepts and challenges in biomedical data analysis</li>
-<li>Hands-on: Biomedical data exploration</li>
-</ul>
-<p>Wednesday:</p>
-<ul>
-<li>Key concepts in biomedical data visualization</li>
-<li>Hands-on: Biomedical data visualization</li>
-</ul>
-<p>Thursday:</p>
-<ul>
-<li>Advanced topics: common machine learning techniques</li>
-<li>Hands-on: multi-omic data integration and reproducible workflows</li>
-</ul>
-<p>Friday:</p>
-<ul>
-<li>Student presentations</li>
-<li>Summary &amp; Conclusions</li>
+<li><a href="https://bioconductor.org/packages/release/data/experiment/html/microbiomeDataSets.html">Bioconductor microbiomeDataSets</a></li>
 </ul>
 </div>
-<div id="material" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Material<a href="index.html#material" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The teaching material follows open online documentation created by the
-course teachers, extending the online book Orchestrating Microbiome
-Analysis (<a href="https://microbiome.github.io/OMA" class="uri">https://microbiome.github.io/OMA</a>). We will teach generic
-data analytical skills that are applicable to common data analysis
-tasks encountered in modern omics research.</p>
-<p>The training material walks through example workflows that go through
-standard steps of biomedical data analysis covering data access,
-exploration, analysis, visualization, reproducible reporting, and best
-practices in open science. The teaching format allows adaptations
-according to the student’s learning speed.</p>
-<p><strong>You can run the workflow by simply copy-pasting the
-examples.</strong> For further, advanced material, you can test and modify
-further examples from the <a href="https://microbiome.github.io/OMA">OMA
-book</a>, or try to apply the
-techniques to your own data.</p>
-<p>We expect that the students will install the necessary software in
-advance. Online support will be available.</p>
+<div id="importing-microbiome-data-in-r" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Importing microbiome data in R<a href="importing-microbiome-data.html#importing-microbiome-data-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Import example data</strong> by modifying the examples in the online book
+section on <a href="https://microbiome.github.io/OMA/data-introduction.html#loading-experimental-microbiome-data">data exploration and
+manipulation</a>. The
+data files in our example are in <em>biom</em> format, which is a standard
+file format for microbiome data. Other file formats exist as well, and
+import details vary by platform.</p>
+<p>Here, we import <em>biom</em> data files into a specific data container (structure)
+in R, <em>TreeSummarizedExperiment</em> (TSE) <a href="https://f1000research.com/articles/9-1246">Huang et
+al. (2020)</a>. This provides
+the basis for downstream data analysis in the <em>miaverse</em> data science
+framework.</p>
+<p>In this course, we focus on downstream analysis of taxonomic profiling
+data, and assume that the data has already been appropriately
+preprocessed and available in the TSE format. In addition to our
+example data, further demonstration data sets are readily available in
+the TSE format through
+<a href="https://bioconductor.org/packages/release/data/experiment/html/microbiomeDataSets.html">microbiomeDataSets</a>.</p>
+<p><img src="https://raw.githubusercontent.com/FelixErnst/TreeSummarizedExperiment
+/2293440c6e70ae4d6e978b6fdf2c42fdea7fb36a/vignettes/tse2.png" width="100%"/></p>
+<p><strong>Figure sources:</strong></p>
+<p><strong>Original article</strong>
+- Huang R <em>et al</em>. (2021) <a href="https://doi.org/10.12688/%20f1000research.26669.2">TreeSummarizedExperiment: a S4 class
+for data with hierarchical structure</a>. F1000Research 9:1246.</p>
+<p><strong>Reference Sequence slot extension</strong>
+- Lahti L <em>et al</em>. (2020) <a href="https://doi.org/10.7490/%20f1000research.1118447.1">Upgrading the R/Bioconductor ecosystem for microbiome
+research</a> F1000Research 9:1464 (slides).</p>
+</div>
+<div id="example-solutions" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Example solutions<a href="importing-microbiome-data.html#example-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Example code for data import: <a href="import.Rmd">import.Rmd</a></li>
+</ul>
+
+<pre><code>## Loading required package: SummarizedExperiment</code></pre>
+<pre><code>## Loading required package: MatrixGenerics</code></pre>
+<pre><code>## Loading required package: matrixStats</code></pre>
+<pre><code>## 
+## Attaching package: &#39;MatrixGenerics&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:matrixStats&#39;:
+## 
+##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+##     colWeightedMeans, colWeightedMedians, colWeightedSds,
+##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+##     rowWeightedSds, rowWeightedVars</code></pre>
+<pre><code>## Loading required package: GenomicRanges</code></pre>
+<pre><code>## Loading required package: stats4</code></pre>
+<pre><code>## Loading required package: BiocGenerics</code></pre>
+<pre><code>## 
+## Attaching package: &#39;BiocGenerics&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     IQR, mad, sd, var, xtabs</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+##     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+##     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+##     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+##     union, unique, unsplit, which.max, which.min</code></pre>
+<pre><code>## Loading required package: S4Vectors</code></pre>
+<pre><code>## 
+## Attaching package: &#39;S4Vectors&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     expand.grid, I, unname</code></pre>
+<pre><code>## Loading required package: IRanges</code></pre>
+<pre><code>## Loading required package: GenomeInfoDb</code></pre>
+<pre><code>## Loading required package: Biobase</code></pre>
+<pre><code>## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     &#39;browseVignettes()&#39;. To cite Bioconductor, see
+##     &#39;citation(&quot;Biobase&quot;)&#39;, and for packages &#39;citation(&quot;pkgname&quot;)&#39;.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;Biobase&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:MatrixGenerics&#39;:
+## 
+##     rowMedians</code></pre>
+<pre><code>## The following objects are masked from &#39;package:matrixStats&#39;:
+## 
+##     anyMissing, rowMedians</code></pre>
+<pre><code>## Loading required package: SingleCellExperiment</code></pre>
+<pre><code>## Loading required package: TreeSummarizedExperiment</code></pre>
+<pre><code>## Loading required package: Biostrings</code></pre>
+<pre><code>## Loading required package: XVector</code></pre>
+<pre><code>## 
+## Attaching package: &#39;Biostrings&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:base&#39;:
+## 
+##     strsplit</code></pre>
+<pre><code>## Loading required package: MultiAssayExperiment</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## Loading required package: ggraph</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:Biostrings&#39;:
+## 
+##     collapse, intersect, setdiff, setequal, union</code></pre>
+<pre><code>## The following object is masked from &#39;package:XVector&#39;:
+## 
+##     slice</code></pre>
+<pre><code>## The following object is masked from &#39;package:Biobase&#39;:
+## 
+##     combine</code></pre>
+<pre><code>## The following objects are masked from &#39;package:GenomicRanges&#39;:
+## 
+##     intersect, setdiff, union</code></pre>
+<pre><code>## The following object is masked from &#39;package:GenomeInfoDb&#39;:
+## 
+##     intersect</code></pre>
+<pre><code>## The following objects are masked from &#39;package:IRanges&#39;:
+## 
+##     collapse, desc, intersect, setdiff, slice, union</code></pre>
+<pre><code>## The following objects are masked from &#39;package:S4Vectors&#39;:
+## 
+##     first, intersect, rename, setdiff, setequal, union</code></pre>
+<pre><code>## The following objects are masked from &#39;package:BiocGenerics&#39;:
+## 
+##     combine, intersect, setdiff, union</code></pre>
+<pre><code>## The following object is masked from &#39;package:matrixStats&#39;:
+## 
+##     count</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
 </div>
 </div>
             </section>
@@ -428,8 +494,8 @@ advance. Online support will be available.</p>
           </div>
         </div>
       </div>
-
-<a href="organizers.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reproducible-reporting-with-rmarkdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="microbiome-data-exploration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

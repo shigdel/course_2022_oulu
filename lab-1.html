@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Questions for Lab 1, 2 and 3</title>
+  <title>Chapter 15 Lab 1 | Questions for Lab 1, 2 and 3</title>
   <meta name="description" content="Course material" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Questions for Lab 1, 2 and 3" />
+  <meta property="og:title" content="Chapter 15 Lab 1 | Questions for Lab 1, 2 and 3" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course material" />
   <meta name="github-repo" content="microbiome/course_2022_oulu" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Questions for Lab 1, 2 and 3" />
+  <meta name="twitter:title" content="Chapter 15 Lab 1 | Questions for Lab 1, 2 and 3" />
   
   <meta name="twitter:description" content="Course material" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="organizers.html"/>
+<link rel="prev" href="tutorial-aims.html"/>
+<link rel="next" href="lab-2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -309,118 +309,23 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Questions for Lab 1, 2 and 3</h1>
-<p class="author"><em>Leo lahti &amp; Rajesh Shigdel</em></p>
-<p class="date"><em>2022-04-23</em></p>
+<div id="lab-1" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">Chapter 15</span> Lab 1<a href="lab-1.html#lab-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="unsupervised-learning-feature-selection-dimension-reduction" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> unsupervised learning: Feature selection &amp; dimension reduction<a href="lab-1.html#unsupervised-learning-feature-selection-dimension-reduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Make the tse (TreeSummarizedExperiment) Object for the further analysis (use the provided script to make a tse )</li>
+</ol>
 </div>
-<div id="overview" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><strong>Welcome to <a href="">Oulu Summer School, June 2022</a></strong></p>
-<p><strong>Venue</strong> University of Oulu. June 20-23, 2022.
-Organized together with <a href="http://datascience.utu.fi">University of Turku</a>, Finland.</p>
-<p><img src="https://user-images.githubusercontent.com/60338854/121848694-1072a480-ccf3-11eb-9af2-7fdefd8d1794.png" alt="ML4microbiome" width="50%"/></p>
-<p style="font-size:12px">
-Figure source: Moreno-Indias <em>et al</em>. (2021) <a href="https://doi.org/10.3389/fmicb.2021.635781">Statistical and Machine Learning Techniques in Human Microbiome Studies: Contemporary Challenges and Solutions</a>. Frontiers in Microbiology 12:11.
-</p>
-<div id="introduction" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This course is based on data science with R, a popular open source
-environment for scientific data analysis. It provides general
-capabilities for the analysis, integration, and visualization of
-multi-omic data from biomedical studies.</p>
-<p>The course is based on <a href="https://microbiome.github.io"><em>miaverse</em></a> (mia = <strong>MI</strong>crobiome <strong>A</strong>nalysis), an
-R/Bioconductor framework for microbiome data science.</p>
-<p>The data science framework consists of the following elements:</p>
-<ul>
-<li>efficient multi-omic data container</li>
-<li>a package ecosystem, providing algorithmic data analysis methods</li>
-<li>demonstration data sets</li>
-<li>open documentation</li>
-</ul>
-<p>The framework is explained in a greater depth in the online book
-<a href="https://microbiome.github.io/OMA">Orchestrating Microbiome
-Analysis</a>. The book is currently a
-development version.</p>
-</div>
-<div id="learning-goals" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Learning goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course aims to provide the basic understanding and skills for
-biomedical data analysis with R and Bioconductor. The course provides
-an overview of reproducible data analysis and reporting workflow in
-multi-omic studies, with recent example data sets published microbiome
-studies.</p>
-<p>The participants become familiar with standard concepts and methods in
-multi-omic data analysis, in particular in human microbiome research.
-This includes better understanding of the specific statistical
-challenges, practical hands-on experience with the commonly used
-methods, and reproducible research with R.</p>
-<p>After the course you will know how to approach new tasks in microbiome
-data science by utilizing available documentation and R tools.</p>
-<p><strong>Target audience</strong> Advanced MSc and PhD students, Postdocs, and
-biomedical researchers who wish to develop their skills in
-scientific programming and biomedical data analysis.</p>
-</div>
-<div id="schedule" class="section level2 hasAnchor" number="1.3">
-<h2><span class="header-section-number">1.3</span> Schedule<a href="index.html#schedule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course takes place daily between 9am – 5pm, including coffee and
-lunch breaks.</p>
-<p>The course will be organized in a live format but the material will be
-openly available online during and after the course.</p>
-<p>A priority will given for local students from Oulu. Participants from
-other higher education institutions are welcome to apply.</p>
-<p>The mornings will start with lectures, and afternoons are mainly
-dedicated to hands-on sessions that consist of practical tasks and
-example data from recent research literature. Students will solve the
-exercises based on available online examples and resources that are
-pointed out in the study material. There is often more than one way to
-solve a given task, and the teachers will be available for assistance.</p>
-<p>Monday:</p>
-<ul>
-<li>Orientation</li>
-<li>Best practices in reproducible reporting and open science</li>
-<li>Hands-on: Introduction to R</li>
-</ul>
-<p>Tuesday:</p>
-<ul>
-<li>Key concepts and challenges in biomedical data analysis</li>
-<li>Hands-on: Biomedical data exploration</li>
-</ul>
-<p>Wednesday:</p>
-<ul>
-<li>Key concepts in biomedical data visualization</li>
-<li>Hands-on: Biomedical data visualization</li>
-</ul>
-<p>Thursday:</p>
-<ul>
-<li>Advanced topics: common machine learning techniques</li>
-<li>Hands-on: multi-omic data integration and reproducible workflows</li>
-</ul>
-<p>Friday:</p>
-<ul>
-<li>Student presentations</li>
-<li>Summary &amp; Conclusions</li>
-</ul>
-</div>
-<div id="material" class="section level2 hasAnchor" number="1.4">
-<h2><span class="header-section-number">1.4</span> Material<a href="index.html#material" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The teaching material follows open online documentation created by the
-course teachers, extending the online book Orchestrating Microbiome
-Analysis (<a href="https://microbiome.github.io/OMA" class="uri">https://microbiome.github.io/OMA</a>). We will teach generic
-data analytical skills that are applicable to common data analysis
-tasks encountered in modern omics research.</p>
-<p>The training material walks through example workflows that go through
-standard steps of biomedical data analysis covering data access,
-exploration, analysis, visualization, reproducible reporting, and best
-practices in open science. The teaching format allows adaptations
-according to the student’s learning speed.</p>
-<p><strong>You can run the workflow by simply copy-pasting the
-examples.</strong> For further, advanced material, you can test and modify
-further examples from the <a href="https://microbiome.github.io/OMA">OMA
-book</a>, or try to apply the
-techniques to your own data.</p>
-<p>We expect that the students will install the necessary software in
-advance. Online support will be available.</p>
+<div id="load-the-data" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> Load the data<a href="lab-1.html#load-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Aggregate the data to Phylum level (agglomerateByRank)</p></li>
+<li><p>Subset the data at the Species level with only taking bacterial Species that are greater than 10% of prevalence in the total sample</p></li>
+<li><p>Subset a tse object which consist only two phyla i.e Actinobacteria”, “Cyanobacteria</p></li>
+<li><p>Calculate relative abundances, and store the table to assays</p></li>
+</ol>
+<p>6.Perform a centred log-ratio transformation (clr) (i.e. mia::transformSamples)</p>
 </div>
 </div>
             </section>
@@ -428,8 +333,8 @@ advance. Online support will be available.</p>
           </div>
         </div>
       </div>
-
-<a href="organizers.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tutorial-aims.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

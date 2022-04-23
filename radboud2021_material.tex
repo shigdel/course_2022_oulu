@@ -36,12 +36,52 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Multi-omic data science with R/Bioconductor},
-  pdfauthor={University of Oulu \& University of Turku},
+  pdftitle={Questions for Lab 1, 2 and 3},
+  pdfauthor={Leo lahti \& Rajesh Shigdel},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[top=30mm,left=15mm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -70,14 +110,28 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Multi-omic data science with R/Bioconductor}
-\author{University of Oulu \& University of Turku}
+\title{Questions for Lab 1, 2 and 3}
+\author{Leo lahti \& Rajesh Shigdel}
 \date{2022-04-23}
 
 \begin{document}
@@ -430,6 +484,3207 @@ support from the course assistants.
 \section{Day 5 : Presentations \& closing}\label{day-5-presentations-closing}}
 
 \textbf{Student presentations} on microbiome data analytics
+
+\hypertarget{getting-started}{%
+\chapter{Getting started}\label{getting-started}}
+
+\hypertarget{checklist-before-the-course}{%
+\section{Checklist (before the course)}\label{checklist-before-the-course}}
+
+Install the following software in advance in order to avoid
+unnecessary delays and leaving more time for the course contents.
+
+\begin{itemize}
+\item
+  \href{https://www.r-project.org/}{R (version \textgreater4.1.0)}
+\item
+  \href{https://www.rstudio.com/products/rstudio/download/}{RStudio};
+  choose ``Rstudio Desktop'' to download the latest version. Optional
+  but preferred. For further details, check the \href{https://www.rstudio.com/}{Rstudio home
+  page}.
+\item
+  Install and load the required R packages
+\item
+  After a successful installation you can start with the
+  case study examples in this training material
+\end{itemize}
+
+\hypertarget{support-and-resources}{%
+\section{Support and resources}\label{support-and-resources}}
+
+For additional reading and online material, see \href{material.html}{Material} section
+
+For online support on installation and other matters, you can join us at:
+
+\begin{itemize}
+\tightlist
+\item
+  Users: \href{https://gitter.im/microbiome/miaverse?utm_source=badge\&utm_medium=badge\&utm_campaign=pr-badge\&utm_content=badge}{miaverse Gitter channel}
+\item
+  Developers: \href{https://bioc-community.herokuapp.com}{Bioconductor Slack} \#microbiomeexperiment channel (ask for an invitation)
+\end{itemize}
+
+\hypertarget{installing-and-loading-the-required-r-packages}{%
+\section{Installing and loading the required R packages}\label{installing-and-loading-the-required-r-packages}}
+
+This section shows how to install and load all required packages into
+the R session. Only uninstalled packages are installed.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# List of packages that we need from cran and bioc }
+\NormalTok{cran\_pkg }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"BiocManager"}\NormalTok{, }\StringTok{"bookdown"}\NormalTok{, }\StringTok{"dplyr"}\NormalTok{, }\StringTok{"ecodist"}\NormalTok{, }\StringTok{"ggplot2"}\NormalTok{, }
+              \StringTok{"gridExtra"}\NormalTok{, }\StringTok{"kableExtra"}\NormalTok{,  }\StringTok{"knitr"}\NormalTok{, }\StringTok{"scales"}\NormalTok{, }\StringTok{"vegan"}\NormalTok{, }\StringTok{"matrixStats"}\NormalTok{)}
+\NormalTok{bioc\_pkg }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"yulab.utils"}\NormalTok{,}\StringTok{"ggtree"}\NormalTok{,}\StringTok{"ANCOMBC"}\NormalTok{, }\StringTok{"ape"}\NormalTok{, }\StringTok{"DESeq2"}\NormalTok{, }\StringTok{"DirichletMultinomial"}\NormalTok{, }\StringTok{"mia"}\NormalTok{, }\StringTok{"miaViz"}\NormalTok{)}
+
+\CommentTok{\# Gets those packages that are already installed}
+\NormalTok{cran\_pkg\_already\_installed }\OtherTok{\textless{}{-}}\NormalTok{ cran\_pkg[ cran\_pkg }\SpecialCharTok{\%in\%} \FunctionTok{installed.packages}\NormalTok{() ]}
+\NormalTok{bioc\_pkg\_already\_installed }\OtherTok{\textless{}{-}}\NormalTok{ bioc\_pkg[ bioc\_pkg }\SpecialCharTok{\%in\%} \FunctionTok{installed.packages}\NormalTok{() ]}
+
+\CommentTok{\# Gets those packages that need to be installed}
+\NormalTok{cran\_pkg\_to\_be\_installed }\OtherTok{\textless{}{-}} \FunctionTok{setdiff}\NormalTok{(cran\_pkg, cran\_pkg\_already\_installed)}
+\NormalTok{bioc\_pkg\_to\_be\_installed }\OtherTok{\textless{}{-}} \FunctionTok{setdiff}\NormalTok{(bioc\_pkg, bioc\_pkg\_already\_installed)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# If there are packages that need to be installed, installs them from CRAN}
+\ControlFlowTok{if}\NormalTok{( }\FunctionTok{length}\NormalTok{(cran\_pkg\_to\_be\_installed) ) \{}
+   \FunctionTok{install.packages}\NormalTok{(cran\_pkg\_to\_be\_installed)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# If there are packages that need to be installed, installs them from Bioconductor}
+\ControlFlowTok{if}\NormalTok{( }\FunctionTok{length}\NormalTok{(bioc\_pkg\_to\_be\_installed) ) \{}
+\NormalTok{   BiocManager}\SpecialCharTok{::}\FunctionTok{install}\NormalTok{(bioc\_pkg\_to\_be\_installed, }\AttributeTok{ask =}\NormalTok{ F)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Now all required packages are installed, so let's load them into the session.
+Some function names occur in multiple packages. That is why miaverse's packages
+mia and miaViz are prioritized. Packages that are loaded first have higher priority.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Reorders bioc packages, so that mia and miaViz are first}
+\NormalTok{bioc\_pkg }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(bioc\_pkg[ bioc\_pkg }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"mia"}\NormalTok{, }\StringTok{"miaViz"}\NormalTok{) ], }
+\NormalTok{              bioc\_pkg[ }\SpecialCharTok{!}\NormalTok{bioc\_pkg }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"mia"}\NormalTok{, }\StringTok{"miaViz"}\NormalTok{) ] ) }
+
+\CommentTok{\# Loading all packages into session. Returns true if package was successfully loaded.}
+\NormalTok{loaded }\OtherTok{\textless{}{-}} \FunctionTok{sapply}\NormalTok{(}\FunctionTok{c}\NormalTok{(bioc\_pkg, cran\_pkg), require, }\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{as.data.frame}\NormalTok{(loaded)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                      loaded
+## mia                    TRUE
+## miaViz                 TRUE
+## yulab.utils            TRUE
+## ggtree                 TRUE
+## ANCOMBC                TRUE
+## ape                    TRUE
+## DESeq2                 TRUE
+## DirichletMultinomial   TRUE
+## BiocManager            TRUE
+## bookdown               TRUE
+## dplyr                  TRUE
+## ecodist                TRUE
+## ggplot2                TRUE
+## gridExtra              TRUE
+## kableExtra             TRUE
+## knitr                  TRUE
+## scales                 TRUE
+## vegan                  TRUE
+## matrixStats            TRUE
+\end{verbatim}
+
+\hypertarget{reproducible-reporting-with-rmarkdown}{%
+\chapter{Reproducible reporting with Rmarkdown}\label{reproducible-reporting-with-rmarkdown}}
+
+Reproducible reporting is the starting point for robust interactive
+data science. Perform the following tasks:
+
+\begin{itemize}
+\item
+  Create a Rmarkdown template in RStudio, and render it into a
+  document (markdown, PDF, docx or other format)
+\item
+  If you are entirely new to Markdown, take
+  \href{https://www.markdowntutorial.com/}{this} 10 minute tutorial to get
+  introduced to the most important functions within Markdown. Then
+  experiment with different options with
+  \href{https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf}{Rmarkdown}
+\end{itemize}
+
+In case you are new to Rmarkdown \href{https://rmarkdown.rstudio.com/lesson-1.html}{Rstudio provides
+resources} to learn
+about the use cases and the basics of Rmarkdown. A good online
+tutorial to reproducible reporting is available by \href{https://rpubs.com/marschmi/RMarkdown}{Dr.~C Titus
+Brown}.
+
+\hypertarget{importing-microbiome-data}{%
+\chapter{Importing microbiome data}\label{importing-microbiome-data}}
+
+This section demonstrates how to import microbiome profiling data in R.
+
+\hypertarget{data-access}{%
+\section{Data access}\label{data-access}}
+
+\textbf{Option 1}
+
+\emph{ADHD-associated changes in gut microbiota and brain in a mouse model}
+
+Tengeler AC \emph{et
+al.} (2020) \href{https://doi.org/10.1186/s40168-020-00816-x}{\textbf{Gut microbiota from persons with
+attention-deficit/hyperactivity disorder affects the brain in
+mice}}. Microbiome
+8:44.
+
+In this study, mice are colonized with microbiota from participants
+with ADHD (attention deficit hyperactivity disorder) and healthy
+participants. The aim of the study was to assess whether the mice
+display ADHD behaviors after being inoculated with ADHD microbiota,
+suggesting a role of the microbiome in ADHD pathology.
+
+Download the data from
+\href{https://github.com/microbiome/course_2021_radboud/tree/main/data}{data}
+subfolder.
+
+\textbf{Option 2}
+
+\emph{Western diet intervention study in serotonin transporter modified mouse model}
+
+Mice received three weeks of Western (high fat, high sugar) or Control diet in
+three Genotype groups, a wild-type group and 2 groups with either partial or
+complete knock-out of the serotonin transporter (SERT), leading to an excess of
+serotonin in the gut, brain and blood circulation. Mice were measured before
+and after the intervention. In total there are three factors in this design,
+Time (pre-,post-intervention), Diet (Control, Western diet) and Genotype group
+(WT, HET, KO). There are about 6-8 mice per group.
+
+Data can be found from Summer School's \href{https://brightspace.ru.nl/d2l/le/content/249077/Home}{Brightspace}.
+
+\textbf{Option 3}
+
+\emph{Open data set of your own choice}, see e.g.:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://bioconductor.org/packages/release/data/experiment/html/microbiomeDataSets.html}{Bioconductor microbiomeDataSets}
+\end{itemize}
+
+\hypertarget{importing-microbiome-data-in-r}{%
+\section{Importing microbiome data in R}\label{importing-microbiome-data-in-r}}
+
+\textbf{Import example data} by modifying the examples in the online book
+section on \href{https://microbiome.github.io/OMA/data-introduction.html\#loading-experimental-microbiome-data}{data exploration and
+manipulation}. The
+data files in our example are in \emph{biom} format, which is a standard
+file format for microbiome data. Other file formats exist as well, and
+import details vary by platform.
+
+Here, we import \emph{biom} data files into a specific data container (structure)
+in R, \emph{TreeSummarizedExperiment} (TSE) \href{https://f1000research.com/articles/9-1246}{Huang et
+al.~(2020)}. This provides
+the basis for downstream data analysis in the \emph{miaverse} data science
+framework.
+
+In this course, we focus on downstream analysis of taxonomic profiling
+data, and assume that the data has already been appropriately
+preprocessed and available in the TSE format. In addition to our
+example data, further demonstration data sets are readily available in
+the TSE format through
+\href{https://bioconductor.org/packages/release/data/experiment/html/microbiomeDataSets.html}{microbiomeDataSets}.
+
+\textbf{Figure sources:}
+
+\textbf{Original article}
+- Huang R \emph{et al}. (2021) \href{https://doi.org/10.12688/\%20f1000research.26669.2}{TreeSummarizedExperiment: a S4 class
+for data with hierarchical structure}. F1000Research 9:1246.
+
+\textbf{Reference Sequence slot extension}
+- Lahti L \emph{et al}. (2020) \href{https://doi.org/10.7490/\%20f1000research.1118447.1}{Upgrading the R/Bioconductor ecosystem for microbiome
+research} F1000Research 9:1464 (slides).
+
+\hypertarget{example-solutions}{%
+\section{Example solutions}\label{example-solutions}}
+
+\begin{itemize}
+\tightlist
+\item
+  Example code for data import: \url{import.Rmd}
+\end{itemize}
+
+\begin{verbatim}
+## Loading required package: SummarizedExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MatrixGenerics
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: matrixStats
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'MatrixGenerics'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:matrixStats':
+## 
+##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+##     colWeightedMeans, colWeightedMedians, colWeightedSds,
+##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+##     rowWeightedSds, rowWeightedVars
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GenomicRanges
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: stats4
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: BiocGenerics
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'BiocGenerics'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     IQR, mad, sd, var, xtabs
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+##     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+##     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+##     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+##     union, unique, unsplit, which.max, which.min
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: S4Vectors
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'S4Vectors'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     expand.grid, I, unname
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: IRanges
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GenomeInfoDb
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Biobase
+\end{verbatim}
+
+\begin{verbatim}
+## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     'browseVignettes()'. To cite Bioconductor, see
+##     'citation("Biobase")', and for packages 'citation("pkgname")'.
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Biobase'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:MatrixGenerics':
+## 
+##     rowMedians
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:matrixStats':
+## 
+##     anyMissing, rowMedians
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: SingleCellExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: TreeSummarizedExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Biostrings
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: XVector
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Biostrings'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:base':
+## 
+##     strsplit
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MultiAssayExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggraph
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:Biostrings':
+## 
+##     collapse, intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:XVector':
+## 
+##     slice
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:Biobase':
+## 
+##     combine
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:GenomicRanges':
+## 
+##     intersect, setdiff, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:GenomeInfoDb':
+## 
+##     intersect
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:IRanges':
+## 
+##     collapse, desc, intersect, setdiff, slice, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:S4Vectors':
+## 
+##     first, intersect, rename, setdiff, setequal, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:BiocGenerics':
+## 
+##     combine, intersect, setdiff, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:matrixStats':
+## 
+##     count
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\hypertarget{microbiome-data-exploration}{%
+\chapter{Microbiome data exploration}\label{microbiome-data-exploration}}
+
+Now we have loaded the data set into R. Next, let us walk through some
+basic operations for data exploration to confirm that the data has all
+the necessary components.
+
+\hypertarget{data-structure}{%
+\section{Data structure}\label{data-structure}}
+
+Let us now investigate how taxonomic profiling data is organized in R.
+
+Dimensionality tells us how many taxa and samples the data
+contains. As we can see, there are 151 taxa and 27
+samples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(tse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 151  27
+\end{verbatim}
+
+The \texttt{rowData} slot contains a taxonomic table. This includes taxonomic
+information for each of the 151 entries. With the \texttt{head()}
+command, we can print just the beginning of the table.
+
+The \texttt{rowData} seems to contain information from 6
+different taxonomy classes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(}\FunctionTok{rowData}\NormalTok{(tse))) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{kable\_styling}\NormalTok{(}\StringTok{"striped"}\NormalTok{, }
+                            \AttributeTok{latex\_options=}\StringTok{"scale\_down"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{scroll\_box}\NormalTok{(}\AttributeTok{width =} \StringTok{"100\%"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{l|l|l|l|l|l|l}
+\hline
+  & Kingdom & Phylum & Class & Order & Family & Genus\\
+\hline
+1726470 & Bacteria & Bacteroidetes & Bacteroidia & Bacteroidales & Bacteroidaceae & Bacteroides\\
+\hline
+1726471 & Bacteria & Bacteroidetes & Bacteroidia & Bacteroidales & Bacteroidaceae & Bacteroides\\
+\hline
+17264731 & Bacteria & Bacteroidetes & Bacteroidia & Bacteroidales & Porphyromonadaceae & Parabacteroides\\
+\hline
+17264726 & Bacteria & Bacteroidetes & Bacteroidia & Bacteroidales & Bacteroidaceae & Bacteroides\\
+\hline
+1726472 & Bacteria & Verrucomicrobia & Verrucomicrobiae & Verrucomicrobiales & Verrucomicrobiaceae & Akkermansia\\
+\hline
+17264724 & Bacteria & Bacteroidetes & Bacteroidia & Bacteroidales & Bacteroidaceae & Bacteroides\\
+\hline
+\end{tabular}}
+\end{table}
+
+The colData slot contains sample metadata. It contains information for all 27 samples.
+However, here only the 6 first samples are shown as we use the \texttt{head()} command. There
+are 4 columns, that contain information, e.g., about patients' status, and cohort.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse))) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{kable\_styling}\NormalTok{(}\StringTok{"striped"}\NormalTok{, }
+                            \AttributeTok{latex\_options=}\StringTok{"scale\_down"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{scroll\_box}\NormalTok{(}\AttributeTok{width =} \StringTok{"100\%"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{l|l|l|l|l}
+\hline
+  & patient\_status & cohort & patient\_status\_vs\_cohort & sample\_name\\
+\hline
+A110 & ADHD & Cohort\_1 & ADHD\_Cohort\_1 & A110\\
+\hline
+A12 & ADHD & Cohort\_1 & ADHD\_Cohort\_1 & A12\\
+\hline
+A15 & ADHD & Cohort\_1 & ADHD\_Cohort\_1 & A15\\
+\hline
+A19 & ADHD & Cohort\_1 & ADHD\_Cohort\_1 & A19\\
+\hline
+A21 & ADHD & Cohort\_2 & ADHD\_Cohort\_2 & A21\\
+\hline
+A23 & ADHD & Cohort\_2 & ADHD\_Cohort\_2 & A23\\
+\hline
+\end{tabular}}
+\end{table}
+
+From here, we can draw summaries of the sample (column) data, for
+instance to see what is the patient status distribution.
+
+The command \texttt{colData(tse)\$patient\_status} fetches the data from the
+column, and \texttt{table()} creates a table that shows how many times each
+class is present, and \texttt{sort()} sorts the table to ascending order.
+
+There are 13
+samples from patients having ADHD,
+and 14 control samples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sort}\NormalTok{(}\FunctionTok{table}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{patient\_status))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##    ADHD Control 
+##      13      14
+\end{verbatim}
+
+\hypertarget{transformations}{%
+\subsection{Transformations}\label{transformations}}
+
+Microbial abundances are typically `compositional' (relative) in the
+current microbiome profiling data sets. This is due to technical
+aspects of the data generation process (see e.g.~\href{https://www.frontiersin.org/articles/10.3389/fmicb.2017.02224/full}{Gloor et al.,
+2017}).
+
+The next example calculates relative abundances as these are usually easier to
+interpret than plain counts. For some statistical models we need to
+transform the data into other formats as explained in above link (and
+as we will see later).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculates relative abundances, and stores the table to assays}
+\NormalTok{tse }\OtherTok{\textless{}{-}} \FunctionTok{transformCounts}\NormalTok{(tse, }\AttributeTok{method =} \StringTok{"relabundance"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+A variety of standard transformations for microbiome data are available for \texttt{TSE} data objects through \href{https://microbiome.github.io/mia/reference/transformCounts.html}{mia R package}.
+
+\hypertarget{aggregation}{%
+\subsection{Aggregation}\label{aggregation}}
+
+Microbial species can be called at multiple taxonomic resolutions. We
+can easily agglomerate the data based on taxonomic ranks. Here, we
+agglomerate the data at Phylum level.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse\_phylum }\OtherTok{\textless{}{-}} \FunctionTok{agglomerateByRank}\NormalTok{(tse, }\AttributeTok{rank =} \StringTok{"Phylum"}\NormalTok{)}
+
+\CommentTok{\# Show dimensionality}
+\FunctionTok{dim}\NormalTok{(tse\_phylum)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  5 27
+\end{verbatim}
+
+Now there are 5 taxa and 27
+samples, meaning that there are 5 different
+Phylum level taxonomic groups. Looking at the \texttt{rowData} after
+agglomeration shows all Firmicutes are combined together, and all
+lower rank information is lost.
+
+From the assay we can see that all abundances of taxa that belong to
+Firmicutes are summed up.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(}\FunctionTok{rowData}\NormalTok{(tse\_phylum))) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{kable\_styling}\NormalTok{(}\StringTok{"striped"}\NormalTok{, }
+                            \AttributeTok{latex\_options=}\StringTok{"scale\_down"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{scroll\_box}\NormalTok{(}\AttributeTok{width =} \StringTok{"100\%"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{l|l|l|l|l|l|l}
+\hline
+  & Kingdom & Phylum & Class & Order & Family & Genus\\
+\hline
+Bacteroidetes & Bacteria & Bacteroidetes & NA & NA & NA & NA\\
+\hline
+Verrucomicrobia & Bacteria & Verrucomicrobia & NA & NA & NA & NA\\
+\hline
+Proteobacteria & Bacteria & Proteobacteria & NA & NA & NA & NA\\
+\hline
+Firmicutes & Bacteria & Firmicutes & NA & NA & NA & NA\\
+\hline
+Cyanobacteria & Bacteria & Cyanobacteria & NA & NA & NA & NA\\
+\hline
+\end{tabular}}
+\end{table}
+
+If you are sharp, you have by now noticed that all the aggregated
+values in the above example are NA's (missing data). This is because
+the agglomeration is missing abundances for certain taxa, and in that
+case the sum is not defined by default (\texttt{na.rm\ =\ FALSE}). We can
+ignore the missing values in summing up the data by setting \texttt{na.rm\ =\ TRUE}; then the taxa that do not have information in specified level
+will be removed. Those taxa that do not have information in specified
+level are agglomerated at lowest possible level that is left after
+agglomeration.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{temp }\OtherTok{\textless{}{-}} \FunctionTok{rowData}\NormalTok{(}\FunctionTok{agglomerateByRank}\NormalTok{(tse, }\AttributeTok{rank =} \StringTok{"Genus"}\NormalTok{))}
+
+\CommentTok{\# Prints those taxa that do not have information at the Genus level}
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(temp[temp}\SpecialCharTok{$}\NormalTok{Genus }\SpecialCharTok{==} \StringTok{""}\NormalTok{,])) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{kable\_styling}\NormalTok{(}\StringTok{"striped"}\NormalTok{, }
+                            \AttributeTok{latex\_options=}\StringTok{"scale\_down"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{scroll\_box}\NormalTok{(}\AttributeTok{width =} \StringTok{"100\%"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{l|l|l|l|l|l|l}
+\hline
+  & Kingdom & Phylum & Class & Order & Family & Genus\\
+\hline
+Family:Lachnospiraceae & Bacteria & Firmicutes & Clostridia & Clostridiales & Lachnospiraceae & \\
+\hline
+Order:Bacteroidales & Bacteria & Bacteroidetes & Bacteroidia & Bacteroidales &  & \\
+\hline
+Order:Clostridiales & Bacteria & Firmicutes & Clostridia & Clostridiales &  & \\
+\hline
+Family:Enterobacteriaceae & Bacteria & Proteobacteria & Gammaproteobacteria & Enterobacteriales & Enterobacteriaceae & \\
+\hline
+Order:Gastranaerophilales & Bacteria & Cyanobacteria & Melainabacteria & Gastranaerophilales &  & \\
+\hline
+\end{tabular}}
+\end{table}
+
+Here agglomeration is done similarly, but na.rm = TRUE
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{temp2 }\OtherTok{\textless{}{-}} \FunctionTok{rowData}\NormalTok{(}\FunctionTok{agglomerateByRank}\NormalTok{(tse, }\AttributeTok{rank =} \StringTok{"Genus"}\NormalTok{, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Agglomeration with na.rm = FALSE: "}\NormalTok{, }\FunctionTok{dim}\NormalTok{(temp)[}\DecValTok{1}\NormalTok{], }\StringTok{" taxa."}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Agglomeration with na.rm = FALSE: 54 taxa."
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Agglomeration with na.rm = TRUE: "}\NormalTok{, }\FunctionTok{dim}\NormalTok{(temp2)[}\DecValTok{1}\NormalTok{], }\StringTok{" taxa."}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Agglomeration with na.rm = TRUE: 49 taxa."
+\end{verbatim}
+
+The \href{https://microbiome.github.io/mia/reference/index.html}{mia
+package}
+contains further examples on various data agglomeration and splitting
+options.
+
+\hypertarget{visualization}{%
+\section{Visualization}\label{visualization}}
+
+The \href{https://microbiome.github.io/miaViz/}{miaViz package} facilitates
+data visualization. Let us plot the Phylum level abundances.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Here we specify "relabundance" to be abundance table that we use for plotting.}
+\CommentTok{\# Note that we can use agglomerated or non{-}agglomerated tse as an input, because}
+\CommentTok{\# the function agglomeration is built{-}in option. }
+
+\CommentTok{\# Legend does not fit into picture, so its height is reduced.}
+\NormalTok{plot\_abundance }\OtherTok{\textless{}{-}} \FunctionTok{plotAbundance}\NormalTok{(tse, }\AttributeTok{abund\_values=}\StringTok{"relabundance"}\NormalTok{, }\AttributeTok{rank =} \StringTok{"Phylum"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.key.height =} \FunctionTok{unit}\NormalTok{(}\FloatTok{0.5}\NormalTok{, }\StringTok{"cm"}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_continuous}\NormalTok{(}\AttributeTok{label =}\NormalTok{ scales}\SpecialCharTok{::}\NormalTok{percent)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Scale for 'y' is already present. Adding another scale for 'y', which will
+## replace the existing scale.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plot\_abundance }
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{05-explore_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\textbf{Density plot} shows the overall abundance distribution for a given
+taxonomic group. Let us check the relative abundance of Firmicutes
+across the sample collection. The density plot is a smoothened
+version of a standard histogram.
+
+The plot shows peak abundances around 30 \%.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Subset data by taking only Firmicutes}
+\NormalTok{tse\_firmicutes }\OtherTok{\textless{}{-}}\NormalTok{ tse\_phylum[}\StringTok{"Firmicutes"}\NormalTok{]}
+
+\CommentTok{\# Gets the abundance table}
+\NormalTok{abundance\_firmicutes }\OtherTok{\textless{}{-}} \FunctionTok{assay}\NormalTok{(tse\_firmicutes, }\StringTok{"relabundance"}\NormalTok{)}
+
+\CommentTok{\# Creates a data frame object, where first column includes abundances}
+\NormalTok{firmicutes\_abund\_df }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{t}\NormalTok{(abundance\_firmicutes))}
+\CommentTok{\# Rename the first and only column}
+\FunctionTok{colnames}\NormalTok{(firmicutes\_abund\_df) }\OtherTok{\textless{}{-}} \StringTok{"abund"}
+
+\CommentTok{\# Creates a plot. Parameters inside feom\_density are optional. With }
+\CommentTok{\# geom\_density(bw=1000), it is possible to adjust bandwidth.}
+\NormalTok{firmicutes\_abund\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(firmicutes\_abund\_df, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ abund)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_density}\NormalTok{(}\AttributeTok{color=}\StringTok{"darkred"}\NormalTok{, }\AttributeTok{fill=}\StringTok{"lightblue"}\NormalTok{) }\SpecialCharTok{+} 
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Relative abundance"}\NormalTok{, }\AttributeTok{title =} \StringTok{"Firmicutes"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_classic}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# Changes the background}
+  \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{label =}\NormalTok{ scales}\SpecialCharTok{::}\NormalTok{percent)}
+
+\NormalTok{firmicutes\_abund\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{05-explore_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+For more visualization options and examples, see the \href{https://microbiome.github.io/miaViz/articles/miaViz.html}{miaViz vignette}.
+
+\hypertarget{exercises-optional}{%
+\section{Exercises (optional)}\label{exercises-optional}}
+
+Explore some of the following questions on your own by following
+\href{https://microbiome.github.io/OMA/}{online examples}. Prepare a
+reproducible report (Rmarkdown), and include the code that you use to
+import the data and generate the analyses.
+
+\begin{itemize}
+\item
+  \textbf{Abundance table} Retrieve the taxonomic abundance table from the
+  example data set (TSE object). Tip: check ``assays'' in \href{https://microbiome.github.io/OMA/data-introduction.html\#loading-experimental-microbiome-data}{data import
+  section}
+\item
+  How many different samples and genus-level groups this phyloseq
+  object has? Tips: see dim(), rowData()
+\item
+  What is the maximum abundance of Akkermansia in this data set? Tip:
+  aggregate the data to Genus level with agglomerateByRank, pick
+  abundance assay, and check a given genus (row) in the assay
+\item
+  Draw a histogram of library sizes (total number of reads per
+  sample). Tip: Library size section in
+  \href{https://microbiome.github.io/OMA/quality-control.html}{OMA}. You
+  can use the available function, or count the sum of reads per
+  sample by using the colSums command applied on the abundance
+  table. Check \href{https://www.nature.com/articles/nature24460}{Vandeputte et
+  al.~2017} for further
+  discussion on the differences between absolute and relative
+  quantification of microbial abundances.
+\item
+  \textbf{Taxonomy table} Retrieve the taxonomy table and print out the
+  first few lines of it with the R command head(). Investigate how
+  many different phylum-level groups this phyloseq object has? Tips:
+  rowData, taxonomicRanks in
+  \href{https://microbiome.github.io/OMA/taxonomic-information.html\#functions-to-access-taxonomic-information}{OMA}.
+\item
+  \textbf{Sample metadata} Retrieve sample metadata. How many patient
+  groups this data set has? Draw a histogram of sample
+  diversities. Tips: colData
+\item
+  \textbf{Subsetting} Pick a subset of the data object including only
+  ADHD individuals from Cohort 1. How many there are? Tips: subsetting in \href{https://microbiome.github.io/OMA/datamanipulation.html\#subsetting}{OMA}
+\item
+  \textbf{Transformations} The data contains read counts. We can convert
+  these into relative abundances and other formats. Compare abundance
+  of a given taxonomic group using the example data before and after
+  the compositionality transformation (with a cross-plot, for
+  instance). You can also compare the results to CLR-transformed data
+  (see e.g.~\href{https://www.frontiersin.org/articles/10.3389/fmicb.2017.02224/full}{Gloor et
+  al.~2017})
+\item
+  \textbf{Visual exploration} Visualize the population distribution of
+  abundances for certain taxonomic groups. Do the same for
+  CLR-transformed abundances. Tip: assays, transformCounts
+\item
+  Experiment with other data manipulation tools from
+  \href{https://microbiome.github.io/OMA/taxonomic-information.html\#functions-to-access-taxonomic-information}{OMA}.
+\item
+  Example solution: \href{06-3-ex-sol-ADHD.html}{Solutions}
+\end{itemize}
+
+\begin{verbatim}
+## Loading required package: SummarizedExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MatrixGenerics
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: matrixStats
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'MatrixGenerics'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:matrixStats':
+## 
+##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+##     colWeightedMeans, colWeightedMedians, colWeightedSds,
+##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+##     rowWeightedSds, rowWeightedVars
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GenomicRanges
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: stats4
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: BiocGenerics
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'BiocGenerics'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     IQR, mad, sd, var, xtabs
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+##     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+##     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+##     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+##     union, unique, unsplit, which.max, which.min
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: S4Vectors
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'S4Vectors'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     expand.grid, I, unname
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: IRanges
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GenomeInfoDb
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Biobase
+\end{verbatim}
+
+\begin{verbatim}
+## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     'browseVignettes()'. To cite Bioconductor, see
+##     'citation("Biobase")', and for packages 'citation("pkgname")'.
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Biobase'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:MatrixGenerics':
+## 
+##     rowMedians
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:matrixStats':
+## 
+##     anyMissing, rowMedians
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: SingleCellExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: TreeSummarizedExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Biostrings
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: XVector
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Biostrings'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:base':
+## 
+##     strsplit
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MultiAssayExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggraph
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:Biostrings':
+## 
+##     collapse, intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:XVector':
+## 
+##     slice
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:Biobase':
+## 
+##     combine
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:GenomicRanges':
+## 
+##     intersect, setdiff, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:GenomeInfoDb':
+## 
+##     intersect
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:IRanges':
+## 
+##     collapse, desc, intersect, setdiff, slice, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:S4Vectors':
+## 
+##     first, intersect, rename, setdiff, setequal, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:BiocGenerics':
+## 
+##     combine, intersect, setdiff, union
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:matrixStats':
+## 
+##     count
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\hypertarget{alpha-diversity}{%
+\chapter{Alpha diversity}\label{alpha-diversity}}
+
+This section demonstrates the analysis of alpha diversity. This
+quantity measures microbial diversity within each sample. Higher
+numbers of unique taxa, and more even abundance distributions within a
+sample yield larger values for alpha diversity.
+
+Alpha diversity is a key quantity in a microbiome research. The \href{https://microbiome.github.io/mia/}{\emph{mia}
+package} provides access to a wide
+variety of alpha diversity indices. For more background information
+and examples with various alpha diversity indices, see the \href{https://microbiome.github.io/OMA/microbiome-diversity.html\#alpha-diversity}{online
+book}.
+
+Let us show how to calculate to different diversity indices, Shannon
+and Faith. Shannon index reflects how many different taxa there are
+and how evenly they are distributed within a sample. Faith index
+additionally takes into account the phylogenetic relations into
+account.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Indices to be calculated. }
+\CommentTok{\# Every index is calculated by default if we don\textquotesingle{}t specify indices.}
+\NormalTok{indices }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"shannon"}\NormalTok{, }\StringTok{"faith"}\NormalTok{)}
+
+\CommentTok{\# Indices are stored in colData (i.e., sample metadata). We can specify the name}
+\CommentTok{\# of column, or we can use the default name which is the name of index }
+\CommentTok{\# (i.e., "shannon" and "faith"). }
+\NormalTok{names }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Shannon\_diversity"}\NormalTok{, }\StringTok{"Faith\_diversity"}\NormalTok{)}
+
+\CommentTok{\# Calculates indices}
+\NormalTok{tse }\OtherTok{\textless{}{-}} \FunctionTok{estimateDiversity}\NormalTok{(tse, }\AttributeTok{index =}\NormalTok{ indices, }\AttributeTok{name =}\NormalTok{ names)}
+
+\CommentTok{\# Shows the calculated indices}
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse)[names])) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{kable\_styling}\NormalTok{(}\StringTok{"striped"}\NormalTok{, }
+                            \AttributeTok{latex\_options=}\StringTok{"scale\_down"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{scroll\_box}\NormalTok{(}\AttributeTok{width =} \StringTok{"100\%"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}{l|r|r}
+\hline
+  & Shannon\_diversity & Faith\_diversity\\
+\hline
+A110 & 1.765407 & 7.39224\\
+\hline
+A12 & 2.716438 & 6.29378\\
+\hline
+A15 & 3.178103 & 6.60608\\
+\hline
+A19 & 2.891987 & 6.79708\\
+\hline
+A21 & 2.841979 & 6.65110\\
+\hline
+A23 & 2.797942 & 5.96246\\
+\hline
+\end{tabular}}
+\end{table}
+
+Next we can visualize Shannon index with histogram.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# ggplot needs data.frame format as input.}
+\CommentTok{\# Here, colData is DataFrame, therefore it needs to be converted to data.frame}
+\NormalTok{shannon\_hist }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse)), }
+                       \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Shannon\_diversity)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{bins =} \DecValTok{20}\NormalTok{, }\AttributeTok{fill =} \StringTok{"gray"}\NormalTok{, }\AttributeTok{color =} \StringTok{"black"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Shannon index"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Sample frequency"}\NormalTok{)}
+
+\NormalTok{shannon\_hist}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{06-alpha_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+Next, let us compare the indices based on a scatter-plot.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{cross\_plot }\OtherTok{\textless{}{-}}\NormalTok{ ggplot2}\SpecialCharTok{::}\FunctionTok{ggplot}\NormalTok{(}\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse)), }
+                                     \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Shannon\_diversity, }\AttributeTok{y =}\NormalTok{ Faith\_diversity)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+} \CommentTok{\# Adds points}
+  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method=}\NormalTok{lm) }\SpecialCharTok{+} \CommentTok{\# Adds regression line}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"Shannon index"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Faith diversity"}\NormalTok{) }
+
+\NormalTok{cross\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `geom_smooth()` using formula 'y ~ x'
+\end{verbatim}
+
+\includegraphics{06-alpha_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\hypertarget{visualization-1}{%
+\section{Visualization}\label{visualization-1}}
+
+Next let us compare indices between different patient status and
+cohorts. Boxplot is suitable for that purpose.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Creates Shannon boxplot }
+\NormalTok{shannon\_box }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse)),}
+  \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }
+      \AttributeTok{y =}\NormalTok{ Shannon\_diversity,}
+      \AttributeTok{fill =}\NormalTok{ cohort)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{12}\NormalTok{)) }\CommentTok{\# makes titles smaller}
+
+\CommentTok{\# Creates Faith boxplot }
+\NormalTok{faith\_box }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse)), }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }
+                                                     \AttributeTok{y =}\NormalTok{ Faith\_diversity, }
+                                                     \AttributeTok{fill =}\NormalTok{ cohort)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{12}\NormalTok{)) }\CommentTok{\# makes titles smaller}
+
+\CommentTok{\# Puts them into same picture}
+\NormalTok{gridExtra}\SpecialCharTok{::}\FunctionTok{grid.arrange}\NormalTok{(shannon\_box, faith\_box, }\AttributeTok{nrow =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{06-alpha_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+For an alternative visualization, see examples with \href{https://microbiome.github.io/OMA/microbiome-diversity.html\#alpha-diversity}{scater::plotColData}.
+
+\hypertarget{statistical-testing-and-comparisons}{%
+\section{Statistical testing and comparisons}\label{statistical-testing-and-comparisons}}
+
+To further investigate if patient status could explain the variation
+of Shannon index, let's do a Wilcoxon test. This is a non-parametric
+test that doesn't make specific assumptions about the distribution,
+unlike popular parametric tests, such as the t test, which assumes
+normally distributed observations.
+
+Wilcoxon test can be used to estimate whether the differences between
+two groups is statistically significant. Here the ADHD and control
+groups are not significantly different between groups (p-value is over
+0.05).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Wilcoxon test, where Shannon index is the variable that we are comparing. }
+\CommentTok{\# Patient status {-} ADHD or control {-} is the factor that we use for grouping. }
+\NormalTok{wilcoxon\_shannon }\OtherTok{\textless{}{-}} \FunctionTok{wilcox.test}\NormalTok{(Shannon\_diversity }\SpecialCharTok{\textasciitilde{}}\NormalTok{ patient\_status, }\AttributeTok{data =} \FunctionTok{colData}\NormalTok{(tse))}
+
+\NormalTok{wilcoxon\_shannon}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Wilcoxon rank sum exact test
+## 
+## data:  Shannon_diversity by patient_status
+## W = 76, p-value = 0.4879
+## alternative hypothesis: true location shift is not equal to 0
+\end{verbatim}
+
+Another test that we can make is to test if ADHD samples differs between different
+cohorts. From boxplot that we made in previous step, we can see that there might
+be statistically significant difference between different cohorts.
+
+Let's compare Shannon index of ADHD samples between cohort 2 and cohort 3.
+
+As we can see, there is statistically significant difference between the cohorts.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Takes subset of colData. Takes only ADHD samples}
+\NormalTok{ADHD\_shannon }\OtherTok{\textless{}{-}} \FunctionTok{colData}\NormalTok{(tse)[ }\FunctionTok{colData}\NormalTok{(tse)[, }\StringTok{"patient\_status"}\NormalTok{] }\SpecialCharTok{==} \StringTok{"ADHD"}\NormalTok{ , ]}
+
+\CommentTok{\# Takes subset of colData. Takes only samples that are in cohort 2 or cohort 3.}
+\NormalTok{ADHD\_shannon }\OtherTok{\textless{}{-}}\NormalTok{ ADHD\_shannon[ ADHD\_shannon[, }\StringTok{"cohort"}\NormalTok{] }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"Cohort\_2"}\NormalTok{, }\StringTok{"Cohort\_3"}\NormalTok{) , ]}
+
+\CommentTok{\# Wilcoxon test, where Shannon index is the variable that we are comparing. }
+\CommentTok{\# Cohort {-} 2 or 3 {-} is the factor that we use for grouping. }
+\NormalTok{wilcoxon\_shannon\_ADHD\_cohorts }\OtherTok{\textless{}{-}} \FunctionTok{wilcox.test}\NormalTok{(Shannon\_diversity }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cohort, }\AttributeTok{data =}\NormalTok{ ADHD\_shannon)}
+
+\NormalTok{wilcoxon\_shannon\_ADHD\_cohorts}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Wilcoxon rank sum exact test
+## 
+## data:  Shannon_diversity by cohort
+## W = 20, p-value = 0.01587
+## alternative hypothesis: true location shift is not equal to 0
+\end{verbatim}
+
+For more examples, see a dedicated section on alpha diversity in the
+\href{https://microbiome.github.io/OMA/microbiome-diversity.html\#alpha-diversity}{online book}.
+
+\hypertarget{exercises}{%
+\section{Exercises}\label{exercises}}
+
+Add the following in the reproducible summary report.
+
+\begin{itemize}
+\item
+  Estimate alpha diversity for each sample and draw a histogram. Tip:
+  estimateDiversity
+\item
+  Compare the results between two or more
+  alpha diversity indices (visually and/or statistically).
+\item
+  See \href{https://microbiome.github.io/OMA/microbiome-diversity.html\#alpha-diversity}{online book}
+  for further examples.
+\item
+  Example \href{07-3-ex-sol-ADHD.html}{Solutions}
+\end{itemize}
+
+\begin{verbatim}
+## Loading required package: SummarizedExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MatrixGenerics
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: matrixStats
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'MatrixGenerics'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:matrixStats':
+## 
+##     colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+##     colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+##     colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+##     colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+##     colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+##     colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+##     colWeightedMeans, colWeightedMedians, colWeightedSds,
+##     colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+##     rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+##     rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+##     rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+##     rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+##     rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+##     rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+##     rowWeightedSds, rowWeightedVars
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GenomicRanges
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: stats4
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: BiocGenerics
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'BiocGenerics'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     IQR, mad, sd, var, xtabs
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+##     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+##     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+##     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+##     union, unique, unsplit, which.max, which.min
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: S4Vectors
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'S4Vectors'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     expand.grid, I, unname
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: IRanges
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: GenomeInfoDb
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Biobase
+\end{verbatim}
+
+\begin{verbatim}
+## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     'browseVignettes()'. To cite Bioconductor, see
+##     'citation("Biobase")', and for packages 'citation("pkgname")'.
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Biobase'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:MatrixGenerics':
+## 
+##     rowMedians
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:matrixStats':
+## 
+##     anyMissing, rowMedians
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: SingleCellExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: TreeSummarizedExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: Biostrings
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: XVector
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'Biostrings'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:base':
+## 
+##     strsplit
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: MultiAssayExperiment
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: ggraph
+\end{verbatim}
+
+\hypertarget{beta-diversity}{%
+\chapter{Beta diversity}\label{beta-diversity}}
+
+Beta diversity is another name for sample dissimilarity. It quantifies
+differences in the overall taxonomic composition between two samples.
+
+Common indices include Bray-Curtis, Unifrac, Jaccard index, and the
+Aitchison distance. Each of these (dis)similarity measures emphasizes
+different aspects. For example, UniFrac incorporates phylogenetic
+information, and Jaccard index ignores exact abundances and considers
+only presence/absence values. For more background information
+and examples, you can check the dedicated section in \href{https://microbiome.github.io/OMA/microbiome-diversity.html\#beta-diversity}{online
+book}.
+
+\hypertarget{examples-of-pcoa-with-different-settings}{%
+\section{Examples of PCoA with different settings}\label{examples-of-pcoa-with-different-settings}}
+
+Beta diversity estimation generates a (dis)similarity matrix that
+contains for each sample (rows) the dissimilarity to any other sample
+(columns).
+
+This complex set of pairwise relations can be visualized in
+informative ways, and even coupled with other explanatory
+variables. As a first step, we compress the information to a lower
+dimensionality, or fewer principal components, and then visualize
+sample similarity based on that using ordination techniques, such as
+Principal Coordinate Analysis (PCoA). PCoA is a non-linear dimension
+reduction technique, and with Euclidean distances it is is identical
+to the linear PCA (except for potential scaling).
+
+We typically retain just the two (or three) most informative top
+components, and ignore the other information. Each sample has a score
+on each of these components, and each component measures the variation
+across a set of correlated taxa. The top components are then easily
+visualized on a two (or three) dimensional display.
+
+Let us next look at some concrete examples.
+
+\hypertarget{pcoa-for-asv-level-data-with-bray-curtis}{%
+\subsection{PCoA for ASV-level data with Bray-Curtis}\label{pcoa-for-asv-level-data-with-bray-curtis}}
+
+Let us start with PCoA based on a Bray-Curtis dissimilarity matrix
+calculated at Genus level abundances.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Pick the relative abundance table}
+\NormalTok{rel\_abund\_assay }\OtherTok{\textless{}{-}} \FunctionTok{assays}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{relabundance}
+
+\CommentTok{\# Calculates Bray{-}Curtis distances between samples. Because taxa is in}
+\CommentTok{\# columns, it is used to compare different samples. We transpose the}
+\CommentTok{\# assay to get taxa to columns}
+\NormalTok{bray\_curtis\_dist }\OtherTok{\textless{}{-}}\NormalTok{ vegan}\SpecialCharTok{::}\FunctionTok{vegdist}\NormalTok{(}\FunctionTok{t}\NormalTok{(rel\_abund\_assay), }\AttributeTok{method =} \StringTok{"bray"}\NormalTok{)}
+
+\CommentTok{\# PCoA}
+\NormalTok{bray\_curtis\_pcoa }\OtherTok{\textless{}{-}}\NormalTok{ ecodist}\SpecialCharTok{::}\FunctionTok{pco}\NormalTok{(bray\_curtis\_dist)}
+
+\CommentTok{\# All components could be found here: }
+\CommentTok{\# bray\_curtis\_pcoa$vectors}
+\CommentTok{\# But we only need the first two to demonstrate what we can do:}
+\NormalTok{bray\_curtis\_pcoa\_df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{pcoa1 =}\NormalTok{ bray\_curtis\_pcoa}\SpecialCharTok{$}\NormalTok{vectors[,}\DecValTok{1}\NormalTok{], }
+                                  \AttributeTok{pcoa2 =}\NormalTok{ bray\_curtis\_pcoa}\SpecialCharTok{$}\NormalTok{vectors[,}\DecValTok{2}\NormalTok{])}
+
+\CommentTok{\# Create a plot}
+\NormalTok{bray\_curtis\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ bray\_curtis\_pcoa\_df, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{pcoa1, }\AttributeTok{y=}\NormalTok{pcoa2)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"PC1"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"PC2"}\NormalTok{, }
+       \AttributeTok{title =} \StringTok{"Bray{-}Curtis PCoA"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{10}\NormalTok{)) }\CommentTok{\# makes titles smaller}
+
+\NormalTok{bray\_curtis\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/pcoa_asv_bc-1.pdf}
+
+\hypertarget{pcoa-for-asv-level-data-with-aitchison-distance}{%
+\subsection{PCoA for ASV-level data with Aitchison distance}\label{pcoa-for-asv-level-data-with-aitchison-distance}}
+
+Now the same using Aitchison distance. This metric corresponds to
+Euclidean distances between CLR transformed sample abundance vectors.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Does clr transformation. Pseudocount is added, because data contains zeros. }
+\NormalTok{tse }\OtherTok{\textless{}{-}} \FunctionTok{transformCounts}\NormalTok{(tse, }\AttributeTok{method =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{pseudocount =} \DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Gets clr table}
+\NormalTok{clr\_assay }\OtherTok{\textless{}{-}} \FunctionTok{assays}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{clr}
+
+\CommentTok{\# Transposes it to get taxa to columns}
+\NormalTok{clr\_assay }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(clr\_assay)}
+
+\CommentTok{\# Calculates Euclidean distances between samples. Because taxa is in columns,}
+\CommentTok{\# it is used to compare different samples.}
+\NormalTok{euclidean\_dist }\OtherTok{\textless{}{-}}\NormalTok{ vegan}\SpecialCharTok{::}\FunctionTok{vegdist}\NormalTok{(clr\_assay, }\AttributeTok{method =} \StringTok{"euclidean"}\NormalTok{)}
+
+\CommentTok{\# Does principal coordinate analysis}
+\NormalTok{euclidean\_pcoa }\OtherTok{\textless{}{-}}\NormalTok{ ecodist}\SpecialCharTok{::}\FunctionTok{pco}\NormalTok{(euclidean\_dist)}
+
+\CommentTok{\# Creates a data frame from principal coordinates}
+\NormalTok{euclidean\_pcoa\_df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{pcoa1 =}\NormalTok{ euclidean\_pcoa}\SpecialCharTok{$}\NormalTok{vectors[,}\DecValTok{1}\NormalTok{], }
+                                \AttributeTok{pcoa2 =}\NormalTok{ euclidean\_pcoa}\SpecialCharTok{$}\NormalTok{vectors[,}\DecValTok{2}\NormalTok{])}
+
+\CommentTok{\# Creates the plot}
+\NormalTok{euclidean\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ euclidean\_pcoa\_df, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{pcoa1, }\AttributeTok{y=}\NormalTok{pcoa2)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"PC1"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"PC2"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"Euclidean PCoA with CLR transformation"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{12}\NormalTok{)) }\CommentTok{\# makes titles smaller}
+
+\NormalTok{euclidean\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/pcoa_asv_aitchison-1.pdf}
+
+\hypertarget{pcoa-aggregated-to-phylum-level}{%
+\subsection{PCoA aggregated to Phylum level}\label{pcoa-aggregated-to-phylum-level}}
+
+We use again the Aitchison distances in this example but this time applied to the phylum level.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Does clr transformation. Psuedocount is added, because data contains zeros. }
+\NormalTok{tse\_phylum }\OtherTok{\textless{}{-}} \FunctionTok{transformCounts}\NormalTok{(tse\_phylum, }\AttributeTok{method =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{pseudocount =} \DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Gets clr table}
+\NormalTok{clr\_phylum\_assay }\OtherTok{\textless{}{-}} \FunctionTok{assays}\NormalTok{(tse\_phylum)}\SpecialCharTok{$}\NormalTok{clr}
+
+\CommentTok{\# Transposes it to get taxa to columns}
+\NormalTok{clr\_phylum\_assay }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(clr\_phylum\_assay)}
+
+\CommentTok{\# Calculates Euclidean distances between samples. Because taxa is in columns,}
+\CommentTok{\# it is used to compare different samples.}
+\NormalTok{euclidean\_phylum\_dist }\OtherTok{\textless{}{-}}\NormalTok{ vegan}\SpecialCharTok{::}\FunctionTok{vegdist}\NormalTok{(clr\_assay, }\AttributeTok{method =} \StringTok{"euclidean"}\NormalTok{)}
+
+\CommentTok{\# Does principal coordinate analysis}
+\NormalTok{euclidean\_phylum\_pcoa }\OtherTok{\textless{}{-}}\NormalTok{ ecodist}\SpecialCharTok{::}\FunctionTok{pco}\NormalTok{(euclidean\_phylum\_dist)}
+
+\CommentTok{\# Creates a data frame from principal coordinates}
+\NormalTok{euclidean\_phylum\_pcoa\_df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{pcoa1 =}\NormalTok{ euclidean\_phylum\_pcoa}\SpecialCharTok{$}\NormalTok{vectors[,}\DecValTok{1}\NormalTok{], }
+  \AttributeTok{pcoa2 =}\NormalTok{ euclidean\_phylum\_pcoa}\SpecialCharTok{$}\NormalTok{vectors[,}\DecValTok{2}\NormalTok{])}
+
+\CommentTok{\# Creates a plot}
+\NormalTok{euclidean\_phylum\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ euclidean\_phylum\_pcoa\_df,}
+  \FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{pcoa1, }\AttributeTok{y=}\NormalTok{pcoa2)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"PC1"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"PC2"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"Aitchison distances at Phylum level"}\NormalTok{) }\SpecialCharTok{+}  
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{12}\NormalTok{)) }\CommentTok{\# makes titles smaller}
+
+\NormalTok{euclidean\_phylum\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/pcoa_phylum_aitchison-1.pdf}
+
+\hypertarget{highlighting-external-variables}{%
+\section{Highlighting external variables}\label{highlighting-external-variables}}
+
+We can map other variables on the same plot for example by coloring
+the points accordingly.
+
+\hypertarget{discrete-grouping-variable-shown-with-colors}{%
+\subsection{Discrete grouping variable shown with colors}\label{discrete-grouping-variable-shown-with-colors}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Adds the variable we later use for coloring to the data frame}
+\NormalTok{euclidean\_patient\_status\_pcoa\_df }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(euclidean\_pcoa\_df,}
+                             \AttributeTok{patient\_status =} \FunctionTok{colData}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{patient\_status)}
+
+\CommentTok{\# Creates a plot}
+\NormalTok{euclidean\_patient\_status\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ euclidean\_patient\_status\_pcoa\_df, }
+                                        \FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{pcoa1, }\AttributeTok{y=}\NormalTok{pcoa2,}
+                                            \AttributeTok{color =}\NormalTok{ patient\_status)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"PC1"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"PC2"}\NormalTok{,}
+       \AttributeTok{title =} \StringTok{"PCoA with Aitchison distances"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{12}\NormalTok{)) }\CommentTok{\# makes titles smaller}
+
+\NormalTok{euclidean\_patient\_status\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/pcoa_genus-1.pdf}
+
+\hypertarget{pcoa-plot-with-continuous-variable}{%
+\subsection{PCoA plot with continuous variable}\label{pcoa-plot-with-continuous-variable}}
+
+We can also overlay a continuous variable on a PCoA plot. E.g. let us
+use the alcohol study dataset from \href{https://bioconductor.org/packages/release/data/experiment/vignettes/curatedMetagenomicData/inst/doc/curatedMetagenomicData.html}{curatedMetagenomicData}.
+Perform PCoA and use the BMI as our continuous variable:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Retrieving data as a TreeSummarizedExperiment object, and agglomerating to a genus level.}
+\FunctionTok{library}\NormalTok{(curatedMetagenomicData)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(DT)}
+\CommentTok{\# Querying the data}
+\NormalTok{tse\_data }\OtherTok{\textless{}{-}}\NormalTok{ sampleMetadata }\SpecialCharTok{\%\textgreater{}\%}
+    \FunctionTok{filter}\NormalTok{(age }\SpecialCharTok{\textgreater{}=} \DecValTok{18}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# taking only data of age 18 or above}
+    \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(alcohol)) }\SpecialCharTok{\%\textgreater{}\%} \CommentTok{\# excluding missing values}
+    \FunctionTok{returnSamples}\NormalTok{(}\StringTok{"relative\_abundance"}\NormalTok{)}
+
+\CommentTok{\# Agglomeration}
+\NormalTok{tse\_genus }\OtherTok{\textless{}{-}} \FunctionTok{agglomerateByRank}\NormalTok{(tse\_data, }\AttributeTok{rank=}\StringTok{"genus"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Performing PCoA with Bray-Curtis dissimilarity.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(scater)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: scuttle
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse\_genus }\OtherTok{\textless{}{-}} \FunctionTok{runMDS}\NormalTok{(tse\_genus, }\AttributeTok{FUN =}\NormalTok{ vegan}\SpecialCharTok{::}\NormalTok{vegdist,}
+              \AttributeTok{name =} \StringTok{"PCoA\_BC"}\NormalTok{, }\AttributeTok{exprs\_values =} \StringTok{"relative\_abundance"}\NormalTok{)}
+
+\CommentTok{\# Retrieving the explained variance}
+\NormalTok{e }\OtherTok{\textless{}{-}} \FunctionTok{attr}\NormalTok{(}\FunctionTok{reducedDim}\NormalTok{(tse\_genus, }\StringTok{"PCoA\_BC"}\NormalTok{), }\StringTok{"eig"}\NormalTok{);}
+\NormalTok{var\_explained }\OtherTok{\textless{}{-}}\NormalTok{ e}\SpecialCharTok{/}\FunctionTok{sum}\NormalTok{(e[e}\SpecialCharTok{\textgreater{}}\DecValTok{0}\NormalTok{])}\SpecialCharTok{*}\DecValTok{100}
+
+\CommentTok{\# Visualization}
+\NormalTok{plot }\OtherTok{\textless{}{-}}\FunctionTok{plotReducedDim}\NormalTok{(tse\_genus,}\StringTok{"PCoA\_BC"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"BMI"}\NormalTok{)}\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\FunctionTok{paste}\NormalTok{(}\StringTok{"PC1 ("}\NormalTok{,}\FunctionTok{round}\NormalTok{(var\_explained[}\DecValTok{1}\NormalTok{],}\DecValTok{1}\NormalTok{),}\StringTok{"\%)"}\NormalTok{),}
+       \AttributeTok{y=}\FunctionTok{paste}\NormalTok{(}\StringTok{"PC2 ("}\NormalTok{,}\FunctionTok{round}\NormalTok{(var\_explained[}\DecValTok{2}\NormalTok{],}\DecValTok{1}\NormalTok{),}\StringTok{"\%)"}\NormalTok{),}
+       \AttributeTok{color=}\StringTok{""}\NormalTok{)}
+\NormalTok{plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/pcoa_coloring-1.pdf}
+
+\hypertarget{estimating-associations-with-an-external-variable}{%
+\section{Estimating associations with an external variable}\label{estimating-associations-with-an-external-variable}}
+
+Next to visualizing whether any variable is associated with
+differences between samples, we can also quantify the strength of the
+association between community composition (beta diversity) and
+external factors.
+
+The standard way to do this is to perform a so-called permutational
+multivariate analysis of variance (PERMANOVA). This method takes as
+input the abundance table, which measure of distance you want to base
+the test on and a formula that tells the model how you think the
+variables are associated with each other.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# First we get the relative abundance table}
+\NormalTok{rel\_abund\_assay }\OtherTok{\textless{}{-}} \FunctionTok{assays}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{relabundance}
+
+\CommentTok{\# again transpose it to get taxa to columns}
+\NormalTok{rel\_abund\_assay }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(rel\_abund\_assay)}
+
+\CommentTok{\# then we can perform the method}
+\NormalTok{permanova\_cohort }\OtherTok{\textless{}{-}}\NormalTok{ vegan}\SpecialCharTok{::}\FunctionTok{adonis}\NormalTok{(rel\_abund\_assay }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cohort,}
+                                  \AttributeTok{data =} \FunctionTok{colData}\NormalTok{(tse),}
+                                  \AttributeTok{permutations =} \DecValTok{9999}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'adonis' will be deprecated: use 'adonis2' instead
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# we can obtain a the p value for our predictor:}
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Different different cohorts and variance of abundance "}\NormalTok{,}
+              \StringTok{"between samples, p{-}value: "}\NormalTok{, }
+              \FunctionTok{as.data.frame}\NormalTok{(permanova\_cohort}\SpecialCharTok{$}\NormalTok{aov.tab)[}\StringTok{"cohort"}\NormalTok{, }\StringTok{"Pr(\textgreater{}F)"}\NormalTok{]))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Different different cohorts and variance of abundance between samples, p-value: 0.7419"
+\end{verbatim}
+
+The cohort variable is not significantly associated with
+microbiota composition (p-value is over 0.05).
+
+We can, however, visualize those taxa whose abundances drive the
+differences between cohorts. We first need to extract the model
+coefficients of taxa:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Gets the coefficients}
+\NormalTok{coef }\OtherTok{\textless{}{-}} \FunctionTok{coefficients}\NormalTok{(permanova\_cohort)[}\StringTok{"cohort1"}\NormalTok{,]}
+
+\CommentTok{\# Gets the highest coefficients}
+\NormalTok{top.coef }\OtherTok{\textless{}{-}} \FunctionTok{sort}\NormalTok{(}\FunctionTok{head}\NormalTok{(coef[}\FunctionTok{rev}\NormalTok{(}\FunctionTok{order}\NormalTok{(}\FunctionTok{abs}\NormalTok{(coef)))],}\DecValTok{20}\NormalTok{))}
+
+\CommentTok{\# Plots the coefficients}
+\NormalTok{top\_taxa\_coeffient\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{data.frame}\NormalTok{(}\AttributeTok{x =}\NormalTok{ top.coef,}
+                                             \AttributeTok{y =} \FunctionTok{factor}\NormalTok{(}\FunctionTok{names}\NormalTok{(top.coef),}
+                         \FunctionTok{unique}\NormalTok{(}\FunctionTok{names}\NormalTok{(top.coef)))),}
+                                  \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ x, }\AttributeTok{y =}\NormalTok{ y)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat=}\StringTok{"identity"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x=}\StringTok{""}\NormalTok{, }\AttributeTok{y=}\StringTok{""}\NormalTok{, }\AttributeTok{title=}\StringTok{"Top Taxa"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_bw}\NormalTok{()}
+
+\NormalTok{top\_taxa\_coeffient\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/permanova_coefs-1.pdf}
+
+The above plot shows taxa as code names, and it is hard to tell which
+bacterial groups they represent. However, it is easy to add human readable
+names. We can fetch those from our rowData. Here we use Genus level names:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Gets corresponding Genus level names and stores them to top.coef}
+\NormalTok{names }\OtherTok{\textless{}{-}} \FunctionTok{rowData}\NormalTok{(tse)[}\FunctionTok{names}\NormalTok{(top.coef), ][,}\StringTok{"Genus"}\NormalTok{]}
+
+\CommentTok{\# Adds new labels to the plot}
+\NormalTok{top\_taxa\_coeffient\_plot }\OtherTok{\textless{}{-}}\NormalTok{ top\_taxa\_coeffient\_plot }\SpecialCharTok{+}
+  \FunctionTok{scale\_y\_discrete}\NormalTok{(}\AttributeTok{labels =}\NormalTok{ names) }\CommentTok{\# Adds new labels}
+\NormalTok{top\_taxa\_coeffient\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{07-beta_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+There are many alternative and complementary methods for analysing
+community composition. For more examples, see a dedicated section on
+beta diversity in the \href{https://microbiome.github.io/OMA/microbiome-diversity.html\#beta-diversity}{online
+book}.
+
+\hypertarget{community-typing}{%
+\section{Community typing}\label{community-typing}}
+
+A dedicated section presenting examples on community typing is in the
+\href{https://microbiome.github.io/OMA/microbiome-community.html\#community-typing}{online book}.
+
+\hypertarget{exercises-1}{%
+\section{Exercises}\label{exercises-1}}
+
+\begin{itemize}
+\item
+  Visualize community variation with different methods (PCA, MDS, t-SNE\ldots) by using the options in the alternative method, plotReducedDim \href{https://microbiome.github.io/OMA/microbiome-diversity.html\#estimating-beta-diversity}{OMA}. Compare results obtained with different dissimilarities (Euclidean, Bray-Curtis, Unifrac..) and transformations (CLR, compositional..) of your own choice.''
+\item
+  Investigate the influence of the data transformations on
+  statistical analysis: Visualize community variation with PCoA with
+  the following options: 1) Bray-Curtis distances for compositional
+  data; 2) Euclidean distances for CLR-transformed data.
+\item
+  Community-level comparisons: Use PERMANOVA to investigate whether
+  the community composition differs between two groups of individuals
+  (e.g.~males and females, or some other grouping of your
+  choice). You can also include covariates such as age and gender,
+  and see how this affects the results.
+\item
+  Perform community typing for the data using the DMM method \href{https://microbiome.github.io/OMA/microbiome-community.html\#community-typing}{OMA}
+\item
+  Example \href{08-5-ex-sol-ADHD.html}{Solutions}
+\end{itemize}
+
+\hypertarget{differential-abundance-analysis}{%
+\chapter{Differential abundance analysis}\label{differential-abundance-analysis}}
+
+Here, we analyse abundances with two different methods: \textbf{Wilcoxon test} (CLR),
+and \textbf{ANCOM-BC}. All of these test statistical differences between groups.
+We will analyse Genus level abundances.
+
+We might want to first perform prevalence filtering to reduce the amount of multiple tests. In this particular dataset, all genera pass a prevalence threshold of 10\%, therefore, we do not perform filtering.
+
+\hypertarget{wilcoxon-test}{%
+\section{Wilcoxon test}\label{wilcoxon-test}}
+
+A Wilcoxon test estimates the difference in an outcome between two groups. It is a
+non-parametric alternative to a t-test, which means that the Wilcoxon test
+does not make any assumptions about the data.
+
+Let's first combine the data for the testing purpose.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Agglomerates data to Genus level}
+\NormalTok{tse\_genus }\OtherTok{\textless{}{-}} \FunctionTok{agglomerateByRank}\NormalTok{(tse, }\AttributeTok{rank =} \StringTok{"Genus"}\NormalTok{)}
+
+\CommentTok{\# Perform clr transformation. A Pseudocount of 1 needs to be added, }
+\CommentTok{\# because the data contains zeros and the clr transformation includes a }
+\CommentTok{\# log transformation.}
+\NormalTok{tse\_genus }\OtherTok{\textless{}{-}} \FunctionTok{transformCounts}\NormalTok{(tse\_genus, }\AttributeTok{method =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{pseudocount =} \DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Does transpose, so samples are in rows, then creates a data frame.}
+\NormalTok{abundance\_analysis\_data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\FunctionTok{t}\NormalTok{(}\FunctionTok{assay}\NormalTok{(tse\_genus, }\StringTok{"clr"}\NormalTok{)))}
+\CommentTok{\# We will analyse whether abundances differ depending on the"patient\_status".}
+\CommentTok{\# There are two groups: "ADHD" and "control". }
+\CommentTok{\# Let\textquotesingle{}s include that to the data frame.}
+\NormalTok{abundance\_analysis\_data }\OtherTok{\textless{}{-}} \FunctionTok{cbind}\NormalTok{(}
+\NormalTok{  abundance\_analysis\_data, }
+  \AttributeTok{patient\_status =} \FunctionTok{colData}\NormalTok{(tse\_genus)}\SpecialCharTok{$}\NormalTok{patient\_status}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Now we can start with the Wilcoxon test. We test all the taxa by looping through columns,
+and store individual p-values to a vector. Then we create a data frame from collected
+data.
+
+The code below does the Wilcoxon test only for columns that contain abundances,
+not for columns that contain patient status.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{genera }\OtherTok{\textless{}{-}} \FunctionTok{names}\NormalTok{(abundance\_analysis\_data[, }\SpecialCharTok{!}\FunctionTok{names}\NormalTok{(abundance\_analysis\_data) }\SpecialCharTok{\%in\%} \StringTok{"patient\_status"}\NormalTok{])}
+
+\NormalTok{wilcoxon\_p }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{() }\CommentTok{\# Initialize empty vector for p{-}values}
+
+\CommentTok{\# Do "for loop" over selected column names}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in}\NormalTok{ genera) \{}
+
+\NormalTok{  result }\OtherTok{\textless{}{-}} \FunctionTok{wilcox.test}\NormalTok{(abundance\_analysis\_data[, i] }\SpecialCharTok{\textasciitilde{}}\NormalTok{ patient\_status,}
+                        \AttributeTok{data =}\NormalTok{ abundance\_analysis\_data)}
+  
+  \CommentTok{\# Stores p{-}value to the vector with this column name}
+\NormalTok{  wilcoxon\_p[[i]]  }\OtherTok{\textless{}{-}}\NormalTok{ result}\SpecialCharTok{$}\NormalTok{p.value}
+
+\NormalTok{\}}
+
+\NormalTok{wilcoxon\_p }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{taxa =}  \FunctionTok{names}\NormalTok{(wilcoxon\_p),}
+                         \AttributeTok{p\_raw =} \FunctionTok{unlist}\NormalTok{(wilcoxon\_p))}
+\end{Highlighting}
+\end{Shaded}
+
+Multiple tests were performed. These are not independent, so we need
+to adjust p-values for multiple testing. Otherwise, we would increase
+the chance of a type I error drastically depending on our p-value
+threshold. By applying a p-value adjustment, we can keep the false
+positive rate at a level that is acceptable. What is acceptable
+depends on our research goals. Here we use the fdr method, but there
+are several other methods as well.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_adjusted }\OtherTok{\textless{}{-}} \FunctionTok{p.adjust}\NormalTok{(wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_raw, }\AttributeTok{method =} \StringTok{"fdr"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# prepare a dataframe to plot p values}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{x =} \FunctionTok{c}\NormalTok{(wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_raw, wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_adjusted), }
+                \AttributeTok{type=}\FunctionTok{rep}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\StringTok{"raw"}\NormalTok{, }\StringTok{"fdr"}\NormalTok{),}
+        \FunctionTok{c}\NormalTok{(}\FunctionTok{length}\NormalTok{(wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_raw),}
+          \FunctionTok{length}\NormalTok{(wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_adjusted))))}
+
+\CommentTok{\# make a histrogram of p values and adjusted p values}
+\NormalTok{wilcoxon\_plot }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(df) }\SpecialCharTok{+}
+  \FunctionTok{geom\_histogram}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{x, }\AttributeTok{fill=}\NormalTok{type)) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{x =} \StringTok{"p{-}value"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Frequency"}\NormalTok{) }
+
+\NormalTok{wilcoxon\_plot}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+\end{verbatim}
+
+\includegraphics{08-abundance_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\hypertarget{ancom-bc}{%
+\section{ANCOM-BC}\label{ancom-bc}}
+
+\href{https://www.nature.com/articles/s41467-020-17041-7}{The analysis of composition of microbiomes with bias correction (ANCOM-BC)}
+is a recently developed method for differential abundance testing. It is based on an
+\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4450248/}{earlier published approach}.
+The former version of this method could be recommended as part of several approaches:
+A \href{https://www.biorxiv.org/content/10.1101/2021.05.10.443486v1.full}{recent study}
+compared several mainstream methods and found that among another method, ANCOM produced the most consistent results and is probably a conservative approach. Please note that based on this and other comparisons, no single method can be recommended across all datasets. Rather, it could be recommended to apply several methods and look at the overlap/differences.
+
+As the only method, ANCOM-BC incorporates the so called \emph{sampling fraction} into the model. The latter term could be empirically estimated by the ratio of the library size to the microbial load. Variations in this sampling fraction would bias differential abundance analyses if ignored. Furthermore, this method provides p-values, and confidence intervals for each taxon.
+It also controls the FDR and it is computationally simple to implement.
+
+As we will see below, to obtain results, all that is needed is to pass
+a phyloseq object to the \texttt{ancombc()} function. Therefore, below we first convert
+our \texttt{tse} object to a \texttt{phyloseq} object. Then, we specify the formula. In this formula, other covariates could potentially be included to adjust for confounding.
+Please check the \href{https://rdrr.io/github/FrederickHuangLin/ANCOMBC/man/ancombc.html}{function documentation}
+to learn about the additional arguments that we specify below. Also, see \href{https://www.bioconductor.org/packages/release/bioc/vignettes/ANCOMBC/inst/doc/ANCOMBC.html}{here} for another example for more than 1 group comparison.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# currently, ancombc requires the phyloseq format, but we can convert this easily}
+\NormalTok{pseq }\OtherTok{\textless{}{-}} \FunctionTok{makePhyloseqFromTreeSummarizedExperiment}\NormalTok{(tse)}
+\NormalTok{pseq\_genus }\OtherTok{\textless{}{-}}\NormalTok{ phyloseq}\SpecialCharTok{::}\FunctionTok{tax\_glom}\NormalTok{(pseq, }\AttributeTok{taxrank =} \StringTok{"Genus"}\NormalTok{)}
+
+\NormalTok{out }\OtherTok{=} \FunctionTok{ancombc}\NormalTok{(}
+  \AttributeTok{phyloseq =}\NormalTok{ pseq\_genus, }
+  \AttributeTok{formula =} \StringTok{"patient\_status"}\NormalTok{, }
+  \AttributeTok{p\_adj\_method =} \StringTok{"fdr"}\NormalTok{, }
+  \AttributeTok{zero\_cut =} \FloatTok{0.90}\NormalTok{, }\CommentTok{\# by default prevalence filter of 10\% is applied}
+  \AttributeTok{lib\_cut =} \DecValTok{0}\NormalTok{, }
+  \AttributeTok{group =} \StringTok{"patient\_status"}\NormalTok{, }
+  \AttributeTok{struc\_zero =} \ConstantTok{TRUE}\NormalTok{, }
+  \AttributeTok{neg\_lb =} \ConstantTok{TRUE}\NormalTok{, }
+  \AttributeTok{tol =} \FloatTok{1e{-}5}\NormalTok{, }
+  \AttributeTok{max\_iter =} \DecValTok{100}\NormalTok{, }
+  \AttributeTok{conserve =} \ConstantTok{TRUE}\NormalTok{, }
+  \AttributeTok{alpha =} \FloatTok{0.05}\NormalTok{, }
+  \AttributeTok{global =} \ConstantTok{TRUE}
+\NormalTok{)}
+\NormalTok{res }\OtherTok{\textless{}{-}}\NormalTok{ out}\SpecialCharTok{$}\NormalTok{res}
+\end{Highlighting}
+\end{Shaded}
+
+The object \texttt{out} contains all relevant information. Again, see the
+\href{https://rdrr.io/github/FrederickHuangLin/ANCOMBC/man/ancombc.html}{documentation of the function}
+under \textbf{Value} for an explanation of all the output objects. Our question can be answered
+by looking at the \texttt{res} object, which now contains dataframes with the coefficients,
+standard errors, p-values and q-values. Conveniently, there is a dataframe \texttt{diff\_abn}.
+Here, we can find all differentially abundant taxa. Below we show the first 6 entries of this dataframe:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(}\FunctionTok{head}\NormalTok{(res}\SpecialCharTok{$}\NormalTok{diff\_abn)) }\SpecialCharTok{\%\textgreater{}\%}\NormalTok{ kableExtra}\SpecialCharTok{::}\FunctionTok{kable\_styling}\NormalTok{(}\StringTok{"striped"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{  kableExtra}\SpecialCharTok{::}\FunctionTok{scroll\_box}\NormalTok{(}\AttributeTok{width =} \StringTok{"100\%"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+\centering
+\begin{tabular}{l|l}
+\hline
+  & patient\_statusControl\\
+\hline
+172647198 & FALSE\\
+\hline
+1726478 & FALSE\\
+\hline
+172647201 & FALSE\\
+\hline
+17264798 & FALSE\\
+\hline
+172647195 & FALSE\\
+\hline
+1726472 & FALSE\\
+\hline
+\end{tabular}
+\end{table}
+
+In total, this method detects 14 differentially abundant taxa.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"Wilcoxon test p{-}values under 0.05: "}\NormalTok{, }\FunctionTok{sum}\NormalTok{(wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_adjusted}\SpecialCharTok{\textless{}}\FloatTok{0.05}\NormalTok{, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{), }\StringTok{"/"}\NormalTok{, }\FunctionTok{length}\NormalTok{(wilcoxon\_p}\SpecialCharTok{$}\NormalTok{p\_adjusted)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Wilcoxon test p-values under 0.05: 2/54"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"ANCOM p{-}values under 0.05: "}\NormalTok{, }\FunctionTok{sum}\NormalTok{(out}\SpecialCharTok{$}\NormalTok{res}\SpecialCharTok{$}\NormalTok{diff\_abn}\SpecialCharTok{$}\NormalTok{patient\_statusControl), }\StringTok{"/"}\NormalTok{, }\FunctionTok{length}\NormalTok{(out}\SpecialCharTok{$}\NormalTok{res}\SpecialCharTok{$}\NormalTok{diff\_abn}\SpecialCharTok{$}\NormalTok{patient\_statusControl)))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "ANCOM p-values under 0.05: 14/49"
+\end{verbatim}
+
+\hypertarget{comparison-of-the-methods}{%
+\section{Comparison of the methods}\label{comparison-of-the-methods}}
+
+TO DO: More difference abundance methods are upcoming. Comparison will be made later.
+
+\hypertarget{comparison-of-abundance}{%
+\section{Comparison of abundance}\label{comparison-of-abundance}}
+
+In previous steps, we got information which taxa vary between ADHD and control groups.
+Let's plot those taxa in the boxplot, and compare visually if abundances of those taxa
+differ in ADHD and control samples. For comparison, let's plot also taxa that do not
+differ between ADHD and control groups.
+
+Let's first gather data about taxa that have highest p-values.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#we used the results from the wilcoxn test }
+\NormalTok{df }\OtherTok{\textless{}{-}}\NormalTok{ wilcoxon\_p}
+\CommentTok{\# renaming row names and taxa column}
+\NormalTok{df}\SpecialCharTok{$}\NormalTok{taxa }\OtherTok{\textless{}{-}} \FunctionTok{rownames}\NormalTok{(}\FunctionTok{assay}\NormalTok{(tse\_genus,}\StringTok{"clr"}\NormalTok{))}
+
+\CommentTok{\# There are some taxa that do not include Genus level information. They are}
+\CommentTok{\# excluded from analysis.}
+\CommentTok{\# str\_detect finds if the pattern is present in values of "taxon" column.}
+\CommentTok{\# Subset is taken, only those rows are included that do not include the pattern.}
+\NormalTok{df }\OtherTok{\textless{}{-}}\NormalTok{ df[ }\SpecialCharTok{!}\NormalTok{stringr}\SpecialCharTok{::}\FunctionTok{str\_detect}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{taxa, }\StringTok{"Genus:uncultured"}\NormalTok{), ]}
+
+\CommentTok{\# Sorts p{-}values in decreasing order. Takes 3 first ones. Takes those rows that match}
+\CommentTok{\# with p{-}values. Takes taxa. }
+\NormalTok{highest3 }\OtherTok{\textless{}{-}}\NormalTok{ df[df}\SpecialCharTok{$}\NormalTok{p\_adjusted }\SpecialCharTok{\%in\%} \FunctionTok{sort}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{p\_adjusted, }\AttributeTok{decreasing =} \ConstantTok{TRUE}\NormalTok{)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{3}\NormalTok{], ]}\SpecialCharTok{$}\NormalTok{taxa}
+
+\CommentTok{\# From clr transformed table, takes only those taxa that had highest p{-}values}
+\NormalTok{highest3 }\OtherTok{\textless{}{-}} \FunctionTok{assay}\NormalTok{(tse\_genus, }\StringTok{"clr"}\NormalTok{)[highest3, ]}
+
+\CommentTok{\# Transposes the table}
+\NormalTok{highest3 }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(highest3)}
+
+\CommentTok{\# Adds colData that includes patient status infomation}
+\NormalTok{highest3 }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(highest3, }\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse\_genus)))}
+
+\CommentTok{\# Some taxa names are that long that they don\textquotesingle{}t fit nicely into title. So let\textquotesingle{}s add there }
+\CommentTok{\# a line break after e.g. "Genus". Here the dot after e.g. Genus is replaced with }
+\CommentTok{\# ": \textbackslash{}n"}
+\FunctionTok{colnames}\NormalTok{(highest3)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(}\FunctionTok{colnames}\NormalTok{(highest3)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{3}\NormalTok{], }\ControlFlowTok{function}\NormalTok{(x)\{}
+  \CommentTok{\# Replaces the first dot}
+\NormalTok{  temp }\OtherTok{\textless{}{-}}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_replace}\NormalTok{(x, }\StringTok{"[.]"}\NormalTok{, }\StringTok{": "}\NormalTok{)}
+  
+  \CommentTok{\# Replace all other dots and underscores with space}
+\NormalTok{  temp }\OtherTok{\textless{}{-}}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_replace\_all}\NormalTok{(temp, }\FunctionTok{c}\NormalTok{(}\StringTok{"[.]"} \OtherTok{=} \StringTok{" "}\NormalTok{, }\StringTok{"\_"} \OtherTok{=} \StringTok{" "}\NormalTok{))}
+  
+  \CommentTok{\# Adds line break so that 25 characters is the maximal width}
+\NormalTok{  temp }\OtherTok{\textless{}{-}}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_wrap}\NormalTok{(temp, }\AttributeTok{width =} \DecValTok{25}\NormalTok{)}
+\NormalTok{\})}
+\end{Highlighting}
+\end{Shaded}
+
+Next, let's do the same but for taxa with lowest p-values.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Sorts p{-}values in increasing order. Takes 3rd first ones. Takes those rows that match}
+\CommentTok{\# with p{-}values. Takes taxa. }
+\NormalTok{lowest3 }\OtherTok{\textless{}{-}}\NormalTok{ df[df}\SpecialCharTok{$}\NormalTok{p\_adjusted }\SpecialCharTok{\%in\%} \FunctionTok{sort}\NormalTok{(df}\SpecialCharTok{$}\NormalTok{p\_adjusted, }\AttributeTok{decreasing =} \ConstantTok{FALSE}\NormalTok{)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{3}\NormalTok{], ]}\SpecialCharTok{$}\NormalTok{taxa}
+
+
+\CommentTok{\# From clr transformed table, takes only those taxa that had lowest p{-}values}
+\NormalTok{lowest3 }\OtherTok{\textless{}{-}}\FunctionTok{assay}\NormalTok{(tse\_genus, }\StringTok{"clr"}\NormalTok{)[lowest3, ]}
+
+\CommentTok{\# Transposes the table}
+\NormalTok{lowest3 }\OtherTok{\textless{}{-}} \FunctionTok{t}\NormalTok{(lowest3)}
+
+\CommentTok{\# Adds colData that includes patient status infomation}
+\NormalTok{lowest3 }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(lowest3, }\FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse\_genus)))}
+
+\CommentTok{\# Some taxa names are that long that they don\textquotesingle{}t fit nicely into title. So let\textquotesingle{}s add there }
+\CommentTok{\# a line break after e.g. "Genus". Here the dot after e.g. Genus is replaced with }
+\CommentTok{\# ": \textbackslash{}n"}
+\FunctionTok{colnames}\NormalTok{(lowest3)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \FunctionTok{lapply}\NormalTok{(}\FunctionTok{colnames}\NormalTok{(lowest3)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{3}\NormalTok{], }\ControlFlowTok{function}\NormalTok{(x)\{}
+  \CommentTok{\# Replaces the first dot}
+\NormalTok{  temp }\OtherTok{\textless{}{-}}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_replace}\NormalTok{(x, }\StringTok{"[.]"}\NormalTok{, }\StringTok{": "}\NormalTok{)}
+  
+  \CommentTok{\# Replace all other dots and underscores with space}
+\NormalTok{  temp }\OtherTok{\textless{}{-}}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_replace\_all}\NormalTok{(temp, }\FunctionTok{c}\NormalTok{(}\StringTok{"[.]"} \OtherTok{=} \StringTok{" "}\NormalTok{, }\StringTok{"\_"} \OtherTok{=} \StringTok{" "}\NormalTok{))}
+  
+  \CommentTok{\# Adds line break so that 25 characters is the maximal width}
+\NormalTok{  temp }\OtherTok{\textless{}{-}}\NormalTok{ stringr}\SpecialCharTok{::}\FunctionTok{str\_wrap}\NormalTok{(temp, }\AttributeTok{width =} \DecValTok{25}\NormalTok{)}
+\NormalTok{\})}
+\end{Highlighting}
+\end{Shaded}
+
+Then we can plot these six different taxa. Let's arrange them into the same picture.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Puts plots in the same picture}
+\NormalTok{gridExtra}\SpecialCharTok{::}\FunctionTok{grid.arrange}\NormalTok{(}
+  
+  \CommentTok{\# Plot 1}
+  \FunctionTok{ggplot}\NormalTok{(highest3, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }\AttributeTok{y =}\NormalTok{ highest3[,}\DecValTok{1}\NormalTok{])) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+} 
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"CLR abundances"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# y axis title}
+    \FunctionTok{ggtitle}\NormalTok{(}\FunctionTok{names}\NormalTok{(highest3)[}\DecValTok{1}\NormalTok{]) }\SpecialCharTok{+} \CommentTok{\# main title}
+    \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.title.x=}\FunctionTok{element\_blank}\NormalTok{()), }\CommentTok{\# makes titles smaller, removes x axis title}
+  
+  \CommentTok{\# Plot 2}
+  \FunctionTok{ggplot}\NormalTok{(highest3, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }\AttributeTok{y =}\NormalTok{ highest3[,}\DecValTok{2}\NormalTok{])) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+} 
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"CLR abundances"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# y axis title}
+    \FunctionTok{ggtitle}\NormalTok{(}\FunctionTok{names}\NormalTok{(highest3)[}\DecValTok{2}\NormalTok{]) }\SpecialCharTok{+} \CommentTok{\# main title}
+    \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.title.x=}\FunctionTok{element\_blank}\NormalTok{()), }\CommentTok{\# makes titles smaller, removes x axis title}
+  
+  \CommentTok{\# Plot 3}
+  \FunctionTok{ggplot}\NormalTok{(highest3, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }\AttributeTok{y =}\NormalTok{ highest3[,}\DecValTok{3}\NormalTok{])) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+} 
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"CLR abundances"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# y axis title}
+    \FunctionTok{ggtitle}\NormalTok{(}\FunctionTok{names}\NormalTok{(highest3)[}\DecValTok{3}\NormalTok{]) }\SpecialCharTok{+} \CommentTok{\# main title}
+    \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.title.x=}\FunctionTok{element\_blank}\NormalTok{()), }\CommentTok{\# makes titles smaller, removes x axis title}
+  
+  \CommentTok{\# Plot 4}
+  \FunctionTok{ggplot}\NormalTok{(lowest3, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }\AttributeTok{y =}\NormalTok{ lowest3[,}\DecValTok{1}\NormalTok{])) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+} 
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"CLR abundances"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# y axis title}
+    \FunctionTok{ggtitle}\NormalTok{(}\FunctionTok{names}\NormalTok{(lowest3)[}\DecValTok{1}\NormalTok{]) }\SpecialCharTok{+} \CommentTok{\# main title}
+    \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.title.x=}\FunctionTok{element\_blank}\NormalTok{()), }\CommentTok{\# makes titles smaller, removes x axis title}
+  
+  \CommentTok{\# Plot 5}
+  \FunctionTok{ggplot}\NormalTok{(lowest3, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }\AttributeTok{y =}\NormalTok{ lowest3[,}\DecValTok{2}\NormalTok{])) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+} 
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"CLR abundances"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# y axis title}
+    \FunctionTok{ggtitle}\NormalTok{(}\FunctionTok{names}\NormalTok{(lowest3)[}\DecValTok{2}\NormalTok{]) }\SpecialCharTok{+} \CommentTok{\# main title}
+    \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.title.x=}\FunctionTok{element\_blank}\NormalTok{()), }\CommentTok{\# makes titles smaller, removes x axis title}
+  
+  \CommentTok{\# Plot 6}
+  \FunctionTok{ggplot}\NormalTok{(lowest3, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ patient\_status, }\AttributeTok{y =}\NormalTok{ lowest3[,}\DecValTok{3}\NormalTok{])) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+} 
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"CLR abundances"}\NormalTok{) }\SpecialCharTok{+} \CommentTok{\# y axis title}
+    \FunctionTok{ggtitle}\NormalTok{(}\FunctionTok{names}\NormalTok{(lowest3)[}\DecValTok{3}\NormalTok{]) }\SpecialCharTok{+} \CommentTok{\# main title}
+    \FunctionTok{theme}\NormalTok{(}\AttributeTok{title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{7}\NormalTok{),}
+          \AttributeTok{axis.title.x=}\FunctionTok{element\_blank}\NormalTok{()), }\CommentTok{\# makes titles smaller, removes x axis title}
+  
+  \CommentTok{\# 3 columns and 2 rows}
+  \AttributeTok{ncol =} \DecValTok{3}\NormalTok{, }
+  \AttributeTok{nrow =} \DecValTok{2}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{08-abundance_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+We plotted those taxa that have the highest and lowest p values according to DESeq2. Can you create a plot that shows the difference in abundance in ``{[}Ruminococcus{]}\_gauvreauii\_group'', which is the other taxon that was identified by all tools. Try for yourself! Below you find one way how to do it.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{select}\NormalTok{(}
+\NormalTok{  abundance\_analysis\_data, }
+\NormalTok{  patient\_status, }
+  \AttributeTok{Ruminococcus\_gauvreauii\_group =} \FunctionTok{contains}\NormalTok{(}\StringTok{"gauvreauii\_group"}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(patient\_status, Ruminococcus\_gauvreauii\_group)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{08-abundance_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+\hypertarget{study-material}{%
+\chapter{Study material}\label{study-material}}
+
+\hypertarget{lecture-slides}{%
+\section{Lecture slides}\label{lecture-slides}}
+
+See \href{https://github.com/microbiome/course_2021_radboud/tree/main/slides}{slides}.
+
+\hypertarget{r-programming-resources}{%
+\section{R programming resources}\label{r-programming-resources}}
+
+R progamming
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf}{Base R cheat sheet}
+\item
+  \href{https://raw.githubusercontent.com/rstudio/cheatsheets/master/base-r.pdf}{Base R cheat sheet 2}
+\item
+  \href{https://www.rstudio.com/resources/cheatsheets/}{Cheat sheet collection}
+\end{itemize}
+
+Visualization
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf}{ggplot2 cheat sheet}
+\item
+  \href{http://www.cookbook-r.com/Graphs/}{R graphics cookbook}
+\end{itemize}
+
+Rmarkdown
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://rmarkdown.rstudio.com/}{Rmarkdown tips}
+\end{itemize}
+
+RStudio
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf}{RStudio cheat sheet}
+\end{itemize}
+
+\hypertarget{resources-for-treesummarizedexperiment}{%
+\section{Resources for TreeSummarizedExperiment}\label{resources-for-treesummarizedexperiment}}
+
+SummarizedExperiment
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html}{Publication}
+\item
+  \href{https://bioconductor.org/packages/release/bioc/html/SummarizedExperiment.html}{Project page}
+\end{itemize}
+
+TreeSummarizedExperiment
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://f1000research.com/articles/9-1246}{Publication}
+\item
+  \href{https://www.bioconductor.org/packages/release/bioc/html/TreeSummarizedExperiment.html}{Project page}
+\end{itemize}
+
+SingleCellExperiment
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://bioconductor.org/packages/release/bioc/vignettes/SingleCellExperiment/inst/doc/intro.html}{Publication}
+\item
+  \href{https://bioconductor.org/packages/release/bioc/html/SingleCellExperiment.html}{Project page}
+\end{itemize}
+
+\hypertarget{resources-for-phyloseq}{%
+\section{Resources for phyloseq}\label{resources-for-phyloseq}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://microsud.github.io/Tools-Microbiome-Analysis/}{List of R tools for microbiome analysis}
+\item
+  \href{http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0061217}{phyloseq}
+\item
+  \href{http://microbiome.github.io/tutorials/}{microbiome tutorial}
+\item
+  \href{https://microsud.github.io/microbiomeutilities/}{microbiomeutilities}
+\item
+  Bioconductor Workflow for Microbiome Data Analysis: from raw reads to community analyses (\href{https://f1000research.com/articles/5-1492/v2}{Callahan et al.~F1000, 2016}).
+\end{itemize}
+
+\hypertarget{further-reading}{%
+\section{Further reading}\label{further-reading}}
+
+\begin{itemize}
+\item
+  \href{https://datacarpentry.org/R-ecology-lesson/}{Data Analysis and Visualization in R for Ecologists} by Data Carpentry
+\item
+  \href{http://web.stanford.edu/class/bios221/book/}{Modern Statistics for Modern Biology. Holmes \& Huber (2018)} for background in statistical analysis
+\item
+  \href{https://openresearchlabs.github.io/publications/papers/2018-Shetty-Lahti-MDS.pdf}{Microbiome Data Science. Shetty \& Lahti, 2019}
+\end{itemize}
+
+\hypertarget{additional-community-typing}{%
+\chapter{Additional Community Typing}\label{additional-community-typing}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load data}
+\FunctionTok{library}\NormalTok{(mia)}
+\FunctionTok{data}\NormalTok{(enterotype)}
+\NormalTok{tse }\OtherTok{\textless{}{-}}\NormalTok{ enterotype}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{community-composition}{%
+\section{Community composition}\label{community-composition}}
+
+\hypertarget{composition-barplot}{%
+\subsection{Composition barplot}\label{composition-barplot}}
+
+The typical way to visualise the microbiome compositions is by using a composition barplot.
+In the following, we calculate the relative abundances and the top 10 taxa. The barplot is ordered by ``Bacteroidetes'':
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(miaViz)}
+
+\CommentTok{\# Remove unwanted taxon}
+\NormalTok{tse }\OtherTok{\textless{}{-}} \FunctionTok{subsetTaxa}\NormalTok{(tse, }\FunctionTok{rownames}\NormalTok{(tse) }\SpecialCharTok{!=} \StringTok{"{-}1"}\NormalTok{)}
+\CommentTok{\# Only consider Sanger technique}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{subsetSamples}\NormalTok{(tse, }\FunctionTok{colData}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{SeqTech }\SpecialCharTok{==} \StringTok{"Sanger"}\NormalTok{)}
+
+\CommentTok{\# Get top taxa}
+\NormalTok{rel\_taxa }\OtherTok{\textless{}{-}} \FunctionTok{getTopTaxa}\NormalTok{(tse, }\AttributeTok{top =} \DecValTok{10}\NormalTok{, }\AttributeTok{abund\_values =} \StringTok{"counts"}\NormalTok{)}
+
+\CommentTok{\# Take only the top taxa}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{subsetTaxa}\NormalTok{(mat, }\FunctionTok{is.element}\NormalTok{(}\FunctionTok{rownames}\NormalTok{(tse), rel\_taxa))}
+
+\CommentTok{\# Visualise composition barplot, with samples order by "Bacteroides"}
+\FunctionTok{plotAbundance}\NormalTok{(mat, }\AttributeTok{abund\_values =} \StringTok{"counts"}\NormalTok{,}
+              \AttributeTok{order\_rank\_by =} \StringTok{"abund"}\NormalTok{, }\AttributeTok{order\_sample\_by =} \StringTok{"Bacteroides"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\hypertarget{composition-heatmap}{%
+\subsection{Composition heatmap}\label{composition-heatmap}}
+
+Community composition can be visualised with a heatmap. The colour of each intersection point represents the abundance of a taxon in a specific sample.
+
+Here, the CLR + Z-transformed abundances are shown.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(pheatmap)}
+\FunctionTok{library}\NormalTok{(grid)}
+\FunctionTok{library}\NormalTok{(RColorBrewer)}
+\CommentTok{\# CLR and Z transforms}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{transformCounts}\NormalTok{(tse, }\AttributeTok{abund\_values =} \StringTok{"counts"}\NormalTok{, }\AttributeTok{method =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{pseudocount =} \DecValTok{1}\NormalTok{)}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{transformFeatures}\NormalTok{(mat, }\AttributeTok{abund\_values =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{method =} \StringTok{"z"}\NormalTok{)}
+\CommentTok{\# Take only the top taxa}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{subsetTaxa}\NormalTok{(mat, }\FunctionTok{is.element}\NormalTok{(}\FunctionTok{rownames}\NormalTok{(tse), rel\_taxa))}
+
+\CommentTok{\# For annotating heat map}
+\NormalTok{SeqTechs }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\StringTok{"SeqTech"} \OtherTok{=} \FunctionTok{colData}\NormalTok{(mat)}\SpecialCharTok{$}\NormalTok{SeqTech)}
+\FunctionTok{rownames}\NormalTok{(SeqTechs) }\OtherTok{\textless{}{-}} \FunctionTok{colData}\NormalTok{(mat)}\SpecialCharTok{$}\NormalTok{Sample\_ID}
+\CommentTok{\# count matrix for pheatmap}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{assays}\NormalTok{(mat)}\SpecialCharTok{$}\NormalTok{z}
+
+\CommentTok{\# Make grid for heatmap}
+\NormalTok{breaks }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\AttributeTok{length.out =} \DecValTok{10}\NormalTok{)}
+\FunctionTok{setHook}\NormalTok{(}\StringTok{"grid.newpage"}\NormalTok{, }\ControlFlowTok{function}\NormalTok{() }\FunctionTok{pushViewport}\NormalTok{(}\FunctionTok{viewport}\NormalTok{(}\AttributeTok{x =} \DecValTok{1}\NormalTok{, }\AttributeTok{y =} \DecValTok{1}\NormalTok{, }\AttributeTok{width =} \FloatTok{0.9}\NormalTok{, }
+                                                         \AttributeTok{height =} \FloatTok{0.9}\NormalTok{, }\AttributeTok{name =} \StringTok{"vp"}\NormalTok{, }
+                                                         \AttributeTok{just =} \FunctionTok{c}\NormalTok{(}\StringTok{"right"}\NormalTok{,}\StringTok{"top"}\NormalTok{))), }
+        \AttributeTok{action =} \StringTok{"prepend"}\NormalTok{)}
+\FunctionTok{pheatmap}\NormalTok{(mat, }\AttributeTok{color =} \FunctionTok{rev}\NormalTok{(}\FunctionTok{brewer.pal}\NormalTok{(}\DecValTok{9}\NormalTok{, }\StringTok{"RdBu"}\NormalTok{)), }\AttributeTok{breaks =}\NormalTok{ breaks, }\AttributeTok{main =} \StringTok{"SeqTechs"}\NormalTok{, }\AttributeTok{treeheight\_row =} \DecValTok{0}\NormalTok{, }\AttributeTok{treeheight\_col =} \DecValTok{0}\NormalTok{, }\AttributeTok{show\_colnames =} \DecValTok{0}\NormalTok{, }\AttributeTok{annotation\_col =}\NormalTok{ SeqTechs, }\AttributeTok{cluster\_cols =}\NormalTok{ F)}
+\FunctionTok{setHook}\NormalTok{(}\StringTok{"grid.newpage"}\NormalTok{, }\ConstantTok{NULL}\NormalTok{, }\StringTok{"replace"}\NormalTok{)}
+\FunctionTok{grid.text}\NormalTok{(}\StringTok{"Sample"}\NormalTok{, }\AttributeTok{x =} \FloatTok{0.39}\NormalTok{, }\AttributeTok{y =} \SpecialCharTok{{-}}\FloatTok{0.04}\NormalTok{, }\AttributeTok{gp =} \FunctionTok{gpar}\NormalTok{(}\AttributeTok{fontsize =} \DecValTok{16}\NormalTok{))}
+\FunctionTok{grid.text}\NormalTok{(}\StringTok{"Genus"}\NormalTok{, }\AttributeTok{x =} \SpecialCharTok{{-}}\FloatTok{0.04}\NormalTok{, }\AttributeTok{y =} \FloatTok{0.47}\NormalTok{, }\AttributeTok{rot =} \DecValTok{90}\NormalTok{, }\AttributeTok{gp =} \FunctionTok{gpar}\NormalTok{(}\AttributeTok{fontsize =} \DecValTok{16}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{cluster-into-csts}{%
+\section{Cluster into CSTs}\label{cluster-into-csts}}
+
+The burden of specifying the number of clusters falls on the researcher. To help make an informed decision, we turn to previously established methods for doing so. In this section we introduce three such methods (aside from DMM analysis) to cluster similar samples. They include the \href{https://uc-r.github.io/kmeans_clustering}{Elbow Method, Silhouette Method, and Gap Statistic Method}. All of them will utilise the \href{https://uc-r.github.io/kmeans_clustering}{`kmeans'} algorithm which essentially assigns clusters and minimises the distance within clusters (a sum of squares calculation). The default distance metric used is the Euclidean metric.
+
+The scree plot allows us to see how much of the variance is captured by each dimension in the MDS ordination.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2); th }\OtherTok{\textless{}{-}} \FunctionTok{theme\_bw}\NormalTok{()}
+
+\CommentTok{\# reset data}
+\NormalTok{tse }\OtherTok{\textless{}{-}}\NormalTok{ enterotype}
+
+\CommentTok{\# MDS analysis with the first 20 dimensions}
+\NormalTok{tse  }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{runMDS}\NormalTok{(tse, }\AttributeTok{FUN =}\NormalTok{ vegan}\SpecialCharTok{::}\NormalTok{vegdist, }\AttributeTok{method =} \StringTok{"bray"}\NormalTok{, }
+                       \AttributeTok{name =} \StringTok{"MDS\_BC"}\NormalTok{, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{, }\AttributeTok{ncomponents =} \DecValTok{20}\NormalTok{)}
+\NormalTok{ord  }\OtherTok{\textless{}{-}} \FunctionTok{reducedDim}\NormalTok{(tse, }\StringTok{"MDS\_BC"}\NormalTok{, }\AttributeTok{withDimnames =} \ConstantTok{TRUE}\NormalTok{)}
+\CommentTok{\# retrieve eigenvalues}
+\NormalTok{eigs }\OtherTok{\textless{}{-}} \FunctionTok{attr}\NormalTok{(ord, }\StringTok{"eig"}\NormalTok{)}
+
+\CommentTok{\# variance in each of the axes}
+\NormalTok{var }\OtherTok{\textless{}{-}}\NormalTok{ eigs }\SpecialCharTok{/} \FunctionTok{sum}\NormalTok{(eigs)}
+\CommentTok{\# first 12 values}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{x =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{12}\NormalTok{), }\AttributeTok{y =}\NormalTok{ var[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{12}\NormalTok{])}
+
+\CommentTok{\# create scree plot}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(df, }\FunctionTok{aes}\NormalTok{(x, y)) }\SpecialCharTok{+}
+     \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat=}\StringTok{"identity"}\NormalTok{) }\SpecialCharTok{+}
+     \FunctionTok{xlab}\NormalTok{(}\StringTok{"Principal Component"}\NormalTok{) }\SpecialCharTok{+}
+     \FunctionTok{ylab}\NormalTok{(}\StringTok{"Variance"}\NormalTok{) }\SpecialCharTok{+}
+     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Scree Plot"}\NormalTok{)}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/scree-1.pdf}
+
+From the scree plot (above), we can see that the two principal dimensions can account for 68\% of the total variation, but at least the top 4 eigenvalues are considerable. Dimensions beyond 3 and 4 may be useful so let's try to remove the less relevant dimensions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# histogram of MDS eigenvalues from the fifth dimension onward}
+\NormalTok{h }\OtherTok{\textless{}{-}} \FunctionTok{hist}\NormalTok{(eigs[}\DecValTok{5}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(eigs)], }\DecValTok{100}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(h}\SpecialCharTok{$}\NormalTok{mids, h}\SpecialCharTok{$}\NormalTok{count, }\AttributeTok{log =} \StringTok{"y"}\NormalTok{, }\AttributeTok{type =} \StringTok{"h"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{10}\NormalTok{, }\AttributeTok{lend =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+As you can see, dimensions 5, 6, and 7 still stand out so we will include 7 MDS dimensions.
+
+\hypertarget{elbow-method}{%
+\subsection{Elbow Method}\label{elbow-method}}
+
+This method graphs the sum of the sum of squares for each \(k\) (number of clusters), where \(k\) ranges between 1 and 10. Where the bend or `elbow' occurs is the optimal value of \(k\).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(factoextra)}
+
+\CommentTok{\# take only first 7 dimensions}
+\NormalTok{NDIM }\OtherTok{\textless{}{-}} \DecValTok{7}
+\NormalTok{x    }\OtherTok{\textless{}{-}}\NormalTok{ ord[, }\DecValTok{1}\SpecialCharTok{:}\NormalTok{NDIM]}
+
+\CommentTok{\# Elbow Method}
+\NormalTok{factoextra}\SpecialCharTok{::}\FunctionTok{fviz\_nbclust}\NormalTok{(x, kmeans, }\AttributeTok{method =} \StringTok{"wss"}\NormalTok{) }\SpecialCharTok{+}
+                         \FunctionTok{geom\_vline}\NormalTok{(}\AttributeTok{xintercept =} \DecValTok{3}\NormalTok{, }\AttributeTok{linetype =} \DecValTok{2}\NormalTok{) }\SpecialCharTok{+}
+                         \FunctionTok{labs}\NormalTok{(}\AttributeTok{subtitle =} \StringTok{"Elbow Method"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/elbow-1.pdf}
+
+As you can see, the bend occurs at \(k=3\), implying there are three clusters present in the enterotype data.
+
+\hypertarget{silhouette-method}{%
+\subsection{Silhouette Method}\label{silhouette-method}}
+
+This method on the otherhand returns a width for each \(k\). In this case, we want the \(k\) that maximises the width.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Silhouette method}
+\NormalTok{factoextra}\SpecialCharTok{::}\FunctionTok{fviz\_nbclust}\NormalTok{(x, kmeans, }\AttributeTok{method =} \StringTok{"silhouette"}\NormalTok{) }\SpecialCharTok{+}
+                         \FunctionTok{labs}\NormalTok{(}\AttributeTok{subtitle =} \StringTok{"Silhouette method"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/silhouette-1.pdf}
+
+The graph shows the maximum occurring at \(k=2\). \(k=3\) is also strongly suggested by the plot and is consistent with what we obtained from the elbow method.
+
+\hypertarget{gap-statistic-method}{%
+\subsection{Gap-Statistic Method}\label{gap-statistic-method}}
+
+The Gap-Statistic Method is the most complicated among the methods discussed here. In the plot produced, we want the \(k\) value that maximises the output (local and global maxima), but we also want to pay attention to where the plot jumps if the maximum value doesn't turn out to be helpful.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Gap Statistic Method}
+\NormalTok{factoextra}\SpecialCharTok{::}\FunctionTok{fviz\_nbclust}\NormalTok{(x, kmeans, }\AttributeTok{method =} \StringTok{"gap\_stat"}\NormalTok{, }\AttributeTok{nboot =} \DecValTok{50}\NormalTok{)}\SpecialCharTok{+}
+                         \FunctionTok{labs}\NormalTok{(}\AttributeTok{subtitle =} \StringTok{"Gap Statistic Method"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/gap-statistic-1.pdf}
+
+\(k=6\) clusters, as the peak suggests, would not be very revealing since having too many clusters can cease to be revealing and so we look to the points where the graph jumps. We can see this occurs at \(k=2\) and \(k=8\). The output indicates that there are at least two clusters present. Since we have previous evidence for the existence of three clusters and \(k=3\) yields a higher gap statistic than \(k=2\), \(k=3\) seems to be a good choice.
+
+One could argue for the existence of two or three clusters as they are both good candidates. At times like these it helps to visualise the clustering in an MDS or NMDS plot.
+
+Now let's divide the subjects into their respective clusters.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(cluster)}
+
+\CommentTok{\# assume 3 clusters}
+\NormalTok{K }\OtherTok{\textless{}{-}} \DecValTok{3}
+\NormalTok{x }\OtherTok{\textless{}{-}}\NormalTok{ ord[, }\DecValTok{1}\SpecialCharTok{:}\NormalTok{NDIM]}
+
+\NormalTok{clust }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(}\FunctionTok{pam}\NormalTok{(x, }\AttributeTok{k =}\NormalTok{ K, }\AttributeTok{cluster.only =}\NormalTok{ T))}
+\CommentTok{\# swapping the assignment of 2 and 3 to match ravel cst enumeration}
+\NormalTok{clust[clust }\SpecialCharTok{==} \DecValTok{2}\NormalTok{] }\OtherTok{\textless{}{-}} \ConstantTok{NA}
+\NormalTok{clust[clust }\SpecialCharTok{==} \DecValTok{3}\NormalTok{] }\OtherTok{\textless{}{-}} \DecValTok{2}
+\NormalTok{clust[}\FunctionTok{is.na}\NormalTok{(clust)] }\OtherTok{\textless{}{-}} \DecValTok{3}
+
+\FunctionTok{colData}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{CST }\OtherTok{\textless{}{-}}\NormalTok{ clust}
+\NormalTok{CSTs }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(}\FunctionTok{seq}\NormalTok{(K))}
+\end{Highlighting}
+\end{Shaded}
+
+Let's take a look at the MDS ordination with the Bray-Curtis dissimilarity in the first four dimensions.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(scater)}
+\FunctionTok{library}\NormalTok{(RColorBrewer)}
+\FunctionTok{library}\NormalTok{(cowplot)}
+
+\CommentTok{\# set up colours}
+\NormalTok{CSTColors }\OtherTok{\textless{}{-}} \FunctionTok{brewer.pal}\NormalTok{(}\DecValTok{6}\NormalTok{, }\StringTok{"Paired"}\NormalTok{)[}\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{)] }\CommentTok{\# Length 6 for consistency with pre{-}revision CST+ colouration}
+\FunctionTok{names}\NormalTok{(CSTColors) }\OtherTok{\textless{}{-}}\NormalTok{ CSTs}
+
+\NormalTok{CSTColorScale }\OtherTok{\textless{}{-}} \FunctionTok{scale\_colour\_manual}\NormalTok{(}\AttributeTok{name =} \StringTok{"CST"}\NormalTok{, }\AttributeTok{values =}\NormalTok{ CSTColors)}
+\NormalTok{CSTFillScale }\OtherTok{\textless{}{-}} \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{name =} \StringTok{"CST"}\NormalTok{, }\AttributeTok{values =}\NormalTok{ CSTColors)}
+
+\CommentTok{\# plot MDS with Bray{-}Curtis dimensions 1 and 2}
+\NormalTok{p1 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse, }\StringTok{"MDS\_BC"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"CST"}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{, }
+                             \AttributeTok{percentVar =}\NormalTok{ var[}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{)]}\SpecialCharTok{*}\DecValTok{100}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th }\SpecialCharTok{+} \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Ordination by Cluster"}\NormalTok{) }\SpecialCharTok{+}
+                             \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{))}
+\CommentTok{\# plot MDS with Bray{-}Curtis dimensions 3 and 4}
+\NormalTok{p2 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse, }\StringTok{"MDS\_BC"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"CST"}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{, }
+                             \AttributeTok{ncomponents =} \FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{), }\AttributeTok{percentVar =}\NormalTok{ var[}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{)]}\SpecialCharTok{*}\DecValTok{100}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+
+\FunctionTok{plot\_grid}\NormalTok{(p1 }\SpecialCharTok{+}\NormalTok{ CSTColorScale, p2 }\SpecialCharTok{+}\NormalTok{ CSTColorScale, }\AttributeTok{nrow =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+And now nMDS.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse  }\OtherTok{\textless{}{-}} \FunctionTok{runNMDS}\NormalTok{(tse, }\AttributeTok{FUN =}\NormalTok{ vegan}\SpecialCharTok{::}\NormalTok{vegdist, }\AttributeTok{method =} \StringTok{"bray"}\NormalTok{, }
+                \AttributeTok{name =} \StringTok{"NMDS\_BC"}\NormalTok{, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{, }\AttributeTok{ncomponents =} \DecValTok{20}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## initial  value 4.717325 
+## iter   5 value 2.138115
+## iter  10 value 1.879881
+## iter  15 value 1.787953
+## iter  20 value 1.750342
+## iter  25 value 1.730981
+## iter  30 value 1.719617
+## iter  30 value 1.717980
+## iter  30 value 1.717898
+## final  value 1.717898 
+## converged
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse, }\StringTok{"NMDS\_BC"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"CST"}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th }\SpecialCharTok{+} 
+        \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"NMDS Bray{-}Curtis by Cluster"}\NormalTok{) }\SpecialCharTok{+}
+        \FunctionTok{theme}\NormalTok{(}\AttributeTok{plot.title =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{hjust =} \FloatTok{0.5}\NormalTok{)) }\SpecialCharTok{+}\NormalTok{ CSTColorScale}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+We can also look at a multitude of other distance metrics and subsets of the data.
+
+\hypertarget{holmes-and-mcmurdie-workflow}{%
+\section{Holmes and McMurdie Workflow}\label{holmes-and-mcmurdie-workflow}}
+
+For the following distance measures, we will only consider the sequencing technique ``Sanger'' from the enterotype data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(tse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 553 280
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Subset data}
+\NormalTok{tse2 }\OtherTok{\textless{}{-}} \FunctionTok{subsetSamples}\NormalTok{(tse, }\FunctionTok{colData}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{SeqTech }\SpecialCharTok{==} \StringTok{"Sanger"}\NormalTok{)}
+
+\CommentTok{\# Change NAs to 0}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{as.vector}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype)}
+\NormalTok{x[}\FunctionTok{is.na}\NormalTok{(x)] }\OtherTok{\textless{}{-}} \DecValTok{0}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(x, }\AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\StringTok{"1"}\NormalTok{, }\StringTok{"2"}\NormalTok{, }\StringTok{"3"}\NormalTok{, }\StringTok{"0"}\NormalTok{))}
+\FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype }\OtherTok{\textless{}{-}}\NormalTok{ x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{dim}\NormalTok{(tse2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 553  41
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{table}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  1  2  3  0 
+##  8  6 18  9
+\end{verbatim}
+
+\hypertarget{jensen-shannon-distance}{%
+\subsection{Jensen-Shannon Distance}\label{jensen-shannon-distance}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(philentropy)}
+
+\NormalTok{custom\_FUN }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{ (x) }\FunctionTok{as.dist}\NormalTok{(philentropy}\SpecialCharTok{::}\FunctionTok{JSD}\NormalTok{(x))}
+\NormalTok{tse2 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{runMDS}\NormalTok{(tse2, }\AttributeTok{FUN =}\NormalTok{ custom\_FUN, }\AttributeTok{name =} \StringTok{"MDS\_JSD"}\NormalTok{, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{)}
+\NormalTok{scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, }\StringTok{"MDS\_JSD"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{, }
+                       \AttributeTok{shape\_by =} \StringTok{"Enterotype"}\NormalTok{, }\AttributeTok{point\_size =} \DecValTok{4}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+                       \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Multidimensional Scaling using Jensen{-}Shannon Divergence"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+\hypertarget{nonmetric-multidimensional-scaling}{%
+\subsection{NonMetric Multidimensional Scaling}\label{nonmetric-multidimensional-scaling}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse2 }\OtherTok{\textless{}{-}}\NormalTok{ mia}\SpecialCharTok{::}\FunctionTok{runNMDS}\NormalTok{(tse2, }\AttributeTok{FUN =}\NormalTok{ custom\_FUN, }\AttributeTok{nmdsFUN =} \StringTok{"monoMDS"}\NormalTok{, }\AttributeTok{name =} \StringTok{"NMDS\_JSD"}\NormalTok{)}
+\NormalTok{scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, }\StringTok{"NMDS\_JSD"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{, }
+                       \AttributeTok{shape\_by =} \StringTok{"Enterotype"}\NormalTok{, }\AttributeTok{point\_size =} \DecValTok{4}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+} 
+                       \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Non{-}Metric Multidimensional Scaling using Jensen{-}Shannon Divergence"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\hypertarget{chi-squared-correspondence-results}{%
+\subsection{Chi-Squared Correspondence Results}\label{chi-squared-correspondence-results}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse2 }\OtherTok{\textless{}{-}}\NormalTok{ mia}\SpecialCharTok{::}\FunctionTok{runCCA}\NormalTok{(tse2, }\AttributeTok{name =} \StringTok{"PCA\_CS"}\NormalTok{, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{)}
+\NormalTok{scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, }\StringTok{"PCA\_CS"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{, }
+                       \AttributeTok{shape\_by =} \StringTok{"Enterotype"}\NormalTok{, }\AttributeTok{point\_size =} \DecValTok{3}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+                       \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Correspondance Analysis using Chi{-}Squared Distance"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+\hypertarget{bray-curtis-mds}{%
+\subsection{Bray-Curtis MDS}\label{bray-curtis-mds}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse2 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{runMDS}\NormalTok{(tse2, }\AttributeTok{FUN =}\NormalTok{ vegan}\SpecialCharTok{::}\NormalTok{vegdist, }\AttributeTok{name =} \StringTok{"MDS\_BC"}\NormalTok{, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{)}
+\NormalTok{scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, }\StringTok{"MDS\_BC"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{, }
+                       \AttributeTok{shape\_by =} \StringTok{"Enterotype"}\NormalTok{, }\AttributeTok{point\_size =} \DecValTok{4}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+                       \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"MDS using Bray{-}Curtis Dissimilarity"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+\hypertarget{bray-curtis-nmds}{%
+\subsection{Bray-Curtis NMDS}\label{bray-curtis-nmds}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tse2 }\OtherTok{\textless{}{-}}\NormalTok{ mia}\SpecialCharTok{::}\FunctionTok{runNMDS}\NormalTok{(tse2, }\AttributeTok{FUN =}\NormalTok{ vegan}\SpecialCharTok{::}\NormalTok{vegdist, }\AttributeTok{nmdsFUN =} \StringTok{"monoMDS"}\NormalTok{, }\AttributeTok{method =} \StringTok{"bray"}\NormalTok{, }\AttributeTok{name =} \StringTok{"NMDS\_BC"}\NormalTok{)}
+\NormalTok{scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, }\StringTok{"NMDS\_BC"}\NormalTok{, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{, }
+                       \AttributeTok{shape\_by =} \StringTok{"Enterotype"}\NormalTok{, }\AttributeTok{point\_size =} \DecValTok{4}\NormalTok{, }\AttributeTok{point\_alpha =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+} 
+                       \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"nMDS using Bray{-}Curtis"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+\hypertarget{other-distances-from-the-philentropy-package}{%
+\subsection{Other distances from the Philentropy package}\label{other-distances-from-the-philentropy-package}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(gridExtra)}
+\CommentTok{\# take distances that more or less match Holmes and McMurdie}
+\NormalTok{distances }\OtherTok{\textless{}{-}} \FunctionTok{getDistMethods}\NormalTok{()[}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{23}\NormalTok{, }\DecValTok{42}\NormalTok{)]}
+\CommentTok{\# variable to store results}
+\NormalTok{plist }\OtherTok{\textless{}{-}} \FunctionTok{vector}\NormalTok{(}\StringTok{"list"}\NormalTok{, }\FunctionTok{length}\NormalTok{(distances))}
+\FunctionTok{names}\NormalTok{(plist) }\OtherTok{\textless{}{-}}\NormalTok{ distances}
+
+\CommentTok{\# calculate each distance measure}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in}\NormalTok{ distances[}\DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(distances)]) \{}
+\NormalTok{  custom\_FUN }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{ (x) }\FunctionTok{as.dist}\NormalTok{(philentropy}\SpecialCharTok{::}\FunctionTok{distance}\NormalTok{(x, }\AttributeTok{method =}\NormalTok{ i, }\AttributeTok{p =} \DecValTok{1}\NormalTok{))}
+\NormalTok{  tse2 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{runMDS}\NormalTok{(tse2, }\AttributeTok{FUN =}\NormalTok{ custom\_FUN, }\AttributeTok{name =}\NormalTok{ i, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{)}
+  \CommentTok{\# store result in plist}
+\NormalTok{  plist[[i]] }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, i, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{)}
+\NormalTok{\}}
+
+\FunctionTok{library}\NormalTok{(plyr)}
+
+\CommentTok{\# plot}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{ldply}\NormalTok{(plist, }\ControlFlowTok{function}\NormalTok{(x) x}\SpecialCharTok{$}\NormalTok{data)}
+\FunctionTok{names}\NormalTok{(df) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"distance"}\NormalTok{, }\StringTok{"Axis.1"}\NormalTok{, }\StringTok{"Axis.2"}\NormalTok{, }\StringTok{"Enterotype"}\NormalTok{)}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(df, }\FunctionTok{aes}\NormalTok{(Axis}\FloatTok{.1}\NormalTok{, Axis}\FloatTok{.2}\NormalTok{, }\AttributeTok{color =}\NormalTok{ Enterotype, }\AttributeTok{shape =}\NormalTok{ Enterotype)) }\SpecialCharTok{+} 
+     \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size =} \FloatTok{2.5}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} 
+     \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{distance, }\AttributeTok{scales =} \StringTok{"free"}\NormalTok{) }\SpecialCharTok{+} 
+     \FunctionTok{theme}\NormalTok{(}\AttributeTok{strip.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{8}\NormalTok{)) }\SpecialCharTok{+}
+     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"MDS on various distance metrics for Enterotype dataset"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-14-1.pdf}
+
+\hypertarget{add-a-clustering-variable}{%
+\subsection{Add a Clustering Variable}\label{add-a-clustering-variable}}
+
+It may be revealing to see the full data (with subsetting) clustered according to a colData variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# remove taxon}
+\NormalTok{tse3 }\OtherTok{\textless{}{-}} \FunctionTok{subsetTaxa}\NormalTok{(tse, }\FunctionTok{rownames}\NormalTok{(tse) }\SpecialCharTok{!=} \StringTok{"{-}1"}\NormalTok{)}
+
+\CommentTok{\# Remove NAs}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{as.vector}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse3)}\SpecialCharTok{$}\NormalTok{Enterotype)}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(x)}
+\FunctionTok{colData}\NormalTok{(tse)}\SpecialCharTok{$}\NormalTok{Enterotype }\OtherTok{\textless{}{-}}\NormalTok{ x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# loop over distances}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in}\NormalTok{ distances[}\DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(distances)]) \{}
+\NormalTok{  custom\_FUN }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{ (x) }\FunctionTok{as.dist}\NormalTok{(philentropy}\SpecialCharTok{::}\FunctionTok{distance}\NormalTok{(x, }\AttributeTok{method =}\NormalTok{ i, }\AttributeTok{p =} \DecValTok{1}\NormalTok{))}
+\NormalTok{  tse3 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{runMDS}\NormalTok{(tse3, }\AttributeTok{FUN =}\NormalTok{ custom\_FUN, }\AttributeTok{name =}\NormalTok{ i, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{)}
+  
+\NormalTok{  plist[[i]] }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse3, i, }\AttributeTok{colour\_by =} \StringTok{"SeqTech"}\NormalTok{, }\AttributeTok{shape\_by =} \StringTok{"Enterotype"}\NormalTok{)}
+\NormalTok{\}}
+\CommentTok{\# plot}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{ldply}\NormalTok{(plist, }\ControlFlowTok{function}\NormalTok{(x) x}\SpecialCharTok{$}\NormalTok{data)}
+\FunctionTok{names}\NormalTok{(df) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"distance"}\NormalTok{, }\StringTok{"Axis.1"}\NormalTok{, }\StringTok{"Axis.2"}\NormalTok{, }\StringTok{"SeqTech"}\NormalTok{, }\StringTok{"Enterotype"}\NormalTok{)}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(df, }\FunctionTok{aes}\NormalTok{(Axis}\FloatTok{.1}\NormalTok{, Axis}\FloatTok{.2}\NormalTok{, }\AttributeTok{color =}\NormalTok{ SeqTech, }\AttributeTok{shape =}\NormalTok{ Enterotype)) }\SpecialCharTok{+} 
+     \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size =} \DecValTok{2}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+     \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{distance, }\AttributeTok{scales =} \StringTok{"free"}\NormalTok{) }\SpecialCharTok{+} 
+     \FunctionTok{theme}\NormalTok{(}\AttributeTok{strip.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{8}\NormalTok{)) }\SpecialCharTok{+}
+     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"MDS on various distance metrics for Enterotype dataset"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-16-1.pdf}
+
+\hypertarget{more-clustering}{%
+\subsection{More Clustering}\label{more-clustering}}
+
+Dropping 9 outliers (the 0 enterotype), let's visualise the clustering in a different manner. Based on our analysis above, we concluded there were 3 distinct clusters. The authors of the Nature paper published on the enterotype data created a figure similar to the following:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ade4)}
+\CommentTok{\# remove 9 outliers}
+\NormalTok{tse2 }\OtherTok{\textless{}{-}} \FunctionTok{subsetSamples}\NormalTok{(tse2, }\FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype }\SpecialCharTok{!=} \DecValTok{0}\NormalTok{)}
+\FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype }\OtherTok{\textless{}{-}} \FunctionTok{factor}\NormalTok{(}\FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{clus }\OtherTok{\textless{}{-}} \FunctionTok{colData}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{Enterotype}
+\NormalTok{dist }\OtherTok{\textless{}{-}} \FunctionTok{calculateJSD}\NormalTok{(tse2)}
+\NormalTok{pcoa }\OtherTok{\textless{}{-}} \FunctionTok{dudi.pco}\NormalTok{(dist, }\AttributeTok{scannf =}\NormalTok{ F, }\AttributeTok{nf =} \DecValTok{3}\NormalTok{)}
+\FunctionTok{s.class}\NormalTok{(pcoa}\SpecialCharTok{$}\NormalTok{li, }\AttributeTok{grid =}\NormalTok{ F, }\AttributeTok{fac =}\NormalTok{ clus)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-18-1.pdf}
+
+Revisit the distances without the 9 outlier values.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# loop over distances}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in}\NormalTok{ distances[}\DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(distances)]) \{}
+\NormalTok{  custom\_FUN }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{ (x) }\FunctionTok{as.dist}\NormalTok{(philentropy}\SpecialCharTok{::}\FunctionTok{distance}\NormalTok{(x, }\AttributeTok{method =}\NormalTok{ i, }\AttributeTok{p =} \DecValTok{1}\NormalTok{))}
+\NormalTok{  tse2 }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{runMDS}\NormalTok{(tse2, }\AttributeTok{FUN =}\NormalTok{ custom\_FUN, }\AttributeTok{name =}\NormalTok{ i, }\AttributeTok{exprs\_values =} \StringTok{"counts"}\NormalTok{)}
+  
+\NormalTok{  plist[[i]] }\OtherTok{\textless{}{-}}\NormalTok{ scater}\SpecialCharTok{::}\FunctionTok{plotReducedDim}\NormalTok{(tse2, i, }\AttributeTok{colour\_by =} \StringTok{"Enterotype"}\NormalTok{)}
+\NormalTok{\}}
+\CommentTok{\# plot}
+\NormalTok{df }\OtherTok{\textless{}{-}} \FunctionTok{ldply}\NormalTok{(plist, }\ControlFlowTok{function}\NormalTok{(x) x}\SpecialCharTok{$}\NormalTok{data)}
+\FunctionTok{names}\NormalTok{(df) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"distance"}\NormalTok{, }\StringTok{"Axis.1"}\NormalTok{, }\StringTok{"Axis.2"}\NormalTok{, }\StringTok{"Enterotype"}\NormalTok{)}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(df, }\FunctionTok{aes}\NormalTok{(Axis}\FloatTok{.1}\NormalTok{, Axis}\FloatTok{.2}\NormalTok{, }\AttributeTok{color =}\NormalTok{ Enterotype, }\AttributeTok{shape =}\NormalTok{ Enterotype)) }\SpecialCharTok{+} 
+     \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size =} \FloatTok{2.5}\NormalTok{, }\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+} 
+     \FunctionTok{facet\_wrap}\NormalTok{(}\SpecialCharTok{\textasciitilde{}}\NormalTok{distance, }\AttributeTok{scales =} \StringTok{"free"}\NormalTok{) }\SpecialCharTok{+} 
+     \FunctionTok{theme}\NormalTok{(}\AttributeTok{strip.text =} \FunctionTok{element\_text}\NormalTok{(}\AttributeTok{size =} \DecValTok{8}\NormalTok{)) }\SpecialCharTok{+}
+     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"MDS on various distance metrics for Enterotype dataset with 9 samples removed"}\NormalTok{) }\SpecialCharTok{+}\NormalTok{ th}
+\NormalTok{p}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-19-1.pdf}
+
+Would we use the same number of clusters as before with 9 values missing?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# Slightly faster way to use pam}
+\NormalTok{pam1 }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x,k) }\FunctionTok{list}\NormalTok{(}\AttributeTok{cluster =} \FunctionTok{pam}\NormalTok{(x,k, }\AttributeTok{cluster.only=}\ConstantTok{TRUE}\NormalTok{))}
+
+\NormalTok{pamPCoA }\OtherTok{=} \ControlFlowTok{function}\NormalTok{(x, k) \{}
+    \FunctionTok{list}\NormalTok{(}\AttributeTok{cluster =} \FunctionTok{pam}\NormalTok{(x[,}\DecValTok{1}\SpecialCharTok{:}\DecValTok{2}\NormalTok{], k, }\AttributeTok{cluster.only =} \ConstantTok{TRUE}\NormalTok{))}
+\NormalTok{\}}
+\CommentTok{\# gap statistic method}
+\NormalTok{gs }\OtherTok{\textless{}{-}} \FunctionTok{clusGap}\NormalTok{(}\FunctionTok{assays}\NormalTok{(tse2)}\SpecialCharTok{$}\NormalTok{counts, }\AttributeTok{FUN =}\NormalTok{ pamPCoA, }\AttributeTok{K.max =} \DecValTok{10}\NormalTok{)}
+\FunctionTok{fviz\_gap\_stat}\NormalTok{(gs)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-20-1.pdf}
+
+We still see a jump at three so it is still a good choice for the number of clusters.
+
+\hypertarget{cst-analysis}{%
+\section{CST Analysis}\label{cst-analysis}}
+
+Looking at heat maps of the CSTs can reveal structure on a different level. Using all of the data again (for the top 20 taxa) and taking the z transformation of the clr transformed counts, we have
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Find top 20 taxa}
+\NormalTok{rel\_taxa }\OtherTok{\textless{}{-}} \FunctionTok{getTopTaxa}\NormalTok{(tse, }\AttributeTok{top =} \DecValTok{20}\NormalTok{)}
+\CommentTok{\# Z transform of CLR counts}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{transformCounts}\NormalTok{(tse, }\AttributeTok{abund\_values =} \StringTok{"counts"}\NormalTok{, }\AttributeTok{method =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{pseudocount =} \DecValTok{1}\NormalTok{)}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{transformFeatures}\NormalTok{(mat, }\AttributeTok{abund\_values =} \StringTok{"clr"}\NormalTok{, }\AttributeTok{method =} \StringTok{"z"}\NormalTok{)}
+\CommentTok{\# Select top 20 taxa}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{subsetTaxa}\NormalTok{(mat, }\FunctionTok{is.element}\NormalTok{(}\FunctionTok{rownames}\NormalTok{(tse), rel\_taxa))}
+\NormalTok{mat }\OtherTok{\textless{}{-}} \FunctionTok{assays}\NormalTok{(mat)}\SpecialCharTok{$}\NormalTok{z}
+
+\CommentTok{\# Order CSTs}
+\NormalTok{mat }\OtherTok{\textless{}{-}}\NormalTok{ mat[, }\FunctionTok{order}\NormalTok{(clust)]}
+\FunctionTok{colnames}\NormalTok{(mat) }\OtherTok{\textless{}{-}} \FunctionTok{names}\NormalTok{(}\FunctionTok{sort}\NormalTok{(clust))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Plot}
+\NormalTok{CSTs        }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{sort}\NormalTok{(clust))}
+\FunctionTok{names}\NormalTok{(CSTs) }\OtherTok{\textless{}{-}} \StringTok{"CST"}
+\NormalTok{breaks }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\AttributeTok{length.out =} \DecValTok{10}\NormalTok{)}
+\CommentTok{\# Make grid for heatmap}
+\FunctionTok{setHook}\NormalTok{(}\StringTok{"grid.newpage"}\NormalTok{, }\ControlFlowTok{function}\NormalTok{() }\FunctionTok{pushViewport}\NormalTok{(}\FunctionTok{viewport}\NormalTok{(}\AttributeTok{x =} \DecValTok{1}\NormalTok{, }\AttributeTok{y =} \DecValTok{1}\NormalTok{, }\AttributeTok{width =} \FloatTok{0.9}\NormalTok{, }
+                                                         \AttributeTok{height =} \FloatTok{0.9}\NormalTok{, }\AttributeTok{name =} \StringTok{"vp"}\NormalTok{, }
+                                                         \AttributeTok{just =} \FunctionTok{c}\NormalTok{(}\StringTok{"right"}\NormalTok{,}\StringTok{"top"}\NormalTok{))), }
+        \AttributeTok{action =} \StringTok{"prepend"}\NormalTok{)}
+\FunctionTok{pheatmap}\NormalTok{(mat, }\AttributeTok{color =} \FunctionTok{rev}\NormalTok{(}\FunctionTok{brewer.pal}\NormalTok{(}\DecValTok{9}\NormalTok{, }\StringTok{"RdBu"}\NormalTok{)), }\AttributeTok{breaks =}\NormalTok{ breaks, }\AttributeTok{main =} \StringTok{"All CSTs"}\NormalTok{, }\AttributeTok{treeheight\_row =} \DecValTok{0}\NormalTok{, }\AttributeTok{treeheight\_col =} \DecValTok{0}\NormalTok{, }\AttributeTok{show\_colnames =} \DecValTok{0}\NormalTok{, }\AttributeTok{annotation\_col =}\NormalTok{ CSTs, }\AttributeTok{cluster\_cols =}\NormalTok{ F)}
+\FunctionTok{setHook}\NormalTok{(}\StringTok{"grid.newpage"}\NormalTok{, }\ConstantTok{NULL}\NormalTok{, }\StringTok{"replace"}\NormalTok{)}
+\FunctionTok{grid.text}\NormalTok{(}\StringTok{"Sample"}\NormalTok{, }\AttributeTok{x =} \FloatTok{0.39}\NormalTok{, }\AttributeTok{y =} \SpecialCharTok{{-}}\FloatTok{0.04}\NormalTok{, }\AttributeTok{gp =} \FunctionTok{gpar}\NormalTok{(}\AttributeTok{fontsize =} \DecValTok{16}\NormalTok{))}
+\FunctionTok{grid.text}\NormalTok{(}\StringTok{"Genus"}\NormalTok{, }\AttributeTok{x =} \SpecialCharTok{{-}}\FloatTok{0.04}\NormalTok{, }\AttributeTok{y =} \FloatTok{0.47}\NormalTok{, }\AttributeTok{rot =} \DecValTok{90}\NormalTok{, }\AttributeTok{gp =} \FunctionTok{gpar}\NormalTok{(}\AttributeTok{fontsize =} \DecValTok{16}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{10-community-typing_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+\hypertarget{session-info}{%
+\section{Session Info}\label{session-info}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sessionInfo}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## R Under development (unstable) (2022-03-14 r81896)
+## Platform: x86_64-pc-linux-gnu (64-bit)
+## Running under: Ubuntu 20.04.4 LTS
+## 
+## Matrix products: default
+## BLAS/LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.8.so
+## 
+## locale:
+##  [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+##  [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+##  [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+##  [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+## [11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+## 
+## attached base packages:
+## [1] grid      stats4    stats     graphics  grDevices utils     datasets 
+## [8] methods   base     
+## 
+## other attached packages:
+##  [1] ade4_1.7-19                    plyr_1.8.7                    
+##  [3] gridExtra_2.3                  philentropy_0.6.0             
+##  [5] cowplot_1.1.1                  scater_1.23.6                 
+##  [7] scuttle_1.5.2                  cluster_2.1.3                 
+##  [9] factoextra_1.0.7               RColorBrewer_1.1-3            
+## [11] pheatmap_1.0.12                miaViz_1.3.3                  
+## [13] ggraph_2.0.5                   ggplot2_3.3.5                 
+## [15] mia_1.3.20                     MultiAssayExperiment_1.21.7   
+## [17] TreeSummarizedExperiment_2.3.0 Biostrings_2.63.3             
+## [19] XVector_0.35.0                 SingleCellExperiment_1.17.2   
+## [21] SummarizedExperiment_1.25.3    Biobase_2.55.2                
+## [23] GenomicRanges_1.47.6           GenomeInfoDb_1.31.10          
+## [25] IRanges_2.29.1                 S4Vectors_0.33.17             
+## [27] BiocGenerics_0.41.2            MatrixGenerics_1.7.0          
+## [29] matrixStats_0.62.0            
+## 
+## loaded via a namespace (and not attached):
+##   [1] backports_1.4.1             igraph_1.3.1               
+##   [3] lazyeval_0.2.2              splines_4.2.0              
+##   [5] BiocParallel_1.29.21        digest_0.6.29              
+##   [7] yulab.utils_0.0.4           htmltools_0.5.2            
+##   [9] viridis_0.6.2               fansi_1.0.3                
+##  [11] magrittr_2.0.3              memoise_2.0.1              
+##  [13] ScaledMatrix_1.3.0          DECIPHER_2.23.0            
+##  [15] graphlayouts_0.8.0          colorspace_2.0-3           
+##  [17] blob_1.2.3                  ggrepel_0.9.1              
+##  [19] xfun_0.30                   dplyr_1.0.8                
+##  [21] crayon_1.5.1                RCurl_1.98-1.6             
+##  [23] jsonlite_1.8.0              ape_5.6-2                  
+##  [25] glue_1.6.2                  polyclip_1.10-0            
+##  [27] gtable_0.3.0                zlibbioc_1.41.0            
+##  [29] DelayedArray_0.21.2         car_3.0-12                 
+##  [31] BiocSingular_1.11.0         abind_1.4-5                
+##  [33] scales_1.2.0                DBI_1.1.2                  
+##  [35] rstatix_0.7.0               Rcpp_1.0.8.3               
+##  [37] viridisLite_0.4.0           decontam_1.15.0            
+##  [39] gridGraphics_0.5-1          tidytree_0.3.9             
+##  [41] bit_4.0.4                   rsvd_1.0.5                 
+##  [43] ellipsis_0.3.2              pkgconfig_2.0.3            
+##  [45] farver_2.1.0                utf8_1.2.2                 
+##  [47] ggplotify_0.1.0             tidyselect_1.1.2           
+##  [49] labeling_0.4.2              rlang_1.0.2                
+##  [51] reshape2_1.4.4              munsell_0.5.0              
+##  [53] tools_4.2.0                 cachem_1.0.6               
+##  [55] cli_3.2.0                   DirichletMultinomial_1.37.0
+##  [57] generics_0.1.2              RSQLite_2.2.12             
+##  [59] broom_0.8.0                 evaluate_0.15              
+##  [61] stringr_1.4.0               fastmap_1.1.0              
+##  [63] yaml_2.3.5                  ggtree_3.3.2               
+##  [65] knitr_1.38                  bit64_4.0.5                
+##  [67] tidygraph_1.2.1             purrr_0.3.4                
+##  [69] nlme_3.1-157                sparseMatrixStats_1.7.0    
+##  [71] aplot_0.1.3                 compiler_4.2.0             
+##  [73] beeswarm_0.4.0              ggsignif_0.6.3             
+##  [75] treeio_1.19.2               tibble_3.1.6               
+##  [77] tweenr_1.0.2                stringi_1.7.6              
+##  [79] highr_0.9                   lattice_0.20-45            
+##  [81] Matrix_1.4-1                vegan_2.6-2                
+##  [83] permute_0.9-7               vctrs_0.4.1                
+##  [85] pillar_1.7.0                lifecycle_1.0.1            
+##  [87] BiocNeighbors_1.13.0        bitops_1.0-7               
+##  [89] irlba_2.3.5                 patchwork_1.1.1            
+##  [91] R6_2.5.1                    bookdown_0.26              
+##  [93] vipor_0.4.5                 MASS_7.3-57                
+##  [95] assertthat_0.2.1            withr_2.5.0                
+##  [97] GenomeInfoDbData_1.2.8      mgcv_1.8-40                
+##  [99] parallel_4.2.0              ggfun_0.0.6                
+## [101] beachmat_2.11.0             tidyr_1.2.0                
+## [103] rmarkdown_2.13              DelayedMatrixStats_1.17.0  
+## [105] carData_3.0-5               ggpubr_0.4.0               
+## [107] ggnewscale_0.4.7            ggforce_0.3.3              
+## [109] ggbeeswarm_0.6.0
+\end{verbatim}
+
+\hypertarget{bibliography}{%
+\section{Bibliography}\label{bibliography}}
+
+Robert L. Thorndike. 1953. ``Who Belongs in the Family?''. Psychometrika. 18 (4): 267--276. \url{doi:10.1007/BF02289263}
+
+Peter J. Rousseeuw. 1987. ``Silhouettes: a Graphical Aid to the Interpretation and Validation of Cluster Analysis''. Computational and Applied Mathematics. 20: 53--65. \url{doi:10.1016/0377-0427(87)90125-7}.
+
+Robert Tibshirani, Guenther Walther, and Trevor Hastie. 2002. Estimating the number of clusters in a data set via the gap statistic method. (63): 411-423. \url{doi:10.1111/1467-9868.00293}.
+
+Susan Holmes and Joey McMurdie. 2015. Reproducible Research: Enterotype Example. \url{http://statweb.stanford.edu/~susan/papers/EnterotypeRR.html}.
+
+Daniel B. DiGiulio et al.~2015. Temporal and spatial variation of the human microbiota during pregnancy. (112): 11060--11065. \url{doi:10.1073/pnas.1502875112}
+
+Arumugam, M., et al.~(2011). Enterotypes of the human gut microbiome.
+
+\hypertarget{exercise-solutions}{%
+\chapter{Exercise Solutions}\label{exercise-solutions}}
+
+This section includes exemplary solutions to the exercises presented earlier.
+
+\hypertarget{section-5}{%
+\section{Section 5}\label{section-5}}
+
+Link:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{import.Rmd}{Rmd}
+\end{itemize}
+
+\hypertarget{section-6}{%
+\section{Section 6}\label{section-6}}
+
+Links:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{06-3-ex-sol-ADHD.Rmd}{Rmd}
+\end{itemize}
+
+\hypertarget{section-7}{%
+\section{Section 7}\label{section-7}}
+
+Links:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{07-3-ex-sol-ADHD.Rmd}{Rmd}
+\end{itemize}
+
+\hypertarget{section-8}{%
+\section{Section 8}\label{section-8}}
+
+Links:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{08-5-ex-sol-ADHD.Rmd}{Rmd}
+\end{itemize}
+
+\hypertarget{tutorial-aims}{%
+\chapter{Tutorial Aims}\label{tutorial-aims}}
+
+In this tutorial we will learn feature selection, dimension reduction, clustering, visualization, analysis and interpretation using\\
+miaverse (mia = MIcrobiome Analysis) and miaViz - (Microbiome Analysis Plotting and Visualization) to explore patterns in human gut microbiome datasets.
+
+The examples in this tutorial are mainly based on this online book\\
+\href{https://microbiome.github.io/OMA/}{Orchestrating Microbiome Analysis}
+
+In this tutorial we use data from \href{https://www.microbiomeatlas.org/}{The Human Gut Microbiome Atlas (HGMA)}
+
+\hypertarget{lab-1}{%
+\chapter{Lab 1}\label{lab-1}}
+
+\hypertarget{unsupervised-learning-feature-selection-dimension-reduction}{%
+\section{unsupervised learning: Feature selection \& dimension reduction}\label{unsupervised-learning-feature-selection-dimension-reduction}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Make the tse (TreeSummarizedExperiment) Object for the further analysis (use the provided script to make a tse )
+\end{enumerate}
+
+\hypertarget{load-the-data}{%
+\section{Load the data}\label{load-the-data}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\item
+  Aggregate the data to Phylum level (agglomerateByRank)
+\item
+  Subset the data at the Species level with only taking bacterial Species that are greater than 10\% of prevalence in the total sample
+\item
+  Subset a tse object which consist only two phyla i.e Actinobacteria'', ``Cyanobacteria
+\item
+  Calculate relative abundances, and store the table to assays
+\end{enumerate}
+
+6.Perform a centred log-ratio transformation (clr) (i.e.~mia::transformSamples)
+
+\hypertarget{lab-2}{%
+\chapter{Lab 2}\label{lab-2}}
+
+\hypertarget{unsupervised-learning-clustering-visualization}{%
+\section{unsupervised learning: clustering \& visualization}\label{unsupervised-learning-clustering-visualization}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Visualize beta diversity using principal coordinate analysis (PCoA);based on the Bray-Curtis dissimilarities
+\item
+  Visualize beta diversity using principal coordinates analysis (PCoA); with Aitchison distance (clr transformation+ Euclidean distance)
+\item
+  Cluster the samples using Dirichlet- multinomial mixture model
+\item
+  Visualize the clusters in the PCoA plot
+\end{enumerate}
+
+\hypertarget{lab-3}{%
+\chapter{Lab 3}\label{lab-3}}
+
+\hypertarget{unsupervised-learninganalysis-and-interpretation}{%
+\section{unsupervised learning:Analysis and interpretation}\label{unsupervised-learninganalysis-and-interpretation}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  What taxa are driving the axis? Calculate the Spearman correlation between PC1 and the relative abundance of the bacteria and visualize the results in a bar plot.
+\item
+  Visualize the dominant taxonomic group of each sample by colour on PCoA plot
+\item
+  Visualize gender by colour on PCoA plot
+\end{enumerate}
 
   \bibliography{packages.bib}
 
