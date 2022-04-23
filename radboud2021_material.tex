@@ -1,0 +1,436 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  oneside]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Multi-omic data science with R/Bioconductor},
+  pdfauthor={University of Oulu \& University of Turku},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[top=30mm,left=15mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Multi-omic data science with R/Bioconductor}
+\author{University of Oulu \& University of Turku}
+\date{2022-04-23}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{overview}{%
+\chapter{Overview}\label{overview}}
+
+\textbf{Welcome to \href{}{Oulu Summer School, June 2022}}
+
+\textbf{Venue} University of Oulu. June 20-23, 2022.
+Organized together with \href{http://datascience.utu.fi}{University of Turku}, Finland.
+
+Figure source: Moreno-Indias \emph{et al}. (2021) \href{https://doi.org/10.3389/fmicb.2021.635781}{Statistical and Machine Learning Techniques in Human Microbiome Studies: Contemporary Challenges and Solutions}. Frontiers in Microbiology 12:11.
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+This course is based on data science with R, a popular open source
+environment for scientific data analysis. It provides general
+capabilities for the analysis, integration, and visualization of
+multi-omic data from biomedical studies.
+
+The course is based on \href{https://microbiome.github.io}{\emph{miaverse}} (mia = \textbf{MI}crobiome \textbf{A}nalysis), an
+R/Bioconductor framework for microbiome data science.
+
+The data science framework consists of the following elements:
+
+\begin{itemize}
+\tightlist
+\item
+  efficient multi-omic data container
+\item
+  a package ecosystem, providing algorithmic data analysis methods
+\item
+  demonstration data sets
+\item
+  open documentation
+\end{itemize}
+
+The framework is explained in a greater depth in the online book
+\href{https://microbiome.github.io/OMA}{Orchestrating Microbiome
+Analysis}. The book is currently a
+development version.
+
+\hypertarget{learning-goals}{%
+\section{Learning goals}\label{learning-goals}}
+
+The course aims to provide the basic understanding and skills for
+biomedical data analysis with R and Bioconductor. The course provides
+an overview of reproducible data analysis and reporting workflow in
+multi-omic studies, with recent example data sets published microbiome
+studies.
+
+The participants become familiar with standard concepts and methods in
+multi-omic data analysis, in particular in human microbiome research.
+This includes better understanding of the specific statistical
+challenges, practical hands-on experience with the commonly used
+methods, and reproducible research with R.
+
+After the course you will know how to approach new tasks in microbiome
+data science by utilizing available documentation and R tools.
+
+\textbf{Target audience} Advanced MSc and PhD students, Postdocs, and
+biomedical researchers who wish to develop their skills in
+scientific programming and biomedical data analysis.
+
+\hypertarget{schedule}{%
+\section{Schedule}\label{schedule}}
+
+The course takes place daily between 9am -- 5pm, including coffee and
+lunch breaks.
+
+The course will be organized in a live format but the material will be
+openly available online during and after the course.
+
+A priority will given for local students from Oulu. Participants from
+other higher education institutions are welcome to apply.
+
+The mornings will start with lectures, and afternoons are mainly
+dedicated to hands-on sessions that consist of practical tasks and
+example data from recent research literature. Students will solve the
+exercises based on available online examples and resources that are
+pointed out in the study material. There is often more than one way to
+solve a given task, and the teachers will be available for assistance.
+
+Monday:
+
+\begin{itemize}
+\tightlist
+\item
+  Orientation
+\item
+  Best practices in reproducible reporting and open science
+\item
+  Hands-on: Introduction to R
+\end{itemize}
+
+Tuesday:
+
+\begin{itemize}
+\tightlist
+\item
+  Key concepts and challenges in biomedical data analysis
+\item
+  Hands-on: Biomedical data exploration
+\end{itemize}
+
+Wednesday:
+
+\begin{itemize}
+\tightlist
+\item
+  Key concepts in biomedical data visualization
+\item
+  Hands-on: Biomedical data visualization
+\end{itemize}
+
+Thursday:
+
+\begin{itemize}
+\tightlist
+\item
+  Advanced topics: common machine learning techniques
+\item
+  Hands-on: multi-omic data integration and reproducible workflows
+\end{itemize}
+
+Friday:
+
+\begin{itemize}
+\tightlist
+\item
+  Student presentations
+\item
+  Summary \& Conclusions
+\end{itemize}
+
+\hypertarget{material}{%
+\section{Material}\label{material}}
+
+The teaching material follows open online documentation created by the
+course teachers, extending the online book Orchestrating Microbiome
+Analysis (\url{https://microbiome.github.io/OMA}). We will teach generic
+data analytical skills that are applicable to common data analysis
+tasks encountered in modern omics research.
+
+The training material walks through example workflows that go through
+standard steps of biomedical data analysis covering data access,
+exploration, analysis, visualization, reproducible reporting, and best
+practices in open science. The teaching format allows adaptations
+according to the student's learning speed.
+
+\textbf{You can run the workflow by simply copy-pasting the
+examples.} For further, advanced material, you can test and modify
+further examples from the \href{https://microbiome.github.io/OMA}{OMA
+book}, or try to apply the
+techniques to your own data.
+
+We expect that the students will install the necessary software in
+advance. Online support will be available.
+
+\hypertarget{organizers}{%
+\chapter{Organizers}\label{organizers}}
+
+Jointly organized by:
+
+\begin{itemize}
+\tightlist
+\item
+  Health and Biosciences Doctoral Programme, University of Oulu Graduate School (HBS-DP)
+\item
+  Department of Computing, University of Turku
+\end{itemize}
+
+Supported by:
+
+\begin{itemize}
+\tightlist
+\item
+  IT Center for Science (CSC), Finland
+\end{itemize}
+
+\textbf{Teachers}
+
+\begin{itemize}
+\item
+  \href{https://datascience.utu.fi}{Leo Lahti} is the main teacher and
+  Associate Professor in Data Science at the University of Turku,
+  with specialization on biomedical data analysis.
+\item
+  Tuomas Borman is research assistant and one of the main developers
+  of the open training material covered by the course.
+\item
+  Jenni Hekkala is a local PhD researchers from Oulu who will
+  coordinate the local arrangements and contribute to course
+  teaching.
+\end{itemize}
+
+\hypertarget{acknowledgments}{%
+\section{Acknowledgments}\label{acknowledgments}}
+
+\textbf{Citation} ``Introduction to microbiome data science (2021). URL: \url{https://microbiome.github.io}''.
+
+\citet{oulu2022course}
+
+We thank all \href{https://microbiome.github.io}{miaverse developers and contributors} who have contributed open resources that supported the development of the training material.
+
+\textbf{Contact} \href{http://datascience.utu.fi}{Leo Lahti}, University of Turku, Finland
+
+\textbf{License} All material is released under the open \href{LICENSE}{CC BY-NC-SA 3.0 License} and available online during and after the course, following the
+\href{https://avointiede.fi/fi/linjaukset-ja-aineistot/kotimaiset-linjaukset/oppimisen-ja-oppimateriaalien-avoimuuden-linjaus}{recommendations on open teaching materials} of the national open science coordination in Finland**.
+
+\textbf{Source code}
+
+The source code of this repository is fully reproducible and contains
+the Rmd files with executable code. All files can be rendered at one
+go by running the file \url{main.R}. You can check the file for
+details on how to clone the repository and convert it into a gitbook,
+although this is not necessary for the training.
+
+\begin{itemize}
+\tightlist
+\item
+  Source code (github): \href{https://github.com/microbiome/course_2022_oulu}{miaverse teaching material}
+\item
+  Course page (html): \href{https://microbiome.github.io/course_2022_oulu/}{miaverse teaching material}
+\end{itemize}
+
+\hypertarget{program}{%
+\chapter{Program}\label{program}}
+
+The course takes place on each working day from 9am -- 1pm
+(CEST). Short breaks will be scheduled between sessions.
+
+The hands-on sessions consist of a set of questions and example
+data. Solve the exercises by taking advantage of the online examples
+and resources that are pointed out in the study material. There is
+often more than one way to solve a given task. It is assumed that you
+have already installed the required software. Do not hesitate to ask
+support from the course assistants.
+
+\hypertarget{day-1-from-raw-sequences-to-ecological-data-analysis}{%
+\section{Day 1: from raw sequences to ecological data analysis}\label{day-1-from-raw-sequences-to-ecological-data-analysis}}
+
+\textbf{Lectures}
+
+\begin{itemize}
+\item
+  Microbiota analysis: association studies vs.~causality; microbiota sequencing methods (16S, shotgun, metagenomics) - by dr. Tom Ederveen (Radboud UMC Nijmegen, The Netherlands)
+\item
+  DNA isolation and 16S rRNA gene sequencing; bioinformatics step 1: from raw sequences to OTU table in a biom file -- by Tom Ederveen (Radboudumc Nijmegen, The Netherlands)
+\end{itemize}
+
+\textbf{Demo \& Practical}
+
+\begin{itemize}
+\item
+  Importing data to R for interactive data analysis
+\item
+  Task: initialize reproducible report
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{day-2---alpha-diversity}{%
+\section{Day 2 - Alpha diversity}\label{day-2---alpha-diversity}}
+
+\textbf{Demo}
+
+\begin{itemize}
+\tightlist
+\item
+  Microbiome data exploration
+\end{itemize}
+
+\textbf{Lecture}
+
+\begin{itemize}
+\tightlist
+\item
+  Key concepts in microbiome data science
+\end{itemize}
+
+\textbf{Practical}
+
+\begin{itemize}
+\tightlist
+\item
+  Alpha diversity: estimation, analysis, and visualization
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{day-3---beta-diversity}{%
+\section{Day 3 - Beta diversity}\label{day-3---beta-diversity}}
+
+\textbf{Demo}
+
+\begin{itemize}
+\tightlist
+\item
+  Community similarity
+\end{itemize}
+
+\textbf{Practical}
+
+\begin{itemize}
+\tightlist
+\item
+  Beta diversity: estimation, analysis, and visualization
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{day-4--differential-abundance}{%
+\section{Day 4- Differential abundance}\label{day-4--differential-abundance}}
+
+\textbf{Lecture}
+
+\begin{itemize}
+\tightlist
+\item
+  Differential abundance analysis methods
+\end{itemize}
+
+\textbf{Practical}
+
+\begin{itemize}
+\tightlist
+\item
+  Differential abundance in practice
+\end{itemize}
+
+\textbf{Lecture}
+
+\begin{itemize}
+\tightlist
+\item
+  Overview of microbiota data science methods \& concepts
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{day-5-presentations-closing}{%
+\section{Day 5 : Presentations \& closing}\label{day-5-presentations-closing}}
+
+\textbf{Student presentations} on microbiome data analytics
+
+  \bibliography{packages.bib}
+
+\end{document}
