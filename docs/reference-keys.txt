@@ -14,13 +14,3 @@ checklist-before-the-course
 support-and-resources
 installing-and-loading-the-required-r-packages
 reproducible-reporting-with-rmarkdown
-importing-microbiome-data
-data-access
-importing-microbiome-data-in-r
-example-solutions
-microbiome-data-exploration
-data-structure
-transformations
-aggregation
-visualization
-exercises-optional
