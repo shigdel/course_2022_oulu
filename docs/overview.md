@@ -1,6 +1,7 @@
 --- 
 title: "Multi-omic data science with R/Bioconductor"
-subtitle: "Welcome to Oulu Summer School, June 2022"
+subtitle: "Oulu Summer School, June 2022"
+author: "University of Oulu & University of Turku"
 date: "2022-04-24"
 site: bookdown::bookdown_site
 documentclass: book
@@ -27,15 +28,20 @@ geometry:
 
 # Overview
 
+**Welcome to [Oulu Summer School, June 2022]()**
+
 ## Contents and learning goals
 
 This course will teach the **basics of biomedical data analysis with
 R/Bioconductor**, a popular open source environment for scientific
 data analysis. The participants get an overview of the reproducible
 data analysis workflow in modern multi-omics, with a focus on recent
-examples from published microbiome studies. After the course you will
-know how to approach new tasks in biomedical data analysis by
-utilizing available documentation and R tools.
+examples from published microbiome studies.
+
+After the course you will know how to approach new tasks in biomedical
+data analysis by utilizing available documentation and R tools. The
+teaching format allows adaptations according to the student's learning
+speed.
 
 The teaching will follow open online documentation created by the
 course teachers, extending the online book Orchestrating Microbiome
@@ -74,6 +80,7 @@ open training material covered by the course.
 
 Course coordinator _Jenni Hekkala_ is PhD researcher at the University of Oulu.
 
+
 The course is jointly organized by
 
 - Health and Biosciences Doctoral Programme, University of Oulu Graduate School
@@ -93,17 +100,11 @@ and researchers from Finland and abroad are welcome and encouraged to
 apply. The course has limited capacity of max 20 participants, and
 priority will given for local students from Oulu.
 
-**Expected background** Some earlier experience with R or another
-  programming language is recommended. However, this can be
-  compensated by familiarizing with the course material in advance, if
-  necessary. The teaching format allows adaptations according to the
-  student's learning speed.
 
 **Application**
 
   * Send a brief motivation letter to Jenni Hekkala <first.last@oulu.fi>
   * Applications sent before May 20 will be given priority
-
 
 **Course fee**
 
@@ -121,23 +122,5 @@ The course fee covers contact teaching and teaching material.
 
 
 
-## Acknowledgments
 
-**Citation** We thank all [developers and contributors](https://microbiome.github.io) who have contributed open resources that supported the development of the training material. Kindly cite the course material as @miacourse 
-
-**Contact** See [https://microbiome.github.io](https://microbiome.github.io)
-
-
-**License and source code**
-
-All material is released under the open [CC BY-NC-SA 3.0 License](LICENSE) and available online during and after the course, following the [recommendations on open teaching materials](https://avointiede.fi/fi/linjaukset-ja-aineistot/kotimaiset-linjaukset/oppimisen-ja-oppimateriaalien-avoimuuden-linjaus) of the national open science coordination in Finland**.
-
-The source code of this repository is reproducible and contains
-the Rmd files with executable code. All files can be rendered at one
-go by running the file [main.R](main.R). You can check the file for
-details on how to clone the repository and convert it into a gitbook,
-although this is not necessary for the training.
-
-- Source code (github): [miaverse teaching material](https://github.com/microbiome/course_2022_oulu)
-- Course page (html): [miaverse teaching material](https://microbiome.github.io/course_2022_oulu/)
 

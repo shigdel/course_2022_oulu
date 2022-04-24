@@ -1,92 +1,129 @@
-
 # Program
 
-The course takes place each day from 9am – 5pm (CEST), including
+The course takes place daily from 9am – 5pm (CEST), including
 coffee and lunch breaks.
 
-
-## Day 1
-
-- Orientation
-- Best practices in reproducible reporting and open science
-- Hands-on: Introduction to R
+We expect that participants will prepare for the course in advance, see section
+\@ref(start). Online support is available.
 
 
-**Lectures**
+## Overview
+
+The course is based on [_miaverse_](https://microbiome.github.io) (mia = **MI**crobiome **A**nalysis), an
+R/Bioconductor framework for microbiome data science. 
 
 
-**Demo**
+This data science framework consists of the following elements:
+
+- data container for multi-omic data tables
+- data analysis methods; a package ecosystem
+- data sets for demonstration
+- open online documentation
+
+The material follows open online book created by the course teachers,
+Orchestrating Microbiome Analysis (https://microbiome.github.io/OMA).
+
+**You can run the workflows by simply copy-pasting the examples.** For
+further, advanced material, you can test and modify further examples
+from the online book, or apply these techniques to your own data.
 
 
-**Practical**
 
- * Importing data to R for interactive data analysis 
+## Day 1 - Open data science 
 
- * Task: initialize reproducible report
+**Morning session**
+
+9-10 Coffee, Welcome & Practicalities
+
+10-11 Lecture: Reproducible reporting and open science (Leo Lahti)
+
+11-12 Demo: Data science framework (Tuomas Borman)
+
+12-13 Lunch break
+
+
+**Afternoon hands-on session** (Leo Lahti, Tuomas Borman, Jenni Hekkala)
+
+13-15 Introduction to R/Bioconductor & teaching environment
+
+15-17 Importing data to R for interactive data analysis; basic data
+analysis and visualization examples
+
+Task: selecting data; initializing a reproducible report in RStudio
 
 ----------------------------------------------------------------
 
-## Day 2 - Alpha diversity
+## Day 2 - Univariate methods
 
 
-- Key concepts and challenges in biomedical data analysis
-- Hands-on: Biomedical data exploration 
+**Morning session**
 
-**Demo**
+9-11 Key concepts and challenges in univariate analysis (Leo)
 
-- Microbiome data exploration
+  - Differential abundance & multiple testing
+  - Alpha diversity estimation
+  - Time series
+  - Statistical considerations
 
-**Lecture**
+11-12 Demo: Data exploration (Tuomas)
 
-- Key concepts in microbiome data science
+  - Diagnostic summaries (library sizes; singletons; etc)
+  - Outlier & anomaly detection
+  - Visualization
 
-**Practical**
 
-- Alpha diversity: estimation, analysis, and visualization 
+**Afternoon hands-on session**
+
+13-15 Differential abundance & multiple testing 
+
+15-17 Alpha diversity analysis & visualization
+
+Task: extending the reproducible report 
 
 ----------------------------------------------------------------
 
-## Day 3 - Beta diversity
+## Day 3 - Multivariate methods
+
+**Morning session**
+
+9-11 Key concepts and challenges in multivariate analysis (Leo)
+
+  - Transformations, dissimilarities
+  - Beta diversity & community similarity
+  - Supervised vs. unsupervised ordination
+  - Clustering & visualization
+
+11-12 Demo: Community similarity (Tuomas)
 
 
-- Key concepts in biomedical data visualization
-- Hands-on: Biomedical data visualization
+**Afternoon hands-on session**
 
-**Demo**
+13-15 Estimating community similarity
 
-- Community similarity 
+15-17 Clustering and visualization
 
-**Practical**
-
-- Beta diversity: estimation, analysis, and visualization
-
------------------------------------------------------------------
-
-## Day 4- Multi-omics
-
-
-- Advanced topics: common machine learning techniques
-- Hands-on: multi-omic data integration and reproducible workflows
-
-**Lecture**
-
-- Differential abundance analysis methods 
-
-
-**Practical**
-
-- Differential abundance in practice
-
-
-**Lecture**
-
-- Overview of microbiota data science methods & concepts
+Task: extending the reproducible report 
 
 -----------------------------------------------------------------
 
-## Day 5 : Presentations & closing
+## Day 4 - Multi-table methods
 
-- Student presentations
-- Summary & Conclusions
+**Morning session**
+
+9-11 Multi-table data integration (Leo)
+
+11-12 Demo: cross-correlation, biclustering & heatmaps (Tuomas)
+
+
+**Afternoon hands-on session**
+
+13-15 Multi-omic data integration 
+
+15-16 Short presentations based on the reproducible reports
+
+16-17 Summary, Conclusions & Feedback
+
+
+ 
 
 

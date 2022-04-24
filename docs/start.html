@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Reproducible reporting with Rmarkdown | Multi-omic data science with R/Bioconductor</title>
+  <title>3 Getting started | Multi-omic data science with R/Bioconductor</title>
   <meta name="description" content="Course material" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Reproducible reporting with Rmarkdown | Multi-omic data science with R/Bioconductor" />
+  <meta property="og:title" content="3 Getting started | Multi-omic data science with R/Bioconductor" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="microbiome/course_2022_oulu" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Reproducible reporting with Rmarkdown | Multi-omic data science with R/Bioconductor" />
+  <meta name="twitter:title" content="3 Getting started | Multi-omic data science with R/Bioconductor" />
   
   <meta name="twitter:description" content="Course material" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="start.html"/>
-<link rel="next" href="importing-microbiome-data.html"/>
+<link rel="prev" href="program.html"/>
+<link rel="next" href="reproducible-reporting-with-rmarkdown.html"/>
 <script src="libs/header-attrs-2.11.3/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -196,33 +196,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="reproducible-reporting-with-rmarkdown" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Reproducible reporting with Rmarkdown</h1>
-<p>Reproducible reporting is the starting point for robust interactive
-data science. Perform the following tasks:</p>
+<div id="start" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Getting started</h1>
+<div id="checklist-before-the-course" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Checklist (before the course)</h2>
+<p>Install the following software in advance in order to avoid
+unnecessary delays and leaving more time for the course contents.</p>
 <ul>
-<li><p>Create a Rmarkdown template in RStudio, and render it into a
-document (markdown, PDF, docx or other format)</p></li>
-<li><p>If you are entirely new to Markdown, take
-<a href="https://www.markdowntutorial.com/">this</a> 10 minute tutorial to get
-introduced to the most important functions within Markdown. Then
-experiment with different options with
-<a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Rmarkdown</a></p></li>
+<li><p><a href="https://www.r-project.org/">R (version &gt;4.1.0)</a></p></li>
+<li><p><a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>;
+choose “Rstudio Desktop” to download the latest version. Optional
+but preferred. For further details, check the <a href="https://www.rstudio.com/">Rstudio home
+page</a>.</p></li>
+<li><p>Install and load the required R packages</p></li>
+<li><p>After a successful installation you can start with the
+case study examples in this training material</p></li>
 </ul>
-<p>In case you are new to Rmarkdown <a href="https://rmarkdown.rstudio.com/lesson-1.html">Rstudio provides
-resources</a> to learn
-about the use cases and the basics of Rmarkdown. A good online
-tutorial to reproducible reporting is available by <a href="https://rpubs.com/marschmi/RMarkdown">Dr. C Titus
-Brown</a>.</p>
+</div>
+<div id="support-and-resources" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Support and resources</h2>
+<p>For additional reading and online material, see <a href="material.html">Material</a> section</p>
+<p>For online support on installation and other matters, you can join us at:</p>
+<ul>
+<li>Users: <a href="https://gitter.im/microbiome/miaverse?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge">miaverse Gitter channel</a></li>
+<li>Developers: <a href="https://bioc-community.herokuapp.com">Bioconductor Slack</a> #microbiomeexperiment channel (ask for an invitation)</li>
+</ul>
+</div>
+<div id="installing-and-loading-the-required-r-packages" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Installing and loading the required R packages</h2>
+<p>This section shows how to install and load all required packages into
+the R session. Only uninstalled packages are installed.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="start.html#cb1-1" aria-hidden="true"></a><span class="co"># List of packages that we need from cran and bioc </span></span>
+<span id="cb1-2"><a href="start.html#cb1-2" aria-hidden="true"></a>cran_pkg &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="st">&quot;bookdown&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ecodist&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, </span>
+<span id="cb1-3"><a href="start.html#cb1-3" aria-hidden="true"></a>              <span class="st">&quot;gridExtra&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>,  <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;scales&quot;</span>, <span class="st">&quot;vegan&quot;</span>, <span class="st">&quot;matrixStats&quot;</span>)</span>
+<span id="cb1-4"><a href="start.html#cb1-4" aria-hidden="true"></a>bioc_pkg &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;yulab.utils&quot;</span>,<span class="st">&quot;ggtree&quot;</span>,<span class="st">&quot;ANCOMBC&quot;</span>, <span class="st">&quot;ape&quot;</span>, <span class="st">&quot;DESeq2&quot;</span>, <span class="st">&quot;DirichletMultinomial&quot;</span>, <span class="st">&quot;mia&quot;</span>, <span class="st">&quot;miaViz&quot;</span>)</span>
+<span id="cb1-5"><a href="start.html#cb1-5" aria-hidden="true"></a></span>
+<span id="cb1-6"><a href="start.html#cb1-6" aria-hidden="true"></a><span class="co"># Gets those packages that are already installed</span></span>
+<span id="cb1-7"><a href="start.html#cb1-7" aria-hidden="true"></a>cran_pkg_already_installed &lt;-<span class="st"> </span>cran_pkg[ cran_pkg <span class="op">%in%</span><span class="st"> </span><span class="kw">installed.packages</span>() ]</span>
+<span id="cb1-8"><a href="start.html#cb1-8" aria-hidden="true"></a>bioc_pkg_already_installed &lt;-<span class="st"> </span>bioc_pkg[ bioc_pkg <span class="op">%in%</span><span class="st"> </span><span class="kw">installed.packages</span>() ]</span>
+<span id="cb1-9"><a href="start.html#cb1-9" aria-hidden="true"></a></span>
+<span id="cb1-10"><a href="start.html#cb1-10" aria-hidden="true"></a><span class="co"># Gets those packages that need to be installed</span></span>
+<span id="cb1-11"><a href="start.html#cb1-11" aria-hidden="true"></a>cran_pkg_to_be_installed &lt;-<span class="st"> </span><span class="kw">setdiff</span>(cran_pkg, cran_pkg_already_installed)</span>
+<span id="cb1-12"><a href="start.html#cb1-12" aria-hidden="true"></a>bioc_pkg_to_be_installed &lt;-<span class="st"> </span><span class="kw">setdiff</span>(bioc_pkg, bioc_pkg_already_installed)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="start.html#cb2-1" aria-hidden="true"></a><span class="co"># If there are packages that need to be installed, installs them from CRAN</span></span>
+<span id="cb2-2"><a href="start.html#cb2-2" aria-hidden="true"></a><span class="cf">if</span>( <span class="kw">length</span>(cran_pkg_to_be_installed) ) {</span>
+<span id="cb2-3"><a href="start.html#cb2-3" aria-hidden="true"></a>   <span class="kw">install.packages</span>(cran_pkg_to_be_installed)</span>
+<span id="cb2-4"><a href="start.html#cb2-4" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="start.html#cb3-1" aria-hidden="true"></a><span class="co"># If there are packages that need to be installed, installs them from Bioconductor</span></span>
+<span id="cb3-2"><a href="start.html#cb3-2" aria-hidden="true"></a><span class="cf">if</span>( <span class="kw">length</span>(bioc_pkg_to_be_installed) ) {</span>
+<span id="cb3-3"><a href="start.html#cb3-3" aria-hidden="true"></a>   BiocManager<span class="op">::</span><span class="kw">install</span>(bioc_pkg_to_be_installed, <span class="dt">ask =</span> F)</span>
+<span id="cb3-4"><a href="start.html#cb3-4" aria-hidden="true"></a>}</span></code></pre></div>
+<p>Now all required packages are installed, so let’s load them into the session.
+Some function names occur in multiple packages. That is why miaverse’s packages
+mia and miaViz are prioritized. Packages that are loaded first have higher priority.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="start.html#cb4-1" aria-hidden="true"></a><span class="co"># Reorders bioc packages, so that mia and miaViz are first</span></span>
+<span id="cb4-2"><a href="start.html#cb4-2" aria-hidden="true"></a>bioc_pkg &lt;-<span class="st"> </span><span class="kw">c</span>(bioc_pkg[ bioc_pkg <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;mia&quot;</span>, <span class="st">&quot;miaViz&quot;</span>) ], </span>
+<span id="cb4-3"><a href="start.html#cb4-3" aria-hidden="true"></a>              bioc_pkg[ <span class="op">!</span>bioc_pkg <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;mia&quot;</span>, <span class="st">&quot;miaViz&quot;</span>) ] ) </span>
+<span id="cb4-4"><a href="start.html#cb4-4" aria-hidden="true"></a></span>
+<span id="cb4-5"><a href="start.html#cb4-5" aria-hidden="true"></a><span class="co"># Loading all packages into session. Returns true if package was successfully loaded.</span></span>
+<span id="cb4-6"><a href="start.html#cb4-6" aria-hidden="true"></a>loaded &lt;-<span class="st"> </span><span class="kw">sapply</span>(<span class="kw">c</span>(bioc_pkg, cran_pkg), require, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb4-7"><a href="start.html#cb4-7" aria-hidden="true"></a><span class="kw">as.data.frame</span>(loaded)</span></code></pre></div>
+<pre><code>##                      loaded
+## mia                    TRUE
+## miaViz                 TRUE
+## yulab.utils            TRUE
+## ggtree                 TRUE
+## ANCOMBC                TRUE
+## ape                    TRUE
+## DESeq2                 TRUE
+## DirichletMultinomial   TRUE
+## BiocManager            TRUE
+## bookdown               TRUE
+## dplyr                  TRUE
+## ecodist                TRUE
+## ggplot2                TRUE
+## gridExtra              TRUE
+## kableExtra             TRUE
+## knitr                  TRUE
+## scales                 TRUE
+## vegan                  TRUE
+## matrixStats            TRUE</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="start.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="importing-microbiome-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="program.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reproducible-reporting-with-rmarkdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

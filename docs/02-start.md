@@ -1,6 +1,4 @@
-
-# Getting started
-
+# Getting started {#start}
 
 ## Checklist (before the course)
 
