@@ -2,7 +2,7 @@
 title: "Multi-omic data science with R/Bioconductor"
 subtitle: "Oulu Summer School, June 2022"
 author: "University of Oulu & University of Turku"
-date: "`r Sys.Date()`"
+date: "2022-04-24"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [packages.bib]
