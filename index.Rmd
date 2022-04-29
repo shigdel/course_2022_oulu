@@ -53,7 +53,7 @@ student's learning speed.
 
 ## Schedule and organizers
 
-The course will be organized in a live format <a href="https://microbiome.github.io/course_2022_oulu/flyer.pdf">(Flyer)</a>
+The course will be organized in a live format <a href="https://github.com/microbiome/course_2022_oulu/raw/main/flyer.pdf">(Flyer)</a>
 
 **Venue** University of Oulu. June 20-23, 2022.
 
