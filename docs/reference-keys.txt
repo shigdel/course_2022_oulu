@@ -4,7 +4,6 @@ schedule-and-organizers
 how-to-apply
 acknowledgments
 program
-overview-1
 day-1---open-data-science
 day-2---univariate-methods
 day-3---multivariate-methods
@@ -12,5 +11,8 @@ day-4---multi-table-methods
 start
 checklist-before-the-course
 support-and-resources
-installing-and-loading-the-required-r-packages
+packages
 reproducible-reporting-with-rmarkdown
+material
+lecture-slides
+further-reading

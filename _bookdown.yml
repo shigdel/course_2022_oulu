@@ -11,12 +11,12 @@ rmd_files:
   - 01-program.Rmd
   - 02-start.Rmd
   - 03-reproduciblereporting.Rmd
+  - 04-material.Rmd  
   #- 04-import.Rmd
   #- 05-explore.Rmd
   #- 06-alpha.Rmd
   #- 07-beta.Rmd
   #- 08-abundance.Rmd
-  #- 09-material.Rmd
   #- 10-community-typing.Rmd
   #- 11-Solutions.Rmd
   #- 90-lab.Rmd

@@ -7,25 +7,15 @@ We expect that participants will prepare for the course in advance, see section
 \@ref(start). Online support is available.
 
 
-## Overview
-
-The course is based on [_miaverse_](https://microbiome.github.io) (mia = **MI**crobiome **A**nalysis), an
-R/Bioconductor framework for microbiome data science. 
-
-
-This data science framework consists of the following elements:
-
-- data container for multi-omic data tables
-- data analysis methods; a package ecosystem
-- data sets for demonstration
-- open online documentation
-
 The material follows open online book created by the course teachers,
-Orchestrating Microbiome Analysis (https://microbiome.github.io/OMA).
+Orchestrating Microbiome Analysis
+https://microbiome.github.io/OMA. This is R/Bioconductor framework for
+multi-omic data science.
 
-**You can run the workflows by simply copy-pasting the examples.** For
-further, advanced material, you can test and modify further examples
-from the online book, or apply these techniques to your own data.
+
+<img src="fig.png" alt="ML4microbiome" width="50%"/>
+<p style="font-size:12px">Figure source: Moreno-Indias _et al_. (2021) [Statistical and Machine Learning Techniques in Human Microbiome Studies: Contemporary Challenges and Solutions](https://doi.org/10.3389/fmicb.2021.635781). Frontiers in Microbiology 12:11.</p>
+
 
 
 

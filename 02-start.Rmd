@@ -2,9 +2,12 @@
 
 ## Checklist (before the course)
 
-Install the following software in advance in order to avoid
-unnecessary delays and leaving more time for the course contents.
+We will provide a temporary access to a cloud computing environment
+that readily contains the available software packages. Instructions to
+access the environment will be sent to the registered participants.
 
+Setting up the system on your own computer is not required for the
+course but it can be useful for later use. The required software:
 
 * [R (version >4.1.0)](https://www.r-project.org/) 
 
@@ -13,7 +16,7 @@ unnecessary delays and leaving more time for the course contents.
   but preferred. For further details, check the [Rstudio home
   page](https://www.rstudio.com/).
 
-* Install and load the required R packages
+* Install and load the required R packages (see Section \@ref(packages))
 
 * After a successful installation you can start with the
   case study examples in this training material
@@ -21,16 +24,16 @@ unnecessary delays and leaving more time for the course contents.
 
 ## Support and resources
 
-For additional reading and online material, see [Material](material.html) section
+ * Online support on installation and other matters, join us at [Gitter](https://gitter.im/microbiome/miaverse?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-For online support on installation and other matters, you can join us at:
-
- * Users: [miaverse Gitter channel](https://gitter.im/microbiome/miaverse?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
- * Developers: [Bioconductor Slack](https://bioc-community.herokuapp.com) #microbiomeexperiment channel (ask for an invitation)
+ * Additional reading and online material are listed in Section \@ref(material).
 
 
+**You can run the workflows by simply copy-pasting the examples.** For
+further, advanced material, you can test and modify further examples
+from the online book, and apply these techniques to your own data.
 
-## Installing and loading the required R packages
+## Installing and loading the required R packages {#packages}
 
 This section shows how to install and load all required packages into
 the R session. Only uninstalled packages are installed.
@@ -41,11 +44,11 @@ cran_pkg <- c("BiocManager", "bookdown", "dplyr", "ecodist", "ggplot2",
               "gridExtra", "kableExtra",  "knitr", "scales", "vegan", "matrixStats")
 bioc_pkg <- c("yulab.utils","ggtree","ANCOMBC", "ape", "DESeq2", "DirichletMultinomial", "mia", "miaViz")
 
-# Gets those packages that are already installed
+# Get those packages that are already installed
 cran_pkg_already_installed <- cran_pkg[ cran_pkg %in% installed.packages() ]
 bioc_pkg_already_installed <- bioc_pkg[ bioc_pkg %in% installed.packages() ]
 
-# Gets those packages that need to be installed
+# Get those packages that need to be installed
 cran_pkg_to_be_installed <- setdiff(cran_pkg, cran_pkg_already_installed)
 bioc_pkg_to_be_installed <- setdiff(bioc_pkg, bioc_pkg_already_installed)
 ```

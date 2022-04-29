@@ -1,7 +1,7 @@
 --- 
 title: "Multi-omic data science with R/Bioconductor"
 subtitle: "Welcome to Oulu Summer School, June 2022"
-date: "2022-04-24"
+date: "2022-04-29"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [packages.bib]
@@ -19,13 +19,12 @@ geometry:
   - left=15mm
 ---
 
-![Figure: Moreno-Indias et al. Frontiers in Microbiology 12:11, 2021.](fig.png)
-
-<img src="https://user-images.githubusercontent.com/60338854/121848694-1072a480-ccf3-11eb-9af2-7fdefd8d1794.png" alt="ML4microbiome" width="50%"/>
-<p style="font-size:12px">Figure source: Moreno-Indias _et al_. (2021) [Statistical and Machine Learning Techniques in Human Microbiome Studies: Contemporary Challenges and Solutions](https://doi.org/10.3389/fmicb.2021.635781). Frontiers in Microbiology 12:11.</p>
 
 
 # Overview
+
+<a href="https://bioconductor.org"><img src="https://github.com/Bioconductor/BiocStickers/raw/master/Bioconductor/Bioconductor-serial.gif" width="200" alt="Bioconductor Sticker" align="right" style="margin: 0 1em 0 1em" /></a>
+
 
 ## Contents and learning goals
 
@@ -65,18 +64,12 @@ The course will be organized in a live format.
 
 **Teachers and organizers**
 
-[Leo Lahti](https://datascience.utu.fi) is the main teacher and
-Associate Professor in Data Science at the University of Turku, with
-specialization on biomedical data analysis.
-
-Course assistant _Tuomas Borman_ (University of Turku) is one of the main developers of the
-open training material covered by the course.
-
-Course coordinator _Jenni Hekkala_ is PhD researcher at the University of Oulu.
+[Leo Lahti](https://datascience.utu.fi) is the main teacher and Associate Professor in Data Science at the University of Turku, with specialization on biomedical data analysis. Course assistants are _Tuomas Borman_ (University of Turku) is one of the main developers of the open training material covered by the course and _Jenni Hekkala_, a PhD researcher at the University of Oulu, in the group of the course coordinator Docent _Justus Reunanen_.
 
 The course is jointly organized by
 
-- Health and Biosciences Doctoral Programme, University of Oulu Graduate School
+- Health and Biosciences Doctoral Programme University of Oulu Graduate School
+- Cancer & Translational Medicine Research Unit, University of Oulu
 - Department of Computing, University of Turku, Finland
 - Finnish IT Center for Science (CSC) supports the course with cloud
   computing services
@@ -116,8 +109,9 @@ The course fee covers contact teaching and teaching material.
 
 **Accommodation** 
 
-  * Accommodation and travel costs are not included in the registration fee
-  * Links to how to reserve accommodation
+Accommodation and travel costs are not included in the registration fee. For 
+accommodation tips, see https://visitoulu.fi/en/arrival-overnight/
+
 
 
 
