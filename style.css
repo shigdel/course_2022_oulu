@@ -4,16 +4,13 @@ p.caption {
 }
 p code {
   white-space: inherit;
-  color: #87b13f;
 }
 pre {
   word-break: normal;
-  color: #87b13f;
   word-wrap: normal;
 }
 pre code {
   white-space: inherit;
-  color: #87b13f;
 }
 
 
@@ -24,6 +21,5 @@ pre code {
 
 body{
   padding: 10px;
-  text-align: center;
   background: #87b13f;
 }
