@@ -4,11 +4,26 @@ p.caption {
 }
 p code {
   white-space: inherit;
+  color: #87b13f;
 }
 pre {
   word-break: normal;
+  color: #87b13f;
   word-wrap: normal;
 }
 pre code {
   white-space: inherit;
+  color: #87b13f;
+}
+
+
+.book .book-summary ul.summary li a, .book .book-summary ul.summary li span {
+  color: #87b13f;
+  font-weight: bold;
+}
+
+body{
+  padding: 10px;
+  text-align: center;
+  background: #87b13f;
 }
