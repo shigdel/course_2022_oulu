@@ -2,9 +2,41 @@
 
 ## Checklist (before the course)
 
+### CSC Notebook
+
 We will provide a temporary access to a cloud computing environment
-that readily contains the available software packages. Instructions to
-access the environment will be sent to the registered participants.
+that readily contains the available software packages. Instructions to access 
+the environment will be sent to the registered participants. 
+
+1. Read the [instructions](https://docs.csc.fi/cloud/csc_notebooks/guide_for_students/)
+2. Go to the [CSC notebook frontpage](https://notebooks-beta.rahtiapp.fi/welcome)
+3. Login
+    a. Haka login
+        * If you have a Finnish university account, you should be able to login with Haka
+        1. Press **Login** button from the frontpage
+        2. Press **Haka** button
+        3. Select right organization
+        4. Enter login information
+    b. CSC login
+        * You can create a CSC account by following the [instructions](https://research.csc.fi/accounts-and-projects)
+        1. Press **Login** button from the frontpage
+        2. Press **CSC** button
+        3. Enter login information
+    c. Special login
+        * For those who cannot login with Haka or CSC account
+        1. [Contact us](https://microbiome.github.io/course_2022_oulu/organizers.html#acknowledgments) if you are not able to login
+        2. We give you a guest account
+        3. Press **Special Login** button from the frontpage (below the **Login** button)
+        4. Enter login information (username goes to **email** slot)
+4. Join workspace
+    a. Press **Join workspace** button (Top right corner)
+    b. Enter the **Join Code** (Check your email)
+5. Start session
+    a. Press **ON** button
+6. You can save files to **my-work** directory. They are kept stored even when the session is closed. **shared** folder is shared with all participants.
+
+    
+### (Your own computer)
 
 Setting up the system on your own computer is not required for the
 course but it can be useful for later use. The required software:
@@ -52,36 +84,32 @@ bioc_pkg_already_installed <- bioc_pkg[ bioc_pkg %in% installed.packages() ]
 # Get those packages that need to be installed
 cran_pkg_to_be_installed <- setdiff(cran_pkg, cran_pkg_already_installed)
 bioc_pkg_to_be_installed <- setdiff(bioc_pkg, bioc_pkg_already_installed)
+
+# Reorders bioc packages, so that mia and miaViz are first
+bioc_pkg <- c(bioc_pkg[ bioc_pkg %in% c("mia", "miaViz") ], 
+              bioc_pkg[ !bioc_pkg %in% c("mia", "miaViz") ] ) 
+
+# Combine to one vector
+packages <- c(bioc_pkg, cran_pkg)
+packages_to_install <- c( bioc_pkg_to_be_installed, cran_pkg_to_be_installed )
 ```
 
 
 ```r
-# If there are packages that need to be installed, installs them from CRAN
-if( length(cran_pkg_to_be_installed) ) {
-   install.packages(cran_pkg_to_be_installed)
+# If there are packages that need to be installed, install them 
+if( length(packages_to_install) ) {
+   install.packages(packages_to_install)
 }
 ```
 
-
-```r
-# If there are packages that need to be installed, installs them from Bioconductor
-if( length(bioc_pkg_to_be_installed) ) {
-   BiocManager::install(bioc_pkg_to_be_installed, ask = F)
-}
-```
- 
 Now all required packages are installed, so let's load them into the session.
 Some function names occur in multiple packages. That is why miaverse's packages
 mia and miaViz are prioritized. Packages that are loaded first have higher priority.
 
 
 ```r
-# Reorders bioc packages, so that mia and miaViz are first
-bioc_pkg <- c(bioc_pkg[ bioc_pkg %in% c("mia", "miaViz") ], 
-              bioc_pkg[ !bioc_pkg %in% c("mia", "miaViz") ] ) 
-
 # Loading all packages into session. Returns true if package was successfully loaded.
-loaded <- sapply(c(bioc_pkg, cran_pkg), require, character.only = TRUE)
+loaded <- sapply(packages, require, character.only = TRUE)
 as.data.frame(loaded)
 ```
 
@@ -107,6 +135,4 @@ as.data.frame(loaded)
 ## vegan                  TRUE
 ## matrixStats            TRUE
 ```
-
-
 

@@ -10,6 +10,8 @@ day-3---multivariate-methods
 day-4---multi-table-methods
 start
 checklist-before-the-course
+csc-notebook
+your-own-computer
 support-and-resources
 packages
 reproducible-reporting-with-rmarkdown
