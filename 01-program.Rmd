@@ -30,9 +30,9 @@ multi-omic data science.
 12-13 Lunch break
 
 
-**Afternoon hands-on session** (Leo Lahti, Tuomas Borman, Jenni Hekkala)
+**Afternoon hands-on session**
 
-13-15 Demo: Data science framework (Tuomas Borman)
+13-15 Demo: Data science framework
 
 15-17 Hands-on: microbiome data summaries & exploration 
 
