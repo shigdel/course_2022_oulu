@@ -170,7 +170,7 @@ jobs:
           git config --global --add safe.directory /__w/course_2022_oulu/course_2022_oulu
           git fetch --all
           commit=$(git --work-tree=../ rev-parse --verify --short HEAD)
-          git worktree add --force --track -B gh-pages docs origin/gh-pages
+          git worktree add --track -B gh-pages docs origin/gh-pages
       - name: Bookdown
         if: runner.os == 'Linux'
         run: |
