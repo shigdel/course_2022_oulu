@@ -65,10 +65,16 @@ course but it can be useful for later use. The required software:
 further, advanced material, you can test and modify further examples
 from the online book, and apply these techniques to your own data.
 
+
 ## Installing and loading the required R packages {#packages}
 
+Note that the CSC/RStudio environment has readily installed setup. You
+may need the examples from this subsection if you are installing the
+environment on your own computer. If you need to add new packages, you
+can modify the examples below.
+
 This section shows how to install and load all required packages into
-the R session. Only uninstalled packages are installed.
+the R session, if needed. Only uninstalled packages are installed.
 
 ```{r warning = FALSE, message = FALSE}
 # List of packages that we need from cran and bioc 
