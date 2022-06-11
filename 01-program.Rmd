@@ -17,103 +17,89 @@ multi-omic data science.
 <p style="font-size:12px">Figure source: Moreno-Indias _et al_. (2021) [Statistical and Machine Learning Techniques in Human Microbiome Studies: Contemporary Challenges and Solutions](https://doi.org/10.3389/fmicb.2021.635781). Frontiers in Microbiology 12:11.</p>
 
 
-
-
 ## Day 1 - Open data science 
 
 **Morning session**
 
 9-10 Coffee, Welcome & Practicalities
 
-10-11 Lecture: Reproducible reporting and open science (Leo Lahti)
+10-11 Lecture: Open & reproducible workflows 
 
-11-12 Demo: Data science framework (Tuomas Borman)
+11-12 Demo & hands-on: Introduction to CSC RStudio notebook 
 
 12-13 Lunch break
 
 
 **Afternoon hands-on session** (Leo Lahti, Tuomas Borman, Jenni Hekkala)
 
-13-15 Introduction to R/Bioconductor & teaching environment
+13-15 Demo: Data science framework (Tuomas Borman)
 
-15-17 Importing data to R for interactive data analysis; basic data
-analysis and visualization examples
+15-17 Hands-on: microbiome data summaries & exploration 
 
-Task: selecting data; initializing a reproducible report in RStudio
+17-18 Presentations & Discussion
+
 
 ----------------------------------------------------------------
 
-## Day 2 - Univariate methods
-
+## Day 2 - Tabular data 
 
 **Morning session**
 
-9-11 Key concepts and challenges in univariate analysis (Leo)
+ 9-10 Lecture: Analysis & visualization of _tabular data_
 
-  - Differential abundance & multiple testing
-  - Alpha diversity estimation
-  - Time series
-  - Statistical considerations
+10-12 Demo & hands-on: Univariate methods
 
-11-12 Demo: Data exploration (Tuomas)
+12-13 Lunch break
 
-  - Diagnostic summaries (library sizes; singletons; etc)
-  - Outlier & anomaly detection
-  - Visualization
+**Afternoon hands-on session**
+
+13-14 Demo: Multivariate data analysis & visualization
+
+14-17 Hands-on: Multivariate data analysis & visualization
+
+17-18 Presentations & Discussion
+
+----------------------------------------------------------------
+
+## Day 3 - Multi-assay data
+
+**Morning session**
+
+ 9-10 Lecture: multi-omic data integration
+
+10-12 Demo & hands-on: multi-assay data container
+
+12-13 Lunch break
 
 
 **Afternoon hands-on session**
 
-13-15 Differential abundance & multiple testing 
+13-15: Demo & hands-on: association analysis
 
-15-17 Alpha diversity analysis & visualization
+13-17: Demo & hands-on: machine learning
 
-Task: extending the reproducible report 
+17-18 Presentations & Discussion
 
-----------------------------------------------------------------
-
-## Day 3 - Multivariate methods
-
-**Morning session**
-
-9-11 Key concepts and challenges in multivariate analysis (Leo)
-
-  - Transformations, dissimilarities
-  - Beta diversity & community similarity
-  - Supervised vs. unsupervised ordination
-  - Clustering & visualization
-
-11-12 Demo: Community similarity (Tuomas)
-
-
-**Afternoon hands-on session**
-
-13-15 Estimating community similarity
-
-15-17 Clustering and visualization
-
-Task: extending the reproducible report 
 
 -----------------------------------------------------------------
 
-## Day 4 - Multi-table methods
+## Day 4 - Advanced topics
 
 **Morning session**
 
-9-11 Multi-table data integration (Leo)
+ 9-10 Summary of the learning material
 
-11-12 Demo: cross-correlation, biclustering & heatmaps (Tuomas)
+10-12 Demo & hands-on: custom data & advanced tools
 
-
-**Afternoon hands-on session**
-
-13-15 Multi-omic data integration 
-
-15-16 Short presentations based on the reproducible reports
-
-16-17 Summary, Conclusions & Feedback
+12-13 Q & A session
 
 
- 
+**Afternoon session**
+
+13-14 Lunch
+
+14-16 Wrap-up
+
+
 
 
