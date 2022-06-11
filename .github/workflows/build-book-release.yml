@@ -170,7 +170,7 @@ jobs:
           git config --global --add safe.directory /__w/course_2022_oulu/course_2022_oulu
           git fetch --all
           commit=$(git --work-tree=../ rev-parse --verify --short HEAD)
-          git worktree add --track -B gh-pages docs_temp origin/gh-pages
+          git worktree add --track -B --force gh-pages docs origin/gh-pages
       - name: Bookdown
         if: runner.os == 'Linux'
         run: |
@@ -185,7 +185,7 @@ jobs:
       - name: Bookdown Deploy
         if: github.ref == 'refs/heads/main' && runner.os == 'Linux'
         run: |
-          cd docs_temp
+          cd docs
           git add -A .
           git commit --allow-empty -m "Build book @$(git rev-parse --short HEAD)"
           git push --force origin HEAD:gh-pages
