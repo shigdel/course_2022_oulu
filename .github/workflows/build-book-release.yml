@@ -73,6 +73,9 @@ jobs:
         run: |
           mkdir /__w/_temp/Library
           echo ".libPaths('/__w/_temp/Library')" > ~/.Rprofile
+      
+      - name: work around permission issue
+        run: git config --global --add safe.directory /__w/course_2022_oulu/course_2022_oulu
 
       - name: Checkout Repository
         uses: actions/checkout@v2
