@@ -1,5 +1,6 @@
 07-beta_files/
 _bookdown_files
+docs
 notes
 *~
 # History files
@@ -30,4 +31,4 @@ vignettes/*.pdf
 *.knit.md
 # R Environment Variables
 .Renviron
-course_2021_radboud.Rproj
+oulu2022_material.rds
