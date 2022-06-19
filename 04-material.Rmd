@@ -13,6 +13,10 @@ already before the course.
 
 [Slides](https://github.com/microbiome/course_2022_oulu/tree/main/slides) (will be added).
 
+## Tasks
+
+[Exercises](https://microbiome.github.io/OMA/exercises.html)
+
 
 ## Extra material on miaverse and R programming
 
