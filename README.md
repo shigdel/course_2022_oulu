@@ -67,7 +67,7 @@ and priority will be given for local students from Oulu.
 
 ## Acknowledgments
 
-**Citation** "Multi-omic data science with R/Bioconductor (2022). Tuomas Borman and Leo Lahti. URL: https://microbiome.github.io/course_2022_oulu/".
+**Citation** "Multi-omic data science with R/Bioconductor (2022). Tuomas Borman and Leo Lahti. URL: https://microbiome.github.io/course_2022_oulu/"
 
 **Contact**
 - [Leo Lahti](http://datascience.utu.fi), University of Turku
