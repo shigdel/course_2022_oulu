@@ -1,26 +1,24 @@
 
-#Project-wide Code of Conduct statement for Bioconductor
+# Project-wide Code of Conduct statement for Bioconductor
 [link to code of conduct](https://bioconductor.github.io/bioc_coc_multilingual/)
-
 
 
 (Adapted from the BioC 2020 Code of Conduct)
 
-#Code of Conduct
-##Version 1.0.2 (July 27, 2021)
+## Code of Conduct -Version 1.0.2 (July 27, 2021)
 
 The Bioconductor community values an open approach to science that promotes the
 
-    * sharing of ideas, code, software and expertise
-    * collaboration
-    * diversity and inclusivity
-    * a kind and welcoming environment
-    * community contributions
+ - sharing of ideas, code, software and expertise
+ - collaboration
+ - diversity and inclusivity
+ - a kind and welcoming environment
+ - community contributions
 
 In line with these values, Bioconductor is dedicated to providing a welcoming, supportive, collegial experience free of harassment, intimidation, and bullying regardless of:
 
-    *identity: gender, gender identity and expression, sexual orientation, disability, physical appearance, ethnicity, body size, race, age, religion, language etc.
-    *intellectual position: approaches to data analysis, software preferences, coding style, scientific perspective, stage of career, etc.
+ - identity: gender, gender identity and expression, sexual orientation, disability, physical appearance, ethnicity, body size, race, age, religion, language etc.
+ - intellectual position: approaches to data analysis, software preferences, coding style, scientific perspective, stage of career, etc.
 
 By participating in this community, you agree not to engage in behavior contrary to these values at any Bioconductor-sponsored event (in person or virtual, including but not limited to talks, workshops, poster sessions, social activities) or electronic communication channel (including but not limited to community-bioc Slack, the support site, online forums, package review site and social media communications). Furthermore, we require all participants to have identifiable accounts in Bioconductor online forums. Accounts that do not adhere to this after request to de-anonymise may be deleted.
 
@@ -32,23 +30,23 @@ Any person/s violating the Code of Conduct may be sanctioned or expelled tempora
 
 Harassment includes, but is not limited to:
 
-    *Making comments in chats, to an audience or personally, that belittle or demean another person
-    *Sharing sexual images online
-    *Harassing photography or recording
-    *Sustained disruption of talks or other events
-    *Unwelcome sexual attention
-    *Advocating for, or encouraging, any of the above behavior
+ - Making comments in chats, to an audience or personally, that belittle or demean another person
+ - Sharing sexual images online
+ - Harassing photography or recording
+ - Sustained disruption of talks or other events
+ - Unwelcome sexual attention
+ - Advocating for, or encouraging, any of the above behavior
 
 Intimidation and bullying include, but are not limited to:
 
-    *Aggressive or browbeating behavior
-    *Mocking or insulting another person’s intellect, work, perspective, or question/comment
-    *Making reference to someone’s gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion, or other personal attributes in the context of a scientific discussion
-    *Deliberately making someone feel unwelcome
-    *Trolling behaviour (deliberately inflammatory or offensive messages)
-    *Sustained off-topic posts
+ - Aggressive or browbeating behavior
+ - Mocking or insulting another person’s intellect, work, perspective, or question/comment
+ - Making reference to someone’s gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion, or other personal attributes in the context of a scientific discussion
+ - Deliberately making someone feel unwelcome
+ - Trolling behaviour (deliberately inflammatory or offensive messages)
+ - Sustained off-topic posts
 
-#Enforcement
+## Enforcement
 
 Anyone asked to stop harassing or intimidating behavior are expected to comply immediately.
 
@@ -58,7 +56,7 @@ The Code of Conduct committee may take action to redress anything designed to, o
 
 We expect everyone in the Bioconductor community to comply with the Code of Conduct when participating in Bioconductor events and online communication platforms.
 
-#Reporting
+## Reporting
 
 If someone makes you or anyone else feel unsafe or unwelcome, please report it as soon as possible. You can make a report either anonymously or personally. All reports will be reviewed by the Code of Conduct Committee and will be kept confidential.
 

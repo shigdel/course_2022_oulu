@@ -9,6 +9,7 @@ output_dir: docs
 rmd_files:
   - index.Rmd  
   - 01-program.Rmd
+  - 01.1-codeofconduct.Rmd
   - 02-start.Rmd
   - 03-reproduciblereporting.Rmd
   - 04-material.Rmd  
